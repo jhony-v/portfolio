@@ -1,6 +1,13 @@
 nav-background = rgb(240,240,240)
 main-background = white
 
+set-flex(direction = row)
+    display flex
+    flex-direction direction
+
+set-default-padding()
+    padding 10px
+
 .app 
     height 100%
     width 100%
@@ -12,6 +19,11 @@ main-background = white
         width 200px
         flex none
         background nav-background
+        justify-content flex-end 
+        set-flex(column)
+        set-default-padding()
+    
     &-main
         width 100%
         background main-background
+        set-default-padding()
