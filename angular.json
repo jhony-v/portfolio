@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "portfolio-jhony"
+    }
+  },
+  "defaultProject": "portfolio-jhony",
+  "cli": {
+    "analytics": "53acbc20-9f6b-48dd-b4f7-007a6bf49b1f"
+  }
 }

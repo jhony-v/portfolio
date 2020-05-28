@@ -1,0 +1,23 @@
+.text-base 
+    display: block
+
+themeSize = {
+    small: 0.9rem,
+    normal: 1rem,
+    regular: 1.1rem,
+    big: 2rem
+};
+themeColors = {
+    smooth: gray,
+    primary: rgb(40, 40, 40),
+    light : white
+};
+
+for key, value in themeSize 
+    .{key}
+        font-size: value
+
+for key, value in themeColors 
+    .{key} 
+        color: value
+
