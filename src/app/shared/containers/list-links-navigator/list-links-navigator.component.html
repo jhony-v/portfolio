@@ -1,5 +1,10 @@
 <div class="list-links-navigator">
   <ul class="links">
-    <li *ngFor="let current of linksNavigator">{{ current.text }}</li>
+    <li *ngFor="let current of linksNavigator">
+      <app-link-navigator
+        href-link="{{ current.href }}"
+        text="{{ current.text }}"
+      ></app-link-navigator>
+    </li>
   </ul>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-link-navigator',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./link-navigator.component.styl']
 })
 export class LinkNavigatorComponent implements OnInit {
+
+  @Input("text") text : string;
+  @Input("href-link") hrefLink : string;
 
   constructor() { }
 

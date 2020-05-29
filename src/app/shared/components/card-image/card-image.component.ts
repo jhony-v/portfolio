@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardImageComponent implements OnInit {
 
-  @Input("image")
-  image : string;
+  @Input("image") image : string;
   
   constructor() { }
 

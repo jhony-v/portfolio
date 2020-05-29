@@ -6,14 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./text-base.component.styl'],
 })
 export class TextBaseComponent implements OnInit {
-  @Input('text')
-  text: string;
-
-  @Input('theme-color')
-  themeColor: string;
-
-  @Input('text-size')
-  textSize: string;
+  @Input('text') text: string;
+  @Input('theme-color') themeColor: string;
+  @Input('text-size') textSize: string;
 
   constructor() {
     this.text = '';
