@@ -9,6 +9,7 @@ export class TextBaseComponent implements OnInit {
   @Input('text') text: string;
   @Input('theme-color') themeColor: string;
   @Input('text-size') textSize: string;
+  @Input('is-weight') isWeight: boolean = false;
 
   constructor() {
     this.text = '';
