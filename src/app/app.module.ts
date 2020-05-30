@@ -15,6 +15,9 @@ import { HistoryModuleComponent } from './modules/history-module/history-module.
 import { DedicateModuleComponent } from './modules/dedicate-module/dedicate-module.component';
 import { StackModuleComponent } from './modules/stack-module/stack-module.component';
 import { ProjectsModuleComponent } from './modules/projects-module/projects-module.component';
+import { CardPointHistoryComponent } from './shared/components/card-point-history/card-point-history.component';
+import { ScrollHorizontalBehaviorComponent } from './shared/containers/scroll-horizontal-behavior/scroll-horizontal-behavior.component';
+import { CardLanguageComponent } from './modules/home-module/card-language/card-language.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ProjectsModuleComponent } from './modules/projects-module/projects-modu
     HistoryModuleComponent,
     DedicateModuleComponent,
     StackModuleComponent,
-    ProjectsModuleComponent
+    ProjectsModuleComponent,
+    CardPointHistoryComponent,
+    ScrollHorizontalBehaviorComponent,
+    CardLanguageComponent
   ],
   imports: [
     BrowserModule,

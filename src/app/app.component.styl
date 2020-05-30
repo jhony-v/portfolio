@@ -5,9 +5,6 @@ set-flex(direction = row)
     display flex
     flex-direction direction
 
-set-default-padding()
-    padding 20px
-
 .app 
     height 100%
     width 100%
@@ -20,11 +17,18 @@ set-default-padding()
         flex none
         background nav-background
         justify-content flex-end 
+        padding 20px
         set-flex(column)
-        set-default-padding()
     
     &-main
         width 100%
         background main-background
-        set-default-padding()
-        padding-top 10em
+        padding 10em 6em 0
+        overflow-y auto
+        &::-webkit-scrollbar
+            width 7px
+        &::-webkit-scrollbar-thumb
+            background rgba(0,0,0,.2)
+            border-radius 7px
+        &::-webkit-scrollbar-button
+            background transparent
