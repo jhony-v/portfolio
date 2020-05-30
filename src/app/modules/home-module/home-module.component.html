@@ -1,10 +1,33 @@
-<div class="detail">
-  <div class="card-point-history">
-    <app-text-base text="Quien soy" is-weight="{{true}}"></app-text-base>
-    <app-text-base
-      theme-color="smooth"
-      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, totam mollitia ratione possimus commodi dolore veritatis, facilis repudiandae a laudantium voluptates repellendus nisi itaque autem debitis architecto delectus aperiam ab."
+<div class="scroll-data-preview">
+  <app-scroll-horizontal-behavior>
+    <app-card-language
+      image="https://cdn.pixabay.com/photo/2020/05/25/20/06/storm-5220380__340.jpg"
+      title="Javascript"
+      detail="Dominio en React, Vue, Angular, Styled components..."
     >
-    </app-text-base>
-  </div>
+    </app-card-language>
+    <app-card-language
+      image="https://cdn.pixabay.com/photo/2020/05/26/07/43/skateboard-5221914__340.jpg"
+      title="Php"
+      detail="Dominio en Php nativo, laravel , codeigniter..."
+    >
+    </app-card-language>
+    <app-card-language
+      image="https://cdn.pixabay.com/photo/2019/07/14/16/29/pen-4337524__340.jpg"
+      title="Python"
+      detail="Dominio python en general,de Flask, Django..."
+    >
+    </app-card-language>
+  </app-scroll-horizontal-behavior>
+</div>
+<div class="home-detail">
+  <app-card-point-history
+    title-text="Acerca de mí"
+    detail-text="Soy Desarrollador de Software, especializado en tecnologías web. Me encanta la programación, investigar y aprender nuevas tecnologías a la par crear proyectos constantemente.
+    Me considero autodidacta, persistente, con claridad de que los mejores resultados se trabajan en equipo. Así mismo me gusta dibujar, bailar y siempre busco hacer las cosas rápido e ir mejorando."
+  ></app-card-point-history>
+  <app-card-point-history
+    title-text="Mi motivación"
+    detail-text="Me gusta crear nuevas cosas, ver como funcionan las cosas especialmente el area de los sistemas. Esto me motiva a crear nuevas cosas y aprender constantemte."
+  ></app-card-point-history>
 </div>
