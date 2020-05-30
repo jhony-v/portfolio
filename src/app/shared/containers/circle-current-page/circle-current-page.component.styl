@@ -1,0 +1,19 @@
+circle-default()
+    width 7px
+    height @width
+    border-radius 100%
+    border:1px solid gray
+
+circle-active()
+    background black
+    border-color black
+
+.circle-current-page 
+    display flex
+    justify-content space-between
+    width 80%
+    margin 30px auto
+    .circle
+        circle-default()
+        &:first-child
+            circle-active()
