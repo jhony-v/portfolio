@@ -1,0 +1,19 @@
+.card-point-history 
+    position relative
+    border-left 1px solid rgba(0,0,0,.2)
+    > .row
+        padding 0 1em
+        padding-left 1cm
+        &.title 
+            margin-bottom 20px
+        &.detail 
+            padding-bottom 80px
+
+    &::before 
+        content ""
+        width 8px
+        height @width
+        background silver 
+        border-radius 100%
+        position absolute
+        transform translateX(-50%)
