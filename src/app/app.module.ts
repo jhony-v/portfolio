@@ -18,6 +18,7 @@ import { ProjectsModuleComponent } from './modules/projects-module/projects-modu
 import { CardPointHistoryComponent } from './shared/components/card-point-history/card-point-history.component';
 import { ScrollHorizontalBehaviorComponent } from './shared/containers/scroll-horizontal-behavior/scroll-horizontal-behavior.component';
 import { CardLanguageComponent } from './modules/home-module/card-language/card-language.component';
+import { CircleCurrentPageComponent } from './shared/containers/circle-current-page/circle-current-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CardLanguageComponent } from './modules/home-module/card-language/card-
     ProjectsModuleComponent,
     CardPointHistoryComponent,
     ScrollHorizontalBehaviorComponent,
-    CardLanguageComponent
+    CardLanguageComponent,
+    CircleCurrentPageComponent
   ],
   imports: [
     BrowserModule,
