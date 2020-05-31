@@ -1,6 +1,11 @@
 .card-point-history 
     position relative
     border-left 1px solid rgba(0,0,0,.2)
+    animation appear .3s 1 ease-out
+    @keyframes appear 
+        from 
+            transform translateY(100%)
+            opacity 0
     > .row
         padding 0 1em
         padding-left 1.5cm

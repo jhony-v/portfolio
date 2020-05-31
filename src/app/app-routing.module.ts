@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModuleComponent } from './modules/home-module/home-module.component';
 import { HistoryModuleComponent } from './modules/history-module/history-module.component';
 import { DedicateModuleComponent } from './modules/dedicate-module/dedicate-module.component';
@@ -8,8 +9,8 @@ import { ProjectsModuleComponent } from './modules/projects-module/projects-modu
 
 const routes: Routes = [
   {
-    path : 'home',
-    component : HomeModuleComponent,
+    path: 'home',
+    component: HomeModuleComponent,
   },
   {
     path: 'history',
@@ -35,7 +36,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), BrowserAnimationsModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
