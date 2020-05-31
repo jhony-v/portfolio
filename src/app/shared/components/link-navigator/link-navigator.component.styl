@@ -1,6 +1,8 @@
+json("../../../json/colors.json")
+
 .link-navigator 
     text-decoration none
-    color rgb(60,60,60)
+    color light
     border-radius 10px
     font-size .8rem
     display block
@@ -9,4 +11,8 @@
     transition .3s background
 
 .link-navigator.router-link-active 
-    background rgba(0,0,0,.15)
+    background rgba(0,0,0,.3)
+    animation selectable-animate .1s 1 ease-in
+    @keyframes selectable-animate 
+        from 
+            transform scale(.5)

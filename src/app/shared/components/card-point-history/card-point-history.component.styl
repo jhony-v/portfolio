@@ -1,6 +1,10 @@
+json("../../../json/colors.json")
+
+color-base = rgb(210,210,210)
+
 .card-point-history 
     position relative
-    border-left 1px solid rgba(0,0,0,.2)
+    border-left 1px solid color-base
     animation appear .3s 1 ease-out
     @keyframes appear 
         from 
@@ -18,7 +22,7 @@
         content ""
         width 8px
         height @width
-        background silver 
+        background color-base 
         border-radius 100%
         position absolute
         transform translateX(-50%)

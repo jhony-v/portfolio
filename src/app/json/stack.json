@@ -1,0 +1,157 @@
+[
+  {
+    "category": "Frontend",
+    "stacks": [
+      {
+        "image": "",
+        "name": "React",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Angular",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Vue",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Sass",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Stylus",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "RxJs",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Styled Components",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "HTML5",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Javascript",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Framer motion",
+        "detail": ""
+      }
+    ]
+  },
+  {
+    "category": "Backend",
+    "stacks": [
+      {
+        "image": "",
+        "name": "Node Js",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Php",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Express Js",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Laravel",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Codeigniter",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Spring Boot",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Flask",
+        "detail": ""
+      }
+    ]
+  },
+  {
+    "category": "Database",
+    "stacks": [
+      {
+        "image": "",
+        "name": "MySql",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "MongoDb",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Redis",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Sql Server",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "CouchDb",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "IndexedDb",
+        "detail": ""
+      }
+    ]
+  },
+  {
+    "category": "Utilities",
+    "stacks": [
+      {
+        "image": "",
+        "name": "Git",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Figma",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "AWS Amplify",
+        "detail": ""
+      },
+      {
+        "image": "",
+        "name": "Slack",
+        "detail": ""
+      }
+    ]
+  }
+]

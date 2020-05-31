@@ -1,5 +1,5 @@
-nav-background = rgb(240,240,240)
-main-background = white
+json("/json/colors.json")
+
 
 set-flex(direction = row)
     display flex
@@ -15,14 +15,14 @@ set-flex(direction = row)
     &-nav-links 
         width 200px
         flex none
-        background nav-background
+        background primary
         justify-content flex-end 
         padding 20px
         set-flex(column)
     
     &-main
         width 100%
-        background main-background
+        background light
         padding 10em 6em 0
         overflow-y auto
         &::-webkit-scrollbar

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CircleViewCompactComponent } from './circle-view-compact.component';
+import { CircleImageComponent } from './circle-image.component';
 
-describe('CircleViewCompactComponent', () => {
-  let component: CircleViewCompactComponent;
-  let fixture: ComponentFixture<CircleViewCompactComponent>;
+describe('CircleImageComponent', () => {
+  let component: CircleImageComponent;
+  let fixture: ComponentFixture<CircleImageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CircleViewCompactComponent ]
+      declarations: [ CircleImageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CircleViewCompactComponent);
+    fixture = TestBed.createComponent(CircleImageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

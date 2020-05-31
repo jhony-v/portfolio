@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TextBaseComponent } from './shared/components/text-base/text-base.component';
 import { ButtonBaseComponent } from './shared/components/button-base/button-base.component';
-import { CircleViewCompactComponent } from './shared/components/circle-view-compact/circle-view-compact.component';
 import { CardImageComponent } from './shared/components/card-image/card-image.component';
 import { ProfileNameCompactComponent } from './shared/components/profile-name-compact/profile-name-compact.component';
 import { LinkNavigatorComponent } from './shared/components/link-navigator/link-navigator.component';
@@ -19,13 +18,13 @@ import { CardPointHistoryComponent } from './shared/components/card-point-histor
 import { ScrollHorizontalBehaviorComponent } from './shared/containers/scroll-horizontal-behavior/scroll-horizontal-behavior.component';
 import { CardLanguageComponent } from './modules/home-module/card-language/card-language.component';
 import { CircleCurrentPageComponent } from './shared/containers/circle-current-page/circle-current-page.component';
+import { CircleImageComponent } from './shared/components/circle-image/circle-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextBaseComponent,
     ButtonBaseComponent,
-    CircleViewCompactComponent,
     CardImageComponent,
     ProfileNameCompactComponent,
     LinkNavigatorComponent,
@@ -38,7 +37,8 @@ import { CircleCurrentPageComponent } from './shared/containers/circle-current-p
     CardPointHistoryComponent,
     ScrollHorizontalBehaviorComponent,
     CardLanguageComponent,
-    CircleCurrentPageComponent
+    CircleCurrentPageComponent,
+    CircleImageComponent
   ],
   imports: [
     BrowserModule,
