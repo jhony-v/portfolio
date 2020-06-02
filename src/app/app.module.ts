@@ -19,6 +19,7 @@ import { ScrollHorizontalBehaviorComponent } from './shared/containers/scroll-ho
 import { CardLanguageComponent } from './modules/home-module/card-language/card-language.component';
 import { CircleCurrentPageComponent } from './shared/containers/circle-current-page/circle-current-page.component';
 import { CircleImageComponent } from './shared/components/circle-image/circle-image.component';
+import { FluidCardInformationComponent } from './shared/components/fluid-card-information/fluid-card-information.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CircleImageComponent } from './shared/components/circle-image/circle-im
     ScrollHorizontalBehaviorComponent,
     CardLanguageComponent,
     CircleCurrentPageComponent,
-    CircleImageComponent
+    CircleImageComponent,
+    FluidCardInformationComponent
   ],
   imports: [
     BrowserModule,
