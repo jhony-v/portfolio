@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StackService, StackCategory } from 'src/app/services/stack.service';
 
 @Component({
   selector: 'app-stack-module',
@@ -6,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stack-module.component.styl'],
 })
 export class StackModuleComponent implements OnInit {
-  constructor() {}
+  allStacks: StackCategory[];
+  constructor(private stacks: StackService) {}
 
-  ngOnInit(): void {}
+  getStacks(): void {
+    this.allStacks = this.stacks.getAllStacks();
+  }
+
+  ngOnInit(): void {
+    this.getStacks();
+  }
 }

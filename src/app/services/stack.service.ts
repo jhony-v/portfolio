@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import stack from '../json/stack.json';
 
 export interface Stacks {
   image: string;
@@ -16,4 +17,8 @@ export interface StackCategory {
 })
 export class StackService {
   constructor() {}
+
+  getAllStacks(): StackCategory[] {
+    return <StackCategory[]>stack;
+  }
 }
