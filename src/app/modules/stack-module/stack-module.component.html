@@ -1,7 +1,8 @@
+<app-search-engine></app-search-engine>
 <div class="all-stack">
   <app-card-point-history
     *ngFor="let item of allStacks"
-    title-text="item.category"
+    [title-text]="item.category"
   >
     <div class="grid-cards">
       <app-fluid-card-information

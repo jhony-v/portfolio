@@ -20,6 +20,7 @@ import { CardLanguageComponent } from './modules/home-module/card-language/card-
 import { CircleCurrentPageComponent } from './shared/containers/circle-current-page/circle-current-page.component';
 import { CircleImageComponent } from './shared/components/circle-image/circle-image.component';
 import { FluidCardInformationComponent } from './shared/components/fluid-card-information/fluid-card-information.component';
+import { SearchEngineComponent } from './shared/components/search-engine/search-engine.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FluidCardInformationComponent } from './shared/components/fluid-card-in
     CardLanguageComponent,
     CircleCurrentPageComponent,
     CircleImageComponent,
-    FluidCardInformationComponent
+    FluidCardInformationComponent,
+    SearchEngineComponent
   ],
   imports: [
     BrowserModule,
