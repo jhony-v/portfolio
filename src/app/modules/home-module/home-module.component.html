@@ -41,6 +41,14 @@
     title-text="Contactarme conmigo"
     detail-text="Me gusta crear nuevas cosas, ver como funcionan las cosas especialmente el area de los sistemas. Esto me motiva a crear nuevas cosas y aprender constantemte."
   >
+    <div class="links">
+      <div class="contact-list">
+        <a *ngFor="let item of allLinksContact" [href]="item.link" target="_black" class="card-row">
+            <app-circle-image [image]="item.image" size-image="30" ></app-circle-image>
+            <app-text-base [text]="item.name" theme-color="smooth" text-size="small"></app-text-base>
+        </a>
+      </div>
+    </div>
   </app-card-point-history>
 </div>
 <div class="to-right">

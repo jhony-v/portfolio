@@ -10,7 +10,7 @@ import { ContactLinkService, LinkContact } from 'src/app/services/contact-link.s
 export class HomeModuleComponent implements OnInit {
 
 
-  private allLinksContact : LinkContact[];
+  allLinksContact : LinkContact[];
 
   constructor( private router : Router,private contacts : ContactLinkService) { 
   }
