@@ -2,11 +2,14 @@ json("../../../json/colors.json")
 
 .card 
     background light
-    border-radius 20px
     display flex
     align-items center
-    box-shadow 0 5px 10px rgba(0,0,0,.05)
     padding 20px
+    transition background .3s ease-out
+    &:hover 
+        background rgba(0,0,0,.02)
+        cursor pointer
+        border-radius 10px
     .row 
         &.image-row 
             margin-right 10px
