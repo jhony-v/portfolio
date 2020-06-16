@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+export interface LinkContact {
+  link : string;
+  name : string;
+  image : string;
+}
 
 @Component({
   selector: 'app-home-module',
@@ -7,9 +14,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeModuleComponent implements OnInit {
 
-  constructor() { }
+
+  private allLinksContact : LinkContact[];
+
+  constructor( private router : Router) { 
+  }
 
   ngOnInit(): void {
+  }
+
+  navigateNext() {
+    this.router.navigate(['/history']);
   }
 
 }
