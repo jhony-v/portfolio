@@ -3,11 +3,14 @@ json("../../../json/colors.json")
 .profile 
     margin 2em 0
     &-my-name 
+        background linear-gradient(60deg,primary,primaryAlternate)
+        -webkit-background-clip text
+        -webkit-text-fill-color transparent
+        // color black
         font-size 3em
         text-transform uppercase
         letter-spacing 5px
         text-align right
-        font-weight normal
         .name-invert 
             color inherit
     &-career
