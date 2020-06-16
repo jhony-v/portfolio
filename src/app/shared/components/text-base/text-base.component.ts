@@ -13,7 +13,6 @@ export class TextBaseComponent implements OnInit {
 
   constructor() {
     this.text = '';
-    this.themeColor = 'primary';
     this.textSize = 'normal';
   }
 

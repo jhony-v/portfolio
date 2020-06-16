@@ -8,6 +8,7 @@ import { StackService, StackCategory } from 'src/app/services/stack.service';
 })
 export class StackModuleComponent implements OnInit {
   allStacks: StackCategory[];
+  searchedWord : string;
   constructor(private stacks: StackService) {}
 
   ngOnInit(): void {
@@ -21,21 +22,32 @@ export class StackModuleComponent implements OnInit {
   searchTechnology(value: string) {
     let data: StackCategory[] = [];
     this.stacks.getAllStacks().forEach(({ category, stacks }) => {
-      let _stacks = stacks.filter(({ name }) => name.includes(value));
+      let _stacks = stacks.filter(({ name }) => name.toLowerCase().includes(value.toLowerCase()));
       if (_stacks.length !== 0) {
         data.push({ category, stacks: _stacks });
       }
     });
     this.allStacks = data;
+    this.searchedWord = value;
   }
 
-
-  get totalStackLength(): number {
+  countStacks(stacks: StackCategory[]): number {
     let total: number = 0;
-    let stacks: StackCategory[] = this.stacks.getAllStacks();
     for (let i in stacks) {
       total += stacks[i].stacks.length;
     }
     return total;
+  }
+
+  cancelSearch() {
+    this.allStacks = this.stacks.getAllStacks();
+  }
+
+  get totalStackLength(): number {
+    return this.countStacks(this.stacks.getAllStacks());
+  }
+
+  get totalStacksFiltered(): number {
+    return this.countStacks(this.allStacks);
   }
 }

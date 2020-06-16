@@ -1,3 +1,6 @@
-<button class="button-base">
+<button 
+(click)="onClickPressed()"
+class="button-base" 
+[ngClass]="{primary:primary}" >
     <app-text-base [text]="title" text-theme="light"></app-text-base>
 </button>

@@ -21,6 +21,7 @@ import { CircleCurrentPageComponent } from './shared/containers/circle-current-p
 import { CircleImageComponent } from './shared/components/circle-image/circle-image.component';
 import { FluidCardInformationComponent } from './shared/components/fluid-card-information/fluid-card-information.component';
 import { SearchEngineComponent } from './shared/components/search-engine/search-engine.component';
+import { AnimatableFadeFromBottomComponent } from './shared/components/animatable-fade-from-bottom/animatable-fade-from-bottom.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SearchEngineComponent } from './shared/components/search-engine/search-
     CircleCurrentPageComponent,
     CircleImageComponent,
     FluidCardInformationComponent,
-    SearchEngineComponent
+    SearchEngineComponent,
+    AnimatableFadeFromBottomComponent
   ],
   imports: [
     BrowserModule,

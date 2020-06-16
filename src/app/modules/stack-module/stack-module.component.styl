@@ -13,9 +13,19 @@ is-flex()
         .text-detail-container 
             is-flex()
             display inline-flex
+            margin-right 10px
             * 
                 margin-right 10px
 
 .grid-cards 
     display grid 
     grid-template-columns repeat(4,1fr)
+
+
+.empty
+    > .text 
+        margin 10px 0
+        display flex 
+        justify-content center
+        &.text-top-margin
+            margin-top 2em
