@@ -1,4 +1,11 @@
 <div class="search-container">
-    <div class="icon-search"></div>
-    <input type="text" class="input-search" [placeholder]="placeholder" />
+  <div class="icon-search"></div>
+  <input
+    spellcheck="false"
+    type="text"
+    class="input-search"
+    [placeholder]="placeholder"
+    #input
+    (keyup)="keyUpSearch(input.value)"
+  />
 </div>

@@ -1,17 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-engine',
   templateUrl: './search-engine.component.html',
-  styleUrls: ['./search-engine.component.styl']
+  styleUrls: ['./search-engine.component.styl'],
 })
-export class SearchEngineComponent implements OnInit {
+export class SearchEngineComponent {
+  @Input('placeholder') placeholder: string = '';
+  @Output() onSearchEvent : EventEmitter<string> = new EventEmitter<string>();
 
-  @Input('placeholder') placeholder : string = '';
-
-  constructor() { }
-
-  ngOnInit(): void {
+  keyUpSearch(value: string) {
+    this.onSearchEvent.emit(value);
   }
-
 }

@@ -6,7 +6,10 @@
     </div>
   </div>
   <div class="medium">
-    <app-search-engine placeholder="Buscar por tecnología o lenguaje..."></app-search-engine>
+    <app-search-engine
+     placeholder="Buscar por tecnología o lenguaje..." 
+     (onSearchEvent)="searchTechnology($event)" >
+    </app-search-engine>
   </div>
 </div>
 <div class="all-stack">
