@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CircleImageComponent implements OnInit {
   @Input('image') image: string;
   @Input('size-image') sizeImage: string;
+  @Input('is-featured') isFeatured : boolean = false;
   constructor() {}
 
   ngOnInit(): void {}

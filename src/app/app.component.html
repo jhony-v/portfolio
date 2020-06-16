@@ -1,10 +1,15 @@
 <div class="app">
-  <app-profile-name-compact></app-profile-name-compact>
   <nav class="app-nav-links">
+    <app-circle-image
+      image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmQJZXVMqfU4rgeHi_gT-yZV2BU4NocGJei8BBeiWZiqRn7cx5&usqp=CAU"
+      size-image="120"
+      [is-featured]="true"
+    ></app-circle-image>
     <app-list-links-navigator></app-list-links-navigator>
     <app-circle-current-page></app-circle-current-page>
   </nav>
   <section class="app-main">
+    <app-profile-name-compact></app-profile-name-compact>
     <router-outlet></router-outlet>
   </section>
 </div>
