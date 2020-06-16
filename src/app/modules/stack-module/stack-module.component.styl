@@ -1,8 +1,20 @@
+
+is-flex() 
+    display flex 
+    align-items center
+    justify-content center
+
 .search-container 
     padding-bottom 4em
+    is-flex()
     > .medium
         margin-left auto
         width 50%
+        .text-detail-container 
+            is-flex()
+            display inline-flex
+            * 
+                margin-right 10px
 
 .grid-cards 
     display grid 

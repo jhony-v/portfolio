@@ -17,4 +17,13 @@ export class StackModuleComponent implements OnInit {
   ngOnInit(): void {
     this.getStacks();
   }
+
+  get totalStackLength(): number {
+    let total: number = 0;
+    let stacks: StackCategory[] = this.allStacks;
+    for (let i in stacks) {
+      total += stacks[i].stacks.length;
+    }
+    return total;
+  }
 }
