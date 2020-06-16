@@ -1,11 +1,24 @@
+json("../../../json/colors.json")
+
 .card-language 
-    margin-right 25px
+    margin-top 2em
+    margin-bottom @margin-top
+    margin-right 40px
     transition .3s
+    background linear-gradient(45deg,primary,primaryAlternate)
+    box-shadow 0 4px 15px rgba(0,0,0,.05)
+    padding 10px
+    border-radius 10px
+    will-change transform
     &:hover
-        transform scale(.96)
-    .card-body-text     
+        transform scale(.92)
+    .card-body     
         width 200px
-        margin-top 3em
-        margin-bottom 10px
-        .text:first-child
-            margin-bottom 20px
+        display flex 
+        flex-direction column
+        .card-image 
+            display block
+        .card-detail
+            text-align center
+            .text:first-child
+                margin 15px auto
