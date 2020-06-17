@@ -1,6 +1,23 @@
-<app-card-point-history
-  title-text="Jhony vega"
-  detail-text="Soy Desarrollador de Software, especializado en tecnologías web. Me encanta la programación, investigar y aprender nuevas tecnologías a la par crear proyectos constantemente.
-Me considero autodidacta, persistente, con claridad de que los mejores resultados se trabajan en equipo. Así mismo me gusta dibujar, bailar y siempre busco hacer las cosas rápido e ir mejorando."
->
+<app-card-point-history *ngFor="let item of [1,2,3,4]" title-text="">
+  <div class="card-history">
+    <div class="card-image">
+      <app-circle-image
+        [image]="'https://source.unsplash.com/collection/101'+item+'/160x90'"
+        size-image="60"
+      ></app-circle-image>
+    </div>
+    <div class="card-detail">
+      <div class="row-m">
+        <app-text-base text="Como comencé" [is-weight]="true"></app-text-base>
+      </div>
+      <div class="row-m">
+        <app-text-base
+          text="Soy Desarrollador de Software, especializado en tecnologías web. Me encanta la programación, investigar y aprender nuevas tecnologías a la par crear proyectos constantemente. Me considero autodidacta, persistente, con claridad de que los mejores resultados se trabajan en equipo. Así mismo me gusta dibujar, bailar y siempre busc"
+          theme-color="smooth" text-size="small"></app-text-base>
+      </div>
+    </div>
+  </div>
 </app-card-point-history>
+<div class="to-right">
+  <app-button-base title="Siguiente..." (onClickEmiter)="navigateNext()"></app-button-base>
+</div>

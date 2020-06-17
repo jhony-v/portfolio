@@ -1,5 +1,5 @@
 <div class="card-point-history">
-  <div class="row title">
+  <div class="row title" *ngIf="titleText != ''">
     <app-text-base [text]="titleText" is-weight="{{ true }}"></app-text-base>
   </div>
   <div class="row detail">
