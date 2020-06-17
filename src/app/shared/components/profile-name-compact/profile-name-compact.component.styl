@@ -1,9 +1,16 @@
 json("../../../json/colors.json")
 
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap")
+
 .profile 
     margin 2em 0
+    animation appear-profile-name 1s 1
+    @keyframes appear-profile-name 
+        from 
+            transform translateX(100%)
     &-my-name 
-        background linear-gradient(60deg,primary,primaryAlternate)
+        font-family 'Muli', sans-serif
+        background linear-gradient(45deg,primary 50%,primaryAlternate 60%)
         -webkit-background-clip text
         -webkit-text-fill-color transparent
         // color black
@@ -11,8 +18,7 @@ json("../../../json/colors.json")
         text-transform uppercase
         letter-spacing 5px
         text-align right
-        .name-invert 
-            color inherit
+        letter-spacing 10px
     &-career
         margin-top 10px 
         text-align right
