@@ -1,0 +1,33 @@
+json("../../../json/colors.json")
+
+.project-card
+  display flex
+  flex-direction column
+  background light
+  box-shadow 0 10px 30px rgba(0,0,0,.1)
+  overflow hidden
+  border-radius 5px
+  &__image
+    width 100%
+    height 150px
+    object-fit cover
+    background rgb(0,0,0,.03)
+
+
+  .body
+    padding 20px
+    &__text
+      &--title
+        margin-top 10px
+        margin-bottom 10px
+  &__button
+    outline none
+    border-width 0
+    background primary
+    color light
+    display block
+    padding 8px
+    width 100%
+    margin-top 20px
+    border-radius 5px
+    font-size 12px
