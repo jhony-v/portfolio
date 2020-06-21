@@ -1,5 +1,5 @@
 {
-    "primary" : "rgb(100,20,250)",
-    "primaryAlternate" : "rgb(180,60,100)",
+    "primary" : "rgb(30,140,230)",
+    "primaryAlternate" : "blue",
     "light" : "white"
 }

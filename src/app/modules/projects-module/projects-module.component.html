@@ -1,3 +1,11 @@
+<div class="search-container">
+  <app-search-engine placeholder="Buscar un proyecto..." ></app-search-engine>
+</div>
 <div class="all-projects">
-
+  <app-project-card
+    *ngFor="let item of [1,2,3,5,6,5,6,7,8]"
+    image="https://cdn.pixabay.com/photo/2020/06/14/09/27/seagull-5297122__340.jpg"
+    title="Estudia en Cibertec"
+    detail="Estudia en Cibertec y accede a los convenios con Microsoft, IBM y Oracle ¡Asegura tu futuro aquí!"
+  ></app-project-card>
 </div>
