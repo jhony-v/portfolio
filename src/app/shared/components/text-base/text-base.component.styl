@@ -1,13 +1,13 @@
 json("../../../json/colors.json")
 
-.text-base 
+.text-base
     display: block
-.is-weight 
+.is-weight
     font-weight bold
 
 themeSize = {
     smallUltra : .7rem,
-    small: 0.9rem,
+    small: 0.8rem,
     normal: 1rem,
     regular: 1.1rem,
     big: 2rem
@@ -18,13 +18,13 @@ themeColors = {
     light : white,
 };
 
-for key, value in themeSize 
+for key, value in themeSize
     .{key}
         font-size: value
         line-height 1.3em
 
-for key, value in themeColors 
-    .{key} 
+for key, value in themeColors
+    .{key}
         color: value
 
 
