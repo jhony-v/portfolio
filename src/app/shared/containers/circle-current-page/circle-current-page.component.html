@@ -1,3 +1,6 @@
 <div class="circle-current-page">
-    <div class="circle" *ngFor="let item of [1,2,3,4,5]"></div>
+  <div
+    *ngFor="let item of allLinksRouters"
+    [class]="{ circle: true, active: item === currentRouter }"
+  ></div>
 </div>

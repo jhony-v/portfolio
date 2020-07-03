@@ -5,17 +5,18 @@ circle-default()
     height @width
     border-radius 100%
     border:1px solid light
+    transition .4s ease-in-out
 
 circle-active()
     background light
     border-color light
 
-.circle-current-page 
+.circle-current-page
     display flex
     justify-content space-between
     width 70%
     margin 30px auto
     .circle
         circle-default()
-        &:first-child
-            circle-active()
+        &.active
+          circle-active()
