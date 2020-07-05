@@ -1,4 +1,5 @@
 json("../../../json/colors.json")
+json("../../../json/sizes.json")
 
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap")
 
@@ -18,7 +19,8 @@ json("../../../json/colors.json")
         letter-spacing 5px
         text-align right
         letter-spacing 10px
-        font-weight normal
+        @media screen and (max-width : mediaTabletBig)
+          font-size 2em
     &-career
         margin-top 10px
         text-align right
