@@ -1,23 +1,27 @@
 json("../../../json/colors.json")
+json("../../../json/sizes.json")
 
 color-base = primaryAlternate
 
-.card-point-history 
+.card-point-history
     position relative
     border-left 1px solid color-base
     > .row
         padding 0 1em
         padding-left 1.5cm
-        &.title 
+        &.title
             margin-bottom 10px
-        &.detail 
+        &.detail
             padding-bottom 40px
+    @media screen and (max-width : mediaTabletBig)
+      > .row
+          padding-left 1.5em
 
-    &::before 
+    &::before
         content ""
         width 10px
         height @width
-        background linear-gradient(45 deg , color-base , primary 200%) 
+        background linear-gradient(45 deg , color-base , primary 200%)
         border-radius 100%
         position absolute
         transform translateX(-50%)
