@@ -1,25 +1,26 @@
 json("/json/colors.json")
-
+json("/json/sizes.json")
 
 set-flex(direction = row)
     display flex
     flex-direction direction
 
-.app 
+.app
     height 100%
     width 100%
     position relative
     display flex
     align-items stretch
-    
-    &-nav-links 
+
+    &-nav-links
         width 200px
         flex none
         background linear-gradient(60deg, primary , primaryAlternate)
-        justify-content flex-end 
+        justify-content flex-end
         padding 20px
+        transition .3s
         set-flex(column)
-    
+
     &-main
         width 100%
         background light
@@ -28,15 +29,30 @@ set-flex(direction = row)
         transition .3s
         &::-webkit-scrollbar
             width 7px
-            &:horizontal 
+            &:horizontal
                 display none
         &::-webkit-scrollbar-thumb
             background primaryAlternate
             border-radius 7px
         &::-webkit-scrollbar-button
             background transparent
+        @media screen and (max-width : mediaTabletBig)
+          &::-webkit-scrollbar
+            display none
 
-.to-right 
+    @media screen and (max-width : mediaTabletBig)
+      &-nav-links
+        position absolute
+        top 0
+        left 0
+        overflow-y auto
+        height 100%
+        z-index 100
+        visibility hidden
+      &-main
+        padding 0 1em
+
+.to-right
     display flex
     justify-content flex-end
     margin-bottom 20px
