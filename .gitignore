@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+/e2e
 
 # profiling files
 chrome-profiler-events*.json
@@ -22,7 +23,6 @@ speed-measure-plugin*.json
 *.launch
 .settings/
 *.sublime-workspace
-
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
