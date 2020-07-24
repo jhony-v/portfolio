@@ -1,6 +1,16 @@
+json("../../../json/sizes.json")
+
 .list-links-navigator
     margin-top auto
-    .links > * 
+    .links > *
         margin-top 2em
         margin-bottom @margin-top
         list-style-type none
+    @media screen and (max-width : mediaMobileBig)
+      .links
+        white-space nowrap
+        overflow-x auto
+        &::-webkit-scrollbar
+          display none
+        > *
+          display inline-block

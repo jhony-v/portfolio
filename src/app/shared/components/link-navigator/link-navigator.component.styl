@@ -1,6 +1,7 @@
 json("../../../json/colors.json")
+json("../../../json/sizes.json")
 
-.link-navigator 
+.link-navigator
     text-decoration none
     color light
     border-radius 10px
@@ -9,10 +10,12 @@ json("../../../json/colors.json")
     text-align center
     padding 10px
     transition .3s background
+    @media screen and (max-width : mediaMobileBig)
+      cursor default
 
-.link-navigator.router-link-active 
+.link-navigator.router-link-active
     background rgba(0,0,0,.3)
     animation selectable-animate .1s 1 ease-in
-    @keyframes selectable-animate 
-        from 
+    @keyframes selectable-animate
+        from
             transform scale(.5)

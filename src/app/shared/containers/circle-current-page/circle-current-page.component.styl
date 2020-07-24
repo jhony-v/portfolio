@@ -1,4 +1,5 @@
 json("../../../json/colors.json")
+json("../../../json/sizes.json")
 
 circle-default()
     width 10px
@@ -20,3 +21,5 @@ circle-active()
         circle-default()
         &.active
           circle-active()
+    @media screen and (max-width : mediaMobileBig)
+     margin 0 auto
