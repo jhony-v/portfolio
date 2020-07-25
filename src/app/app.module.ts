@@ -23,6 +23,7 @@ import { FluidCardInformationComponent } from './shared/components/fluid-card-in
 import { SearchEngineComponent } from './shared/components/search-engine/search-engine.component';
 import { AnimatableFadeFromBottomComponent } from './shared/components/animatable-fade-from-bottom/animatable-fade-from-bottom.component';
 import { ProjectCardComponent } from './shared/components/project-card/project-card.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ProjectCardComponent } from './shared/components/project-card/project-c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
