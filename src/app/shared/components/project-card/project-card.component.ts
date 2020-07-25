@@ -10,6 +10,8 @@ export class ProjectCardComponent implements OnInit {
   @Input('image') image : string;
   @Input('title') title : string;
   @Input('detail') detail : string;
+  @Input('href') href : string;
+  @Input('language') language : string;
 
   constructor() { }
 
