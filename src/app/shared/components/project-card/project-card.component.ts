@@ -12,6 +12,7 @@ export class ProjectCardComponent implements OnInit {
   @Input('detail') detail : string;
   @Input('href') href : string;
   @Input('language') language : string;
+  @Input('created') created : string;
 
   constructor() { }
 
