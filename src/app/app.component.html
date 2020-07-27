@@ -1,10 +1,8 @@
 <div class="app">
   <nav class="app-nav-links">
-    <app-circle-image
-      [image]="profileImage"
-      size-image="120"
-      [is-featured]="true"
-    ></app-circle-image>
+    <div class="container-image-profile">
+      <app-circle-image [image]="profileImage" size-image="120" [is-featured]="true" ></app-circle-image>
+    </div>
     <app-list-links-navigator></app-list-links-navigator>
     <app-circle-current-page></app-circle-current-page>
   </nav>

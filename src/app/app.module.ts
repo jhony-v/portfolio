@@ -10,7 +10,6 @@ import { ProfileNameCompactComponent } from './shared/components/profile-name-co
 import { LinkNavigatorComponent } from './shared/components/link-navigator/link-navigator.component';
 import { ListLinksNavigatorComponent } from './shared/containers/list-links-navigator/list-links-navigator.component';
 import { HomeModuleComponent } from './modules/home-module/home-module.component';
-import { HistoryModuleComponent } from './modules/history-module/history-module.component';
 import { DedicateModuleComponent } from './modules/dedicate-module/dedicate-module.component';
 import { StackModuleComponent } from './modules/stack-module/stack-module.component';
 import { ProjectsModuleComponent } from './modules/projects-module/projects-module.component';
@@ -35,7 +34,6 @@ import { HttpClientModule } from "@angular/common/http";
     LinkNavigatorComponent,
     ListLinksNavigatorComponent,
     HomeModuleComponent,
-    HistoryModuleComponent,
     DedicateModuleComponent,
     StackModuleComponent,
     ProjectsModuleComponent,
