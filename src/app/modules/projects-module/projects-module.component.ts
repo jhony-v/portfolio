@@ -19,11 +19,13 @@ interface ProjectRepository {
 export class ProjectsModuleComponent implements OnInit {
 
   projects : ProjectRepository[] = [];
-
+  loading : boolean = false;
   constructor(private http : HttpClient) { }
 
   ngOnInit(): void {
+    this.loading = true;
     this.http.get("https://api.github.com/users/jhony-24/repos").subscribe((e : ProjectRepository[]) => {
+      this.loading = false;
       this.projects = e;
     });
   }
