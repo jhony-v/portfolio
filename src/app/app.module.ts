@@ -23,6 +23,7 @@ import { SearchEngineComponent } from './shared/components/search-engine/search-
 import { AnimatableFadeFromBottomComponent } from './shared/components/animatable-fade-from-bottom/animatable-fade-from-bottom.component';
 import { ProjectCardComponent } from './shared/components/project-card/project-card.component';
 import { HttpClientModule } from "@angular/common/http";
+import { SpinnerLoadingComponent } from './shared/components/spinner-loading/spinner-loading.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { HttpClientModule } from "@angular/common/http";
     FluidCardInformationComponent,
     SearchEngineComponent,
     AnimatableFadeFromBottomComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    SpinnerLoadingComponent
   ],
   imports: [
     BrowserModule,

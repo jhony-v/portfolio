@@ -1,0 +1,15 @@
+json("../../../json/colors.json");
+
+size-loader = 40px
+.spinner-loading
+  width size-loader
+  height size-loader
+  border 3px solid transparent
+  border-left-color primaryAlternate
+  border-top-color @border-left-color
+  border-radius 100%
+  margin auto
+  animation spinner-loading .35s infinite linear
+  @keyframes spinner-loading
+    from
+      transform rotate(360deg)
