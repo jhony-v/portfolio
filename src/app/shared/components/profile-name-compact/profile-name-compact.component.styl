@@ -4,26 +4,27 @@ json("../../../json/sizes.json")
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap")
 
 .profile
-    margin 2em 0
+    margin 2em 0 5em
     animation appear-profile-name 1s 1
     @keyframes appear-profile-name
         from
             transform translateX(100%)
     &-my-name
-        font-family 'Muli', sans-serif
-        background linear-gradient(45deg,primary 50%,primaryAlternate 60%)
-        -webkit-background-clip text
-        -webkit-text-fill-color transparent
-        font-size 3em
+        font-size 1.5em
+        font-weight bold
         text-transform uppercase
-        letter-spacing 5px
-        text-align right
-        letter-spacing 10px
+        text-align center
+        .clip
+          width 10px
+          height @width
+          border-radius 100%
+          background primaryAlternate
+          display inline-block
         @media screen and (max-width : mediaTabletBig)
           font-size 2em
     &-career
         margin-top 10px
-        text-align right
+        text-align center
     @media screen and (max-width:mediaMobileBig)
       &-my-name, &-career
         font-size 1.5em !important
