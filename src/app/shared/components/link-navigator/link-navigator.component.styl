@@ -3,19 +3,29 @@ json("../../../json/sizes.json")
 
 .link-navigator
     text-decoration none
-    color light
+    color smooth
     border-radius 10px
     font-size .8rem
     display block
-    text-align center
     padding 10px
+    position relative
     transition .3s background
     @media screen and (max-width : mediaMobileBig)
       cursor default
 
+
 .link-navigator.router-link-active
-    background rgba(0,0,0,.3)
+    background primaryAlternate
+    color light
     animation selectable-animate .1s 1 ease-in
+    &::before
+      content ""
+      background white
+      width 8px
+      height @width
+      position absolute
+      right 10px
+      border-radius 100%
     @keyframes selectable-animate
         from
             transform scale(.5)
