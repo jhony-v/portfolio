@@ -5,6 +5,8 @@ export interface LinkContact {
   link : string;
   name : string;
   image : string;
+  icon : string;
+  background : string;
 }
 
 @Injectable({

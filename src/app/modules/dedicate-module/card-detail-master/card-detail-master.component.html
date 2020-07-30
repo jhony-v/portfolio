@@ -6,7 +6,7 @@
     <div class="card-row">
       <app-text-base text-size="small" theme-color="light" [text]="description" ></app-text-base>
     </div>
-    <div class="card-row card-row__footer-button">
+    <div class="card-row card-row__footer-button" *ngIf="link">
       <app-button-base title="Ver más" [dark]="true" ></app-button-base>
     </div>
   </div>

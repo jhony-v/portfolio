@@ -1,14 +1,11 @@
 json("../../../json/colors.json")
 json("../../../json/sizes.json")
 
-color-base = primaryAlternate
-
 .card-point-history
     position relative
-    border-left 1px solid color-base
     > .row
         padding 0 1em
-        padding-left 1.5cm
+        padding-left .5cm
         &.title
             margin-bottom 10px
         &.detail
@@ -21,7 +18,7 @@ color-base = primaryAlternate
         content ""
         width 10px
         height @width
-        background linear-gradient(45 deg , color-base , primary 200%)
+        background primaryThird
         border-radius 100%
         position absolute
         transform translateX(-50%)

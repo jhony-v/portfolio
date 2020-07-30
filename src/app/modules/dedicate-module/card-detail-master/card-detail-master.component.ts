@@ -11,6 +11,7 @@ export class CardDetailMasterComponent implements OnInit {
   @Input('description') description : string;
   @Input('background') background : string;
   @Input('icon') icon : string;
+  @Input('link') link : string = null;
   constructor() { }
 
   ngOnInit(): void {

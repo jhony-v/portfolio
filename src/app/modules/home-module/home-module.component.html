@@ -43,14 +43,16 @@
   >
     <div class="links">
       <div class="contact-list">
-        <a *ngFor="let item of allLinksContact" [href]="item.link" target="_black" class="card-row">
-            <app-circle-image [image]="item.image" size-image="30" ></app-circle-image>
-            <app-text-base [text]="item.name" theme-color="smooth" text-size="small"></app-text-base>
-        </a>
+        <app-card-detail-master
+        *ngFor="let item of allLinksContact"
+        [title]="item.name"
+        [background]="item.background"
+        [icon]="item.icon"
+        ></app-card-detail-master>
       </div>
-    </div>
+  </div>
   </app-card-point-history>
 </div>
 <div class="to-right">
-  <app-button-base title="Siguiente..." (onClickEmiter)="navigateNext()"></app-button-base>
+  <app-button-base title="Siguiente..." (onClickEmiter)="navigateNext()" [dark]="true"></app-button-base>
 </div>
