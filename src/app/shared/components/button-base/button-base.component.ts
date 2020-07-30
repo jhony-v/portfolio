@@ -9,6 +9,7 @@ export class ButtonBaseComponent implements OnInit {
 
   @Input('title') title : string;
   @Input('primary') primary : boolean;
+  @Input('dark') dark : boolean;
   @Output() onClickEmiter : EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }

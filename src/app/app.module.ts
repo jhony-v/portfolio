@@ -24,6 +24,7 @@ import { AnimatableFadeFromBottomComponent } from './shared/components/animatabl
 import { ProjectCardComponent } from './shared/components/project-card/project-card.component';
 import { HttpClientModule } from "@angular/common/http";
 import { SpinnerLoadingComponent } from './shared/components/spinner-loading/spinner-loading.component';
+import { CardDetailMasterComponent } from './modules/dedicate-module/card-detail-master/card-detail-master.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { SpinnerLoadingComponent } from './shared/components/spinner-loading/spi
     SearchEngineComponent,
     AnimatableFadeFromBottomComponent,
     ProjectCardComponent,
-    SpinnerLoadingComponent
+    SpinnerLoadingComponent,
+    CardDetailMasterComponent
   ],
   imports: [
     BrowserModule,

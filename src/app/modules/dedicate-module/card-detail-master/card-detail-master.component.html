@@ -1,0 +1,18 @@
+<div class="card-detail" [ngStyle]="{background:background}">
+  <div class="card-col">
+    <div class="card-row">
+      <app-text-base text-size="regular" theme-color="light" [text]="title" ></app-text-base>
+    </div>
+    <div class="card-row">
+      <app-text-base text-size="small" theme-color="light" [text]="description" ></app-text-base>
+    </div>
+    <div class="card-row card-row__footer-button">
+      <app-button-base title="Ver más" [dark]="true" ></app-button-base>
+    </div>
+  </div>
+  <div class="card-col">
+    <div class="card-icon">
+      <i class="material-icons">{{icon}}</i>
+    </div>
+  </div>
+</div>
