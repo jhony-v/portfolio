@@ -1,6 +1,7 @@
 {
     "primary" : "#29b6f6",
     "primaryAlternate" : "#ff5252",
+    "primaryThird" : "#ba68c8",
     "light" : "white",
     "dark" : "rgb(30,30,30)",
     "smooth" : "gray"
