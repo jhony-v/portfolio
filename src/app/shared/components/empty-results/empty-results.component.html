@@ -1,0 +1,19 @@
+<div class="empty">
+  <div class="text">
+    <img
+    src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/instat_analysis_ajld.svg"
+    alt=""
+    width="250px"/>
+  </div>
+  <div class="text text-top-margin">
+    <app-text-base [text]="'No se encontraron resultados para'+textEmpty" theme-color="smooth" text-size="small" >
+    </app-text-base>
+  </div>
+  <div class="text">
+    <app-text-base text="Ups! Sin resultados Algunos" text-size="big">
+    </app-text-base>
+  </div>
+  <div class="text text-top-margin">
+    <app-button-base (onClickEmiter)="onClick()" title="cancelar" [primary]="true"></app-button-base>
+  </div>
+</div>

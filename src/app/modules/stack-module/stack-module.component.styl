@@ -1,31 +1,22 @@
 
-is-flex() 
-    display flex 
+is-flex()
+    display flex
     align-items center
     justify-content center
 
-.search-container 
+.search-container
     padding-bottom 4em
     is-flex()
     > .medium
         margin-left auto
         width 50%
-        .text-detail-container 
+        .text-detail-container
             is-flex()
             display inline-flex
             margin-right 10px
-            * 
+            *
                 margin-right 10px
 
-.grid-cards 
-    display grid 
+.grid-cards
+    display grid
     grid-template-columns repeat(4,1fr)
-
-
-.empty
-    > .text 
-        margin 10px 0
-        display flex 
-        justify-content center
-        &.text-top-margin
-            margin-top 2em
