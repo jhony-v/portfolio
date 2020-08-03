@@ -4,15 +4,25 @@
 
 <app-spinner-loading *ngIf="loading; else elseComplete"></app-spinner-loading>
 <ng-template #elseComplete>
-  <div class="all-projects">
-      <app-project-card
-        *ngFor="let item of projects"
-        image="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-        [title]="item.name"
-        [detail]="item.description"
-        [href]="item.html_url"
-        [language]="item.language"
-        [created]="item.created_at"
-      ></app-project-card>
-    </div>
+  <ng-container *ngIf="projects.length !== 0;then repositories else empty"></ng-container>
 </ng-template>
+
+<ng-template #repositories>
+  <div class="all-projects">
+    <app-project-card
+      *ngFor="let item of projects"
+      image="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+      [title]="item.name"
+      [detail]="item.description"
+      [href]="item.html_url"
+      [language]="item.language"
+      [created]="item.created_at"
+    ></app-project-card>
+  </div>
+</ng-template>
+
+<ng-template #empty>
+  <app-empty-results text-empty="tu busqueda" (onClickEmiter)="onCancel()"></app-empty-results>
+</ng-template>
+
+

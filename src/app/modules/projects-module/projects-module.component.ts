@@ -13,6 +13,10 @@ export class ProjectsModuleComponent implements OnInit {
   constructor(private userGithub: UserProfileService) {}
 
   ngOnInit(): void {
+    this.getRepositories();
+  }
+
+  getRepositories() {
     this.loading = true;
     this.userGithub.getUserRepositories().subscribe(repositores => {
       this.loading = false;
@@ -24,5 +28,9 @@ export class ProjectsModuleComponent implements OnInit {
     this.userGithub.getUserRepositories().subscribe( repositories => {
       this.projects = repositories.filter(({name})=>name.toLowerCase().includes(value.toLowerCase()));
     });
+  }
+
+  onCancel() {
+    this.getRepositories();
   }
 }
