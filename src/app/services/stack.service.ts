@@ -1,16 +1,6 @@
 import { Injectable } from '@angular/core';
 import stack from '../json/stack.json';
-
-export interface Stacks {
-  image: string;
-  name: string;
-  detail: string;
-}
-
-export interface StackCategory {
-  category: string;
-  stacks: Stacks[];
-}
+import { StackCategory } from '../@types/interfaces';
 
 @Injectable({
   providedIn: 'root',

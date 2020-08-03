@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { UserProfileService } from './services/user-profile.service';
 
 interface ImageFromRepository {
   avatar_url : string;
@@ -16,12 +17,12 @@ export class AppComponent implements OnInit {
   title = 'portfolio-jhony';
   profileImage : string = '';
 
-  constructor(private http : HttpClient) {}
+  constructor(private userGithub : UserProfileService) {}
 
   ngOnInit() {
-    this.http.get("https://api.github.com/users/jhony-24").subscribe(( e : ImageFromRepository ) => {
-      this.profileImage = e.avatar_url;
-  });
+      this.userGithub.getUserGithub().subscribe((e) => {
+        this.profileImage = e.avatar_url;
+      });
   }
 
 }

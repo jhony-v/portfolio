@@ -1,33 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-
-interface ProjectRepository {
-  html_url : string;
-  name : string;
-  description: string;
-  created_at : string;
-  language : string;
-}
-
+import { ProjectRepository } from 'src/app/@types/interfaces';
+import { UserProfileService } from 'src/app/services/user-profile.service';
 
 @Component({
   selector: 'app-projects-module',
   templateUrl: './projects-module.component.html',
-  styleUrls: ['./projects-module.component.styl']
+  styleUrls: ['./projects-module.component.styl'],
 })
 export class ProjectsModuleComponent implements OnInit {
-
-  projects : ProjectRepository[] = [];
-  loading : boolean = false;
-  constructor(private http : HttpClient) { }
+  projects: ProjectRepository[] = [];
+  loading: boolean = false;
+  constructor(private userGithub: UserProfileService) {}
 
   ngOnInit(): void {
     this.loading = true;
-    this.http.get("https://api.github.com/users/jhony-24/repos").subscribe((e : ProjectRepository[]) => {
+    this.userGithub.getUserRepositories().subscribe(repositores => {
       this.loading = false;
-      this.projects = e;
+      this.projects = repositores;
     });
   }
 
+  searchRepositories(value: string) {
+    this.userGithub.getUserRepositories().subscribe( repositories => {
+      this.projects = repositories.filter(({name})=>name.toLowerCase().includes(value.toLowerCase()));
+    });
+  }
 }

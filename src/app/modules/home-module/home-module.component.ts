@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ContactLinkService, LinkContact } from 'src/app/services/contact-link.service';
+import { ContactLinkService } from 'src/app/services/contact-link.service';
+import { LinkContact } from 'src/app/@types/interfaces';
 
 @Component({
   selector: 'app-home-module',
@@ -12,7 +13,7 @@ export class HomeModuleComponent implements OnInit {
 
   allLinksContact : LinkContact[];
 
-  constructor( private router : Router,private contacts : ContactLinkService) { 
+  constructor( private router : Router,private contacts : ContactLinkService) {
   }
 
   ngOnInit(): void {

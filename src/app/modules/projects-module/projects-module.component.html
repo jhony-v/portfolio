@@ -1,5 +1,5 @@
 <div class="search-container">
-  <app-search-engine placeholder="Buscar un proyecto..."></app-search-engine>
+  <app-search-engine placeholder="Buscar un proyecto..." (onSearchEvent)="searchRepositories($event)"></app-search-engine>
 </div>
 
 <app-spinner-loading *ngIf="loading; else elseComplete"></app-spinner-loading>

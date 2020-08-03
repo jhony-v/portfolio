@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { StackService, StackCategory } from 'src/app/services/stack.service';
+import { StackService } from 'src/app/services/stack.service';
+import { StackCategory } from 'src/app/@types/interfaces';
 
 @Component({
   selector: 'app-stack-module',
