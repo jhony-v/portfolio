@@ -1,6 +1,5 @@
 <div class="search-container">
-
-  <div class="medium">
+  <div class="medium medium--totals">
     <div class="text-detail-container">
       <app-text-base [text]="totalStackLength" text-size="big"></app-text-base>
       <app-text-base text="tecnologías usadas" theme-color="smooth" text-size="small"></app-text-base>
@@ -10,13 +9,11 @@
       <app-text-base text="Resultados de busqueda" theme-color="smooth" text-size="small"></app-text-base>
     </div>
   </div>
-
   <div class="medium">
     <app-search-engine
      placeholder="Buscar por alguna tecnología..." (onSearchEvent)="searchTechnology($event)" >
     </app-search-engine>
   </div>
-
 </div>
 
 <ng-container *ngIf="totalStacksFiltered != 0;then showStacks else emptyStacks"></ng-container>
