@@ -1,3 +1,5 @@
+json("../../json/sizes.json");
+
 .container-dedicate
   &__title
     margin-bottom 1em
@@ -6,3 +8,5 @@
     display grid
     grid-template-columns repeat(3,1fr)
     gap 20px
+    @media screen and (max-width mediaTabletSmall), (min-width mediaTabletBig) and (max-width mediaDesktopMedium)
+      grid-template-columns 1fr

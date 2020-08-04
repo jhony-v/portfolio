@@ -21,7 +21,7 @@ export class HomeModuleComponent implements OnInit {
   }
 
   navigateNext() {
-    this.router.navigate(['/history']);
+    this.router.navigate(['/dedicate']);
   }
 
 }
