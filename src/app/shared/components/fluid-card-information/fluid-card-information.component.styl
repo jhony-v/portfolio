@@ -1,19 +1,26 @@
 json("../../../json/colors.json")
+json("../../../json/sizes.json")
 
-.card 
+.card
     background light
     display flex
     align-items center
     padding 20px
     transition background .3s ease-out
-    &:hover 
+    &:hover
         background rgba(0,0,0,.02)
         cursor pointer
         border-radius 10px
-    .row 
-        .text 
+    .row
+        .text
             margin-bottom 2px
-        &.image-row 
+        &.image-row
             margin-right 10px
-        
-    
+    @media (max-width mediaMobileBig)
+      flex-direction column
+      text-align center
+      .image-row
+       margin-right 0
+       margin-bottom 5px
+
+
