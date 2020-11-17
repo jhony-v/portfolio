@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --output-path=docs --base-href=\"https://github.com/jhony-24/portfolio/\"",
+    "build": "ng build --prod --output-path=docs --base-href=\"https://jhony-24.github.io/portfolio/\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
