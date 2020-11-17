@@ -17,7 +17,7 @@ export class ListLinksNavigatorComponent implements OnInit {
     this.linksNavigator = [
       { href: '/home', text: 'Quien soy' },
       { href: '/dedicate', text: 'Que hago' },
-      { href: '/stack', text: 'Stack tecnologico' },
+      { href: '/stack', text: 'Stack tecnológico' },
       { href: '/projects', text: 'Proyectos' },
     ];
   }

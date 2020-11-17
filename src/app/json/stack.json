@@ -3,9 +3,24 @@
     "category": "Frontend",
     "stacks": [
       {
+        "image": "https://pluspng.com/img-png/logo-javascript-png-file-javascript-logo-png-1052.png",
+        "name": "Javascript",
+        "detail": "lenguaje"
+      },
+      {
         "image": "https://www.pinclipart.com/picdir/middle/207-2071102_es7-snippets-react-native-icon-png-clipart.png",
         "name": "React",
         "detail": "librería"
+      },
+      {
+        "image" : "data:image/png;base64,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",
+        "name" : "Typescript",
+        "detail" : "lenguaje"
+      },
+      {
+        "image": "https://octocourses.com/static/7bcadc9ec2ba0513c32383ea8ff863c7/630fb/framer-motion.png",
+        "name": "Framer motion",
+        "detail": "librería, animaciones"
       },
       {
         "image": "https://cdn.iconscout.com/icon/free/png-256/redux-283024.png",
@@ -13,9 +28,19 @@
         "detail": "librería"
       },
       {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQx_cUhH2jYai4HoUHXGsAEi49rifYNXA66yxNIf16ULncqj1XT&usqp=CAU",
-        "name": "Angular",
-        "detail": "framework"
+        "image": "https://miro.medium.com/max/318/1*7jRD5QhgARucFKvRHFxpOg.png",
+        "name": "Styled Components",
+        "detail": "librería"
+      },
+      {
+        "image" : "https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png",
+        "name" : "Jest",
+        "detail" : "testing"
+      },
+            {
+        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/600px-GraphQL_Logo.svg.png",
+        "name" : "GraphQL",
+        "detail" : "lenguaje"
       },
       {
         "image": "https://www.kindpng.com/picc/m/476-4768417_vue-js-logo-vue-js-icon-svg-hd.png",
@@ -43,24 +68,9 @@
         "detail" : "librería"
       },
       {
-        "image": "https://miro.medium.com/max/318/1*7jRD5QhgARucFKvRHFxpOg.png",
-        "name": "Styled Components",
-        "detail": "librería"
-      },
-      {
         "image": "https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/html5-512.png",
         "name": "HTML5",
         "detail": "lenguaje de marcado"
-      },
-      {
-        "image": "https://pluspng.com/img-png/logo-javascript-png-file-javascript-logo-png-1052.png",
-        "name": "Javascript",
-        "detail": "lenguaje"
-      },
-      {
-        "image": "https://octocourses.com/static/7bcadc9ec2ba0513c32383ea8ff863c7/630fb/framer-motion.png",
-        "name": "Framer motion",
-        "detail": "librería, animaciones"
       },
       {
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRq-vWjeKanp6V__aJAq2WuEpnSaX6_rE4WbdgFkKtZIVKRdxZY&usqp=CAU",
@@ -78,9 +88,9 @@
         "detail" : "librería"
       },
       {
-        "image" : "https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png",
-        "name" : "Jest",
-        "detail" : "testing"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQx_cUhH2jYai4HoUHXGsAEi49rifYNXA66yxNIf16ULncqj1XT&usqp=CAU",
+        "name": "Angular",
+        "detail": "framework"
       }
     ]
   },
@@ -108,11 +118,6 @@
         "detail": "framework"
       },
       {
-        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/600px-GraphQL_Logo.svg.png",
-        "name" : "GraphQL",
-        "detail" : "lenguaje"
-      },
-      {
         "image" : "https://spectrum.imgix.net/communities/9cb9c2e4-1d80-4f03-8857-c83ae6d246b2/d419fe8c-0094-4683-b737-0083cb31d60f-Spectrum-Logo.png?w=256&h=256&dpr=2&auto=compress&expires=1587427200000&ixlib=js-1.3.0&s=19bf6889c4bdd404a135e6b2672d6122",
         "name" : "Apollo",
         "detail" : "framework"
@@ -120,11 +125,6 @@
       {
         "image": "https://www.designbust.com/download/168/png/laravel_icon512.png",
         "name": "Laravel",
-        "detail": "framework"
-      },
-      {
-        "image": "data:image/png;base64,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",
-        "name": "Codeigniter",
         "detail": "framework"
       },
       {
@@ -158,13 +158,8 @@
         "detail": "no relacional, caché"
       },
       {
-        "image": "https://w7.pngwing.com/pngs/338/123/png-transparent-microsoft-sql-server-sql-server-management-studio-database-transact-sql-microsoft-angle-white-text.png",
-        "name": "Sql Server",
-        "detail": "relacional"
-      },
-      {
         "image": "https://greenido.files.wordpress.com/2012/05/screen-shot-2012-05-15-at-3-13-59-pm.png",
-        "name": "IndexedDb",
+        "name": "IndexedDb - Cliente",
         "detail": "no relacional, caché"
       }
     ]
