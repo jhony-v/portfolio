@@ -21,10 +21,12 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.1.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.5",
+    "gh-pages": "^3.1.0",
     "prettier": "2.2.1",
     "tailwindcss": "^2.0.2"
   },
@@ -39,7 +41,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",

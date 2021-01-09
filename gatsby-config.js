@@ -1,10 +1,11 @@
 const path = require('path');
 
 module.exports = {
+  pathPrefix : "/portfolio",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Jhony Vega - Portfolio`,
+    description: `Frontend Developer, working main in React , Vue and Testing libraries to improve the websites and create new features`,
+    author: `Jhony Vega`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -37,7 +38,8 @@ module.exports = {
         common : path.resolve(__dirname,"src/components/common"),
         layouts : path.resolve(__dirname,"src/components/layouts"),
         views : path.resolve(__dirname,"src/views"),
-        config : path.resolve(__dirname,"src/config")
+        config : path.resolve(__dirname,"src/config"),
+        assets : path.resolve(__dirname,"src/assets"),
       }
     }
   ],

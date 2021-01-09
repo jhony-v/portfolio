@@ -1,9 +1,11 @@
+import WrapperRootNavigation from "layouts/WrapperRootNavigation"
 import React from "react"
+import IndexView from "views/IndexView"
 
 const IndexPage = () => (
-    <div>
-        hola
-    </div>
+  <WrapperRootNavigation>
+    <IndexView />
+  </WrapperRootNavigation>
 )
 
 export default IndexPage

@@ -5,8 +5,7 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    colors : {
-    }
+    extends : {}
   },
   variants: {
     extend: {},
