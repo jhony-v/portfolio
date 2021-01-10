@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import figure_dotted from "assets/figure_dotted.png"
 import { FaLinkedinIn, FaGoogle, FaTwitter, FaDev } from "react-icons/fa"
 
 const AboutWrapper = styled.div`

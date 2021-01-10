@@ -13,7 +13,7 @@ const BannerWrapper = styled.div`
   align-items: center;
   clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 90%);
   & > .left {
-    background-color: #e9eef9;
+    background-color: #f1f4fa;
     width: 80%;
     height: 100%;
   }

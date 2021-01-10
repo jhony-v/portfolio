@@ -2,7 +2,8 @@
   "colorize.languages": [
     "css",
     "postcss",
-    "typescript"
+    "typescript",
+    "javascript"
   ],
   "tailwindCSS.includeLanguages": {
       "plaintext" : "typescript"
