@@ -8,7 +8,7 @@ const HeaderWrapper = styled.header`
   background-color: transparent;
   position:fixed;
   width:100%;
-  z-index:100;
+  z-index:50;
 `
 
 const LiItemNavigation = ({ to, text }) => (

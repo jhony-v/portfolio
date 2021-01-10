@@ -2,12 +2,13 @@
     "compilerOptions": {
         "baseUrl": "./src",
         "paths": {
-            "common/*" : ["src/components/common"],  
-            "layouts/*" : ["src/components/layouts"],  
-            "views/*" : ["src/views"],  
-            "config/*" : ["src/config"],  
-            "assets/*" : ["src/assets"],  
+            "common/*" : ["components/common/*"],  
+            "layouts/*" : ["components/layouts/*"],  
+            "views/*" : ["views/*"],  
+            "config/*" : ["config/*"],  
+            "assets/*" : ["assets/*"],  
         },
         "jsx": "react"
-    }
+    },
+    "include": ["src/**/*"]
 }

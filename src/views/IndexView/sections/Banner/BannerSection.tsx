@@ -1,8 +1,11 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import profile from "assets/profile.png"
 import figure_dotted from "assets/figure_dotted.png"
 import stylePosition, { PositionProps } from "common/StyledSystem/stylePosition"
+import { Transition } from "react-spring/renderprops"
+import { FaRegObjectUngroup } from "react-icons/fa"
+import TextTranslateYAnimation from "./animations/TextTranslateYAnimation"
 
 const BannerWrapper = styled.div`
   width: 100%;
@@ -24,9 +27,9 @@ const BannerWrapper = styled.div`
   }
 `
 
-const TitleCareer = styled.div`
+const TitleCareer = styled.h2`
   position: relative;
-  text-shadow:0 20px 30px rgba(100,100,100,.2);
+  text-shadow: 0 20px 30px rgba(100, 100, 100, 0.2);
   &::after {
     content: "";
     position: absolute;
@@ -39,32 +42,33 @@ const TitleCareer = styled.div`
 `
 
 const ImageWrapper = styled.img<PositionProps>`
-    ${stylePosition};
+  ${stylePosition};
 `
 
 const BannerImageWrapper = styled.div`
-    position:relative;
-    margin-left:-160px;
-    transform-style:preserve-3d;
-    transform:perspective(400px)rotateY(-10deg);
+  position: relative;
+  margin-left: -160px;
+  transform-style: preserve-3d;
+  transform: perspective(400px) rotateY(-10deg);
 `
 
 const SquareBackgroundImageWrapper = styled.div<PositionProps>`
-    background-color:#7440E2;
-    width:180px;
-    height:260px;
-    ${stylePosition};
+  background-color: #7440e2;
+  width: 180px;
+  height: 260px;
+  ${stylePosition};
 `
-
 
 const BannerSection = () => {
   return (
     <BannerWrapper>
       <div className="left flex items-center justify-center">
         <div className="pl-20">
-          <h1 className="text-black text-4xl font-bold ">I'm Jhony Vega</h1>
-          <TitleCareer className="mb-12 mt-2 text-blue-900 text-6xl font-bold ">
-            Frontend Developer
+          <h1 className="text-black text-4xl font-bold flex">
+            <TextTranslateYAnimation trail={70} text="I'm Jhony Vega" />
+          </h1>
+          <TitleCareer className="mb-12 mt-2 text-blue-900 text-6xl font-bold flex">
+            <TextTranslateYAnimation trail={20} text="Frontend Developer" />
           </TitleCareer>
           <p className="text-gray-400 w-6/12">
             Frontend Developer, working main in React , Vue and Testing
@@ -74,9 +78,24 @@ const BannerSection = () => {
       </div>
       <div className="right flex items-center relative">
         <BannerImageWrapper>
-          <ImageWrapper src={figure_dotted} width="160" className="absolute transform rotate-90" left="-75px" top="-10px" />
-          <SquareBackgroundImageWrapper className="z-10 absolute"  left="-80px" bottom="-60px" />
-          <ImageWrapper src={profile} width="220" height="270" className="z-10 relative object-cover" />
+          <ImageWrapper
+            src={figure_dotted}
+            width="160"
+            className="absolute transform rotate-90"
+            left="-75px"
+            top="-10px"
+          />
+          <SquareBackgroundImageWrapper
+            className="z-10 absolute"
+            left="-80px"
+            bottom="-60px"
+          />
+          <ImageWrapper
+            src={profile}
+            width="220"
+            height="270"
+            className="z-10 relative object-cover"
+          />
         </BannerImageWrapper>
       </div>
     </BannerWrapper>

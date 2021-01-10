@@ -1,16 +1,16 @@
-import React from 'react'
-import GitHubLinkToRepository from './components/GitHubLinkToRepository'
-import AboutSection from './sections/AboutSection'
-import BannerSection from './sections/BannerSection'
-import MainTechnologiesSection from './sections/MainTechnologiesSection'
+import React from "react"
+import GitHubLinkToRepository from "./components/GitHubLinkToRepository"
+import AboutSection from './sections/About/AboutSection'
+import BannerSection from "./sections/Banner/BannerSection"
+import MainTechnologiesSection from "./sections/MainTechnologies/MainTechnologiesSection"
 
 const IndexView = () => {
   return (
     <div className="index-view">
-      <GitHubLinkToRepository/>
-      <BannerSection/>
+      <GitHubLinkToRepository />
+      <BannerSection />
       <AboutSection/>
-      <MainTechnologiesSection/>
+      <MainTechnologiesSection />
     </div>
   )
 }
