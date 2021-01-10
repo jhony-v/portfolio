@@ -5,3 +5,7 @@
 :root {
     --height-navigation:60px;
 }
+
+#___gatsby {
+    overflow-x: hidden;
+}

@@ -5,6 +5,7 @@
             "common/*" : ["components/common/*"],  
             "layouts/*" : ["components/layouts/*"],  
             "views/*" : ["views/*"],  
+            "hooks/*" : ["hooks/*"],  
             "config/*" : ["config/*"],  
             "assets/*" : ["assets/*"],  
         },

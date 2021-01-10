@@ -40,6 +40,7 @@ module.exports = {
         views : path.resolve(__dirname,"src/views"),
         config : path.resolve(__dirname,"src/config"),
         assets : path.resolve(__dirname,"src/assets"),
+        hooks : path.resolve(__dirname,"src/hooks"),
       }
     }
   ],

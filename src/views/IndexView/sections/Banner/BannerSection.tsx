@@ -1,11 +1,16 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import profile from "assets/profile.png"
 import figure_dotted from "assets/figure_dotted.png"
 import stylePosition, { PositionProps } from "common/StyledSystem/stylePosition"
-import { Transition } from "react-spring/renderprops"
-import { FaRegObjectUngroup } from "react-icons/fa"
-import TextTranslateYAnimation from "./animations/TextTranslateYAnimation"
+import useBannerScrollAnimation from "./hooks/useBannerScrollAnimation"
+
+const bannerH1 = keyframes`
+  from {
+    opacity : 0;
+    transform:translateY(-50px);
+  }
+`
 
 const BannerWrapper = styled.div`
   width: 100%;
@@ -13,6 +18,7 @@ const BannerWrapper = styled.div`
   padding-top: var(--height-navigator);
   background-color: #fcfcfc;
   display: flex;
+  transition:.3s;
   align-items: center;
   clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 90%);
   & > .left {
@@ -25,6 +31,10 @@ const BannerWrapper = styled.div`
     width: 20%;
     height: 100%;
   }
+  `
+
+const H1 = styled.h1`
+animation:${bannerH1} .3s 1 linear;
 `
 
 const TitleCareer = styled.h2`
@@ -42,6 +52,7 @@ const TitleCareer = styled.h2`
 `
 
 const ImageWrapper = styled.img<PositionProps>`
+  transition: .3s linear;
   ${stylePosition};
 `
 
@@ -49,7 +60,7 @@ const BannerImageWrapper = styled.div`
   position: relative;
   margin-left: -160px;
   transform-style: preserve-3d;
-  transform: perspective(400px) rotateY(-10deg);
+  transform: perspective(400px)rotateY(-10deg);
 `
 
 const SquareBackgroundImageWrapper = styled.div<PositionProps>`
@@ -60,24 +71,25 @@ const SquareBackgroundImageWrapper = styled.div<PositionProps>`
 `
 
 const BannerSection = () => {
+  useBannerScrollAnimation();
   return (
-    <BannerWrapper>
+    <BannerWrapper id="banner">
       <div className="left flex items-center justify-center">
-        <div className="pl-20">
-          <h1 className="text-black text-4xl font-bold flex">
-            <TextTranslateYAnimation trail={70} text="I'm Jhony Vega" />
-          </h1>
+        <div className="pl-20 relative duration-150 banner__text">
+          <H1 className="text-black text-4xl font-bold duration-75">
+            I'm Jhony Vega
+          </H1>
           <TitleCareer className="mb-12 mt-2 text-blue-900 text-6xl font-bold flex">
-            <TextTranslateYAnimation trail={20} text="Frontend Developer" />
+            Frontend Developer
           </TitleCareer>
-          <p className="text-gray-400 w-6/12">
-            Frontend Developer, working main in React , Vue and Testing
-            libraries to improve the websites and create new features.
+          <p className="text-gray-400 w-6/12 flex">
+            Frontend Developer, working main in React , Vue and Testing libraries to improve the websites and create new features.
           </p>
         </div>
       </div>
       <div className="right flex items-center relative">
         <BannerImageWrapper>
+          <div className="banner__figure-dotted transition duration-75">
           <ImageWrapper
             src={figure_dotted}
             width="160"
@@ -85,16 +97,17 @@ const BannerSection = () => {
             left="-75px"
             top="-10px"
           />
+          </div>
           <SquareBackgroundImageWrapper
-            className="z-10 absolute"
+            className="z-10 absolute banner__figure-solid"
             left="-80px"
             bottom="-60px"
-          />
+            />
           <ImageWrapper
             src={profile}
             width="220"
             height="270"
-            className="z-10 relative object-cover"
+            className="z-10 relative object-cover banner__image-profile"
           />
         </BannerImageWrapper>
       </div>
