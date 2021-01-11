@@ -4,6 +4,9 @@ import profile from "assets/profile.png"
 import figure_dotted from "assets/figure_dotted.png"
 import stylePosition, { PositionProps } from "common/StyledSystem/stylePosition"
 import useBannerScrollAnimation from "./hooks/useBannerScrollAnimation"
+import SectionFullHeight from "layouts/SectionFullHeight"
+import { VscArrowDown } from "react-icons/vsc"
+import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
 
 const bannerH1 = keyframes`
   from {
@@ -12,9 +15,7 @@ const bannerH1 = keyframes`
   }
 `
 
-const BannerWrapper = styled.div`
-  width: 100%;
-  height: 570px;
+const BannerWrapper = styled(SectionFullHeight)`
   padding-top: var(--height-navigator);
   background-color: #fcfcfc;
   display: flex;
@@ -40,15 +41,6 @@ animation:${bannerH1} .3s 1 linear;
 const TitleCareer = styled.h2`
   position: relative;
   text-shadow: 0 20px 30px rgba(100, 100, 100, 0.2);
-  &::after {
-    content: "";
-    position: absolute;
-    height: 3px;
-    background-color: #024e9b;
-    width: 100px;
-    bottom: -12px;
-    left: 0;
-  }
 `
 
 const ImageWrapper = styled.img<PositionProps>`
@@ -79,16 +71,19 @@ const BannerSection = () => {
           <H1 className="text-black text-4xl font-bold duration-75">
             I'm Jhony Vega
           </H1>
-          <TitleCareer className="mb-12 mt-2 text-blue-900 text-6xl font-bold flex">
-            Frontend Developer
+          <TitleCareer className="mb-12 mt-2 font-bold flex">
+            <span className="text-purple-700 text-6xl inline-block mr-3">Frontend</span> <span className="text-black text-7xl">Developer</span>
           </TitleCareer>
           <p className="text-gray-400 w-6/12 flex">
             Frontend Developer, working main in React , Vue and Testing libraries to improve the websites and create new features.
           </p>
+          <div className="mt-9">
+            <BaseRoundedButton>Contact me</BaseRoundedButton>
+          </div>
         </div>
       </div>
       <div className="right flex items-center relative">
-        <BannerImageWrapper>
+        <BannerImageWrapper className="banner__image">
           <div className="banner__figure-dotted transition duration-75">
           <ImageWrapper
             src={figure_dotted}
@@ -110,6 +105,9 @@ const BannerSection = () => {
             className="z-10 relative object-cover banner__image-profile"
           />
         </BannerImageWrapper>
+      </div>
+      <div className="absolute bottom-0 mb-8 left-1/2 -translate-x-1/2 transform animate-bounce">
+        <VscArrowDown size={40} />
       </div>
     </BannerWrapper>
   )

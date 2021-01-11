@@ -3,8 +3,10 @@ import BasePrimaryButton from "common/Buttons/BasePrimaryButton"
 import stylePosition, { PositionProps } from "common/StyledSystem/stylePosition"
 import styled from "styled-components"
 import useTechnologiesScroll from "./hooks/useTechnologiesScroll"
+import SectionFullHeight from "layouts/SectionFullHeight"
+import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
 
-const MainTechnologiesWrapper = styled.div`
+const MainTechnologiesWrapper = styled(SectionFullHeight)`
   .technology__card {
     transition: 0.6s;
   }
@@ -90,15 +92,18 @@ const MainTechnologiesSection = () => {
       </div>
       <div className="right w-1/2">
         <div className="relative w-4/6 technology__detail">
-          <div className="text-blue-900 font-bold text-3xl">
+          <span className="font-bold flex text-green-400">
+            My skills
+          </span>
+          <div className="text-blue-900 font-bold text-3xl mb-10 mt-4">
             Manage and know principal technologies
           </div>
-          <p className="text-gray-400 mt-4 mb-4">
+          <p className="text-gray-400 mt-4 mb-10">
             I current Working with technologies such as ReactJS, typescript,
             Jest, CSS in JS, Vue, etc. So I worked with backend technologies:
             NodeJs, PHP, Flask, Java.
           </p>
-          <BasePrimaryButton>See more</BasePrimaryButton>
+          <BaseRoundedButton>Explore Technologies</BaseRoundedButton>
         </div>
       </div>
     </MainTechnologiesWrapper>

@@ -4,6 +4,7 @@
 
 :root {
     --height-navigation:60px;
+    --height-section:100vh;
 }
 
 #___gatsby {

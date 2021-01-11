@@ -1,4 +1,3 @@
-import useScrolling from "hooks/useScrolling";
 import { useEffect } from "react";
 
 export default function useTechnologiesScroll() {
@@ -17,9 +16,9 @@ export default function useTechnologiesScroll() {
                     }
                     else {
                         htmlElement.style.opacity = "0";
-                        htmlElement.style.left="60px"
+                        htmlElement.style.left="70px"
                         detail.style.opacity = "0";
-                        detail.style.transform = "translateY(-120px)";
+                        detail.style.transform = "translateY(-200px)";
                     }
             },{
                 threshold : [.5]
