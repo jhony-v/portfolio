@@ -1,5 +1,6 @@
 import LinkNavigation from "common/LinkNavigation"
-import React from "react"
+import useNavigateToDataIdSection from "hooks/useNavigateToDataIdSection"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
@@ -11,9 +12,9 @@ const HeaderWrapper = styled.header`
   z-index:50;
 `
 
-const LiItemNavigation = ({ to, text }) => (
+const LiItemNavigation = ({ to, text, onClick }) => (
   <li className="pl-4 pr-4">
-    <LinkNavigation to={to}>{text}</LinkNavigation>
+    <LinkNavigation to={to} onClick={()=>onClick(to)}>{text}</LinkNavigation>
   </li>
 )
 
@@ -21,14 +22,21 @@ type WrapperRootNavigationProps = {
   children: React.ReactNode
 }
 export default function WrapperRootNavigation({ children }: WrapperRootNavigationProps) {
+  const { onNavigate } = useNavigateToDataIdSection();
+  const handlerOnLinkSelected = (to : string) => {
+    if(!to.includes('projects')) {
+      onNavigate(to.replace('#',''));
+    }
+  }
+
   return (
     <>
       <HeaderWrapper>
         <ul className="flex items-center h-full justify-center w-full">
-          <LiItemNavigation to="/" text="Welcome" />
-          <LiItemNavigation to="/about" text="About me" />
-          <LiItemNavigation to="/skills" text="Skills" />
-          <LiItemNavigation to="/projects" text="All Projects" />
+          <LiItemNavigation to="#home" text="Welcome" onClick={handlerOnLinkSelected} />
+          <LiItemNavigation to="#about" text="About me" onClick={handlerOnLinkSelected} />
+          <LiItemNavigation to="#technologies" text="Skills" onClick={handlerOnLinkSelected} />
+          <LiItemNavigation to="#projects" text="All Projects" onClick={handlerOnLinkSelected} />
         </ul>
       </HeaderWrapper>
       {children}

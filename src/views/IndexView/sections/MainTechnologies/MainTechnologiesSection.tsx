@@ -5,6 +5,7 @@ import styled from "styled-components"
 import useTechnologiesScroll from "./hooks/useTechnologiesScroll"
 import SectionFullHeight from "layouts/SectionFullHeight"
 import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
+import Subtitle from "common/Texts/Subtitle"
 
 const MainTechnologiesWrapper = styled(SectionFullHeight)`
   .technology__card {
@@ -49,7 +50,7 @@ const MainTechnologiesSection = () => {
   useTechnologiesScroll()
 
   return (
-    <MainTechnologiesWrapper className="flex mt-48 mb-48 items-center">
+    <MainTechnologiesWrapper className="flex mt-48 mb-48 items-center" data-id="technologies">
       <div className="left w-1/2">
         <WrapperCardTechnologies className="technology__card relative">
           <MiniCardTechonology
@@ -92,9 +93,7 @@ const MainTechnologiesSection = () => {
       </div>
       <div className="right w-1/2">
         <div className="relative w-4/6 technology__detail">
-          <span className="font-bold flex text-green-400">
-            My skills
-          </span>
+          <Subtitle>My skills</Subtitle>
           <div className="text-blue-900 font-bold text-3xl mb-10 mt-4">
             Manage and know principal technologies
           </div>

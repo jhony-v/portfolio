@@ -65,7 +65,7 @@ const SquareBackgroundImageWrapper = styled.div<PositionProps>`
 const BannerSection = () => {
   useBannerScrollAnimation();
   return (
-    <BannerWrapper id="banner">
+    <BannerWrapper data-id="home">
       <div className="left flex items-center justify-center">
         <div className="pl-20 relative duration-150 banner__text">
           <H1 className="text-black text-4xl font-bold duration-75">

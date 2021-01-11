@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export default function useBannerScrollAnimation() {
   useScrolling(() => {
     let e = document.documentElement.scrollTop;
-    let banner = document.getElementById("banner");
+    let banner = document.querySelector("[data-id='home']");
     let imageProfile = banner.querySelector(".banner__image-profile") as HTMLElement;
     let figureSolid = banner.querySelector(".banner__figure-solid") as HTMLElement;
     let figureDotted = banner.querySelector(".banner__figure-dotted") as HTMLElement;
