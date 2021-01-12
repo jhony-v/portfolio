@@ -1,17 +1,17 @@
-import FixedBox from "common/FixedBaseFigures/FixedBox"
+import useDelay from "hooks/useDelay"
 import React from "react"
 import ClosePrevisualize from "./components/ClosePrevisualize"
-import ListProjects from "./containers/ListProjects"
-import PreviewProject from "./containers/PreviewProject"
+import LoadingScreen from "./components/LoadingScreen"
 
-const PrevisualizeProjectsSection = ({}) => {
-  return (
-    <div className="flex h-full p-6 w-full relative">
-      <ListProjects/>
-      <PreviewProject/>
-      <ClosePrevisualize />
-    </div>
-  )
+const PrevisualizeProjectsSection = () => {
+  const { completed } = useDelay({auto:true,duration:2000})
+  if (completed)
+    return (
+      <div className="flex h-full p-6 w-full relative">
+        <ClosePrevisualize />
+      </div>
+    )
+  return <LoadingScreen/>
 }
 
 export default PrevisualizeProjectsSection

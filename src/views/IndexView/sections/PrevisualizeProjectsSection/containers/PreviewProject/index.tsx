@@ -3,7 +3,6 @@ import React from "react"
 import styled from "styled-components"
 
 const ImageWrapper = styled.img`
-  transform: perspective(400px) rotateY(-10deg);
   width: 500px;
   height: 300px;
 `

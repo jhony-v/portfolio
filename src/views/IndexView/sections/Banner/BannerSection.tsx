@@ -69,7 +69,7 @@ const BannerSection = () => {
   useBannerScrollAnimation();
   return (
     <BannerWrapper data-id="home">
-      <div className="left h-full bg-black flex items-center justify-center ">
+      <div className="left h-full bg-black flex items-center ">
         <div className="pl-20 relative duration-150 banner__text">
           <H1 className="text-label text-4xl font-bold duration-75">
             I'm Jhony Vega
@@ -77,8 +77,8 @@ const BannerSection = () => {
           <TitleCareer className="mb-12 mt-2 font-bold flex">
             <span className="text-purple-700 text-6xl inline-block mr-3">Frontend</span> <span className="text-label text-7xl">Developer</span>
           </TitleCareer>
-          <p className="text-gray-200 w-6/12 flex">
-            Frontend Developer, working main in React , Vue and Testing libraries to improve the websites and create new features.
+          <p className="text-gray-200 w-4/6 flex"> 
+          Hi 👋, I'm self-taught, persistent, passionate about programming and web development ❤️.
           </p>
           <div className="mt-9">
             <BaseRoundedButton>Contact me</BaseRoundedButton>

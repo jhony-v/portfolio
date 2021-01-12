@@ -5,7 +5,7 @@ import IndexView from "views/IndexView"
 import ModalVisualizeProvider from "views/IndexView/contexts/ModalVisualize/ModalVisualizeProvider"
 
 const IndexPage = () => (
-  <SEO title="Jhony Vega - Portfolio" description="">
+  <SEO title="Jhony Vega | Frontend Developer" description="">
     <ModalVisualizeProvider>
       <WrapperRootNavigation>
         <IndexView />

@@ -20,7 +20,7 @@ const Loading = styled.div<LoadingProps>`
   height: ${s}px;
   transform: scale(${props => props.scale});
   background: ${props =>
-    props.bg === "primary" ? "va(--primary-color)" : "white"};
+    props.bg === "primary" ? "var(--primary-color)" : "white"};
   opacity: ${props => props.opacity};
   border-radius: 100%;
   animation: ${pulse} ${props => props.duration}s infinite linear;
@@ -29,6 +29,8 @@ const Loading = styled.div<LoadingProps>`
 const WrapperLoading = styled.div`
   margin: auto;
   position: relative;
+  width:100px;
+  height:100px;
   ${Loading} {
     position: absolute;
     left: 0;
@@ -42,11 +44,11 @@ const WrapperLoading = styled.div`
 export default function PulseCircleLoading({bg,}: { bg: "primary" | "nature" }) {
   return (
     <WrapperLoading>
-      <Loading bg={bg} opacity={.2} duration={1} scale={.6} />
-      <Loading bg={bg} opacity={.4} duration={1.8} scale={2} />
-      <Loading bg={bg} opacity={.2} duration={2} scale={5} />
-      <Loading bg={bg} opacity={.1} duration={4} scale={8} />
-      <Loading bg={bg} opacity={.1} duration={2} scale={12} />
+      <Loading bg={bg} opacity={.2} duration={1} scale={.5} />
+      <Loading bg={bg} opacity={.4} duration={1.8} scale={1} />
+      <Loading bg={bg} opacity={.2} duration={2} scale={4} />
+      <Loading bg={bg} opacity={.1} duration={4} scale={7} />
+      <Loading bg={bg} opacity={.1} duration={2} scale={11} />
     </WrapperLoading>
   )
 }

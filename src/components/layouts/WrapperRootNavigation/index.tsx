@@ -48,7 +48,7 @@ export default function WrapperRootNavigation({ children }: WrapperRootNavigatio
   const handlerOnLinkSelected = (to : string) => {
     setSelected(to);
     let getAlsoText = to.replace('#',''); 
-    if(!getAlsoText.includes('projects')) onNavigate(getAlsoText);
+    if(!/(projects|contact)/.test(getAlsoText)) onNavigate(getAlsoText);
     else setModalActive(getAlsoText);
   }
 

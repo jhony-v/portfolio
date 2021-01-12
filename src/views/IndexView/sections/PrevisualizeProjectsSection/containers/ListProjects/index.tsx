@@ -24,24 +24,7 @@ const Wrapper = styled.div`
     }
 `
 
-interface SmoothWrapperProps {
-    position : "top" | "bottom"
-}
-const color = "var(--primary-color)";
-const SmoothWrapper = styled.div<SmoothWrapperProps>`
-    position:absolute;
-    background:${props => props.position === "top" && `linear-gradient(180deg,${color},transparent);`};
-    background:${props => props.position === "bottom" && `linear-gradient(0deg,${color},transparent);`};
-    top:${props => props.position === "top" && 0};
-    bottom:${props => props.position === "bottom" && 0};
-    width:100%;
-    height:50px;
-`
-
-
-const ListProjectsWrapper = styled.div`
-    transform: perspective(20px)rotateY(1deg);
-`
+const ListProjectsWrapper = styled.div``
 
 export default function ListProjects() {
     return (
@@ -49,8 +32,6 @@ export default function ListProjects() {
             <Wrapper className="flex flex-col h-full overflow-y-auto pr-6">
                 {Array(10).fill(0).map((e,i)=><ProjectCard key={i} />)}
             </Wrapper>
-            <SmoothWrapper position="top" />
-            <SmoothWrapper position="bottom" />
         </ListProjectsWrapper>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import {
   ModalVisualizeContext,
   ModalVisualizeState,
@@ -15,6 +15,11 @@ const ModalVisualizeProvider = ({ children }: ModalVisualizeProviderProps) => {
     closeModalActive: () => setModal(""),
     setModalActive: (modalKey: string) => setModal(modalKey),
   }
+
+
+  useEffect(() => {
+    document.body.style.overflow = modalActive !== "" ? "hidden" : "visible";
+  },[modalActive]);
 
   return (
     <ModalVisualizeContext.Provider value={value}>

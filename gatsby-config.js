@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   pathPrefix : "/portfolio",
   siteMetadata: {
-    title: `Jhony Vega - Portfolio`,
+    title: `Jhony Vega | Frontend Developer`,
     description: `Frontend Developer, working main in React , Vue and Testing libraries to improve the websites and create new features`,
     author: `Jhony Vega`,
   },
@@ -23,11 +23,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jhony Vega - Portfolio`,
+        name: `Jhony Vega | Frontend Developer`,
         short_name: `Portfolio`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#7440e2`,
         display: `minimal-ui`,
         icon: `src/images/avatar_logo.png`, 
       },
