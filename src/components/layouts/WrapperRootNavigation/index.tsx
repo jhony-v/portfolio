@@ -2,6 +2,7 @@ import LinkNavigation from "common/LinkNavigation"
 import useNavigateToDataIdSection from "hooks/useNavigateToDataIdSection"
 import React, { useEffect } from "react"
 import styled from "styled-components"
+import { useModalVisualize } from "views/IndexView/contexts/ModalVisualize/ModalVisualizeContext"
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -22,11 +23,12 @@ type WrapperRootNavigationProps = {
   children: React.ReactNode
 }
 export default function WrapperRootNavigation({ children }: WrapperRootNavigationProps) {
+  const { setModalActive } = useModalVisualize();
   const { onNavigate } = useNavigateToDataIdSection();
   const handlerOnLinkSelected = (to : string) => {
-    if(!to.includes('projects')) {
-      onNavigate(to.replace('#',''));
-    }
+    let getAlsoText = to.replace('#',''); 
+    if(!getAlsoText.includes('projects')) onNavigate(getAlsoText);
+    else setModalActive(getAlsoText);
   }
 
   return (
