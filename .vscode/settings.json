@@ -5,6 +5,7 @@
     "typescript",
     "javascript"
   ],
+  "css.validate": false,
   "tailwindCSS.includeLanguages": {
       "plaintext" : "typescript"
   }

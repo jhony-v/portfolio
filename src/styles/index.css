@@ -6,9 +6,15 @@
     --height-navigation:60px;
     --height-section:100vh;
     --primary-color: #7440e2;
-    --primary-color-10: #ad8ef0;
+    --width-navigator:80px;
 }
 
+@layer base {
+    body {
+        @apply bg-black;
+        @apply bg-opacity-95;
+    }
+}
 
 input,button,textarea {
     outline: none !important;
@@ -17,4 +23,11 @@ input,button,textarea {
 #___gatsby {
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width:15px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:rgba(255,255,255,.2);
 }

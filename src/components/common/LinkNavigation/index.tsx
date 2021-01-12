@@ -5,11 +5,12 @@ type LinkNavigationProps = {
   to: string,
   children : React.ReactNode,
   onClick ?: () => void;
+  className ?: string;
 }
 
-export default function LinkNavigation({ to ,children,onClick}: LinkNavigationProps) {
+export default function LinkNavigation({ to ,children,onClick, className}: LinkNavigationProps) {
   return <Link to={to}>
-      <span className="text-blue-800 font-bold text-base" onClick={onClick}>
+      <span className={className} onClick={onClick}>
             {children}
       </span>
   </Link>

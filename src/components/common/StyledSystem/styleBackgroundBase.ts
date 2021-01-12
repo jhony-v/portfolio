@@ -9,7 +9,8 @@ const styleBackgroundBase = css<BackgroundBaseProps>`
   ${props =>
     !props.grayscale &&
     css`
-      background-color: rgba(30, 130, 230, ${props.opacity});
+      background-color:var(--primary-color);
+      opacity:${props.opacity};
     `}
   ${props =>
     props.grayscale &&

@@ -4,10 +4,12 @@ import stylePosition, { PositionProps } from "common/StyledSystem/stylePosition"
 import styled from "styled-components"
 import useTechnologiesScroll from "./hooks/useTechnologiesScroll"
 import SectionFullHeight from "layouts/SectionFullHeight"
-import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
 import Subtitle from "common/Texts/Subtitle"
+import FixedCircle from "common/FixedBaseFigures/FixedCircle"
+import FixedBox from "common/FixedBaseFigures/FixedBox"
 
 const MainTechnologiesWrapper = styled(SectionFullHeight)`
+  clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
   .technology__card {
     transition: 0.6s;
   }
@@ -18,21 +20,18 @@ const MainTechnologiesWrapper = styled(SectionFullHeight)`
 
 const WrapperCardTechnologies = styled.div`
   width: 80%;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.07), 0 -10px 10px rgba(0, 0, 0, 0.02);
   height: 500px;
   margin-left: 70px;
-  transform-style: preserve-3d;
-  transform: perspective(400px) rotateY(6deg) rotateX(4deg);
   border-radius: 10px;
 `
 
 const MiniCard = styled.div<PositionProps>`
   position: absolute;
-  width: 90px;
-  height: 110px;
+  width: 110px;
+  height: 140px;
   border-radius: 5px;
-  background-color: white;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04);
+  background-color: rgb(0,0,0,.26);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
   ${stylePosition};
 `
 const MiniCardTechonology = ({ text, image, left, top }) => (
@@ -41,8 +40,8 @@ const MiniCardTechonology = ({ text, image, left, top }) => (
     top={top}
     className="flex items-center flex-col justify-center"
   >
-    <img src={image} alt={image} className="w-8 h-8 mb-1" />
-    <span className="text-xs text-center">{text}</span>
+    <img src={image} alt={image} className="w-12 h-12 mb-2 rounded-full bg-white" />
+    <span className="text-sm text-center text-label">{text}</span>
   </MiniCard>
 )
 
@@ -50,9 +49,9 @@ const MainTechnologiesSection = () => {
   useTechnologiesScroll()
 
   return (
-    <MainTechnologiesWrapper className="flex mt-48 mb-48 items-center" data-id="technologies">
+    <MainTechnologiesWrapper className="flex mt-48 mb-48 items-center bg-gradient-to-r from-primary to-secondary" data-id="technologies">
       <div className="left w-1/2">
-        <WrapperCardTechnologies className="technology__card relative">
+        <WrapperCardTechnologies className="technology__card relative z-20">
           <MiniCardTechonology
             left="20px"
             top="40px"
@@ -91,20 +90,24 @@ const MainTechnologiesSection = () => {
           />
         </WrapperCardTechnologies>
       </div>
-      <div className="right w-1/2">
+      <div className="right w-1/2 z-20">
         <div className="relative w-4/6 technology__detail">
           <Subtitle>My skills</Subtitle>
-          <div className="text-blue-900 font-bold text-3xl mb-10 mt-4">
+          <div className="text-label font-bold text-3xl mb-10 mt-4">
             Manage and know principal technologies
           </div>
-          <p className="text-gray-400 mt-4 mb-10">
+          <p className="text-label mt-4 mb-10">
             I current Working with technologies such as ReactJS, typescript,
             Jest, CSS in JS, Vue, etc. So I worked with backend technologies:
             NodeJs, PHP, Flask, Java.
           </p>
-          <BaseRoundedButton>Explore Technologies</BaseRoundedButton>
+          <BasePrimaryButton>Explore Technologies</BasePrimaryButton>
         </div>
       </div>
+      <FixedBox right="0" top="0" h="100%" w="60%" grayscale={.1} />
+      <FixedCircle right="10%" top="10%" d="100px" opacity={.3} />
+      <FixedCircle right="20%" bottom="0%" d="300px" opacity={.2} />
+      <FixedCircle left="10%" top="10%" d="300px" grayscale={.05} />
     </MainTechnologiesWrapper>
   )
 }
