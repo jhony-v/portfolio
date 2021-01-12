@@ -54,7 +54,7 @@ const AboutSection = () => {
         Welcome to my <span className="text-purple-700 text-7xl">portfolio</span>, I believe you’re very nice
         </TextShadow>
         <div className="text-gray-400 text-center w-1/2">
-        I am a Fronted Developer with any any years of experience in the area of ​​web development.
+        I am a Fronted Developer with any years of experience in the area of ​​web development.
         Currently I am on the following social networks as.
         </div>
         <div className="flex items-center justify-between mx-auto mt-14">
