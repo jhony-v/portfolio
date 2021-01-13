@@ -4,17 +4,14 @@ import { useSpring } from "react-spring"
 import { animated } from "react-spring/renderprops"
 import styled from "styled-components"
 
-const MiniCard = styled(animated.div)<PositionProps>`
-  position: absolute;
-  width: 110px;
-  height: 140px;
+const MiniCard = styled(animated.div)`
+  height: 160px;
   border-radius: 5px;
-  background-color: rgb(0, 0, 0, 0.26);
+  background-color: rgba(100,100,100,.3);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-  ${stylePosition};
 `
 
-const MiniCardTechonology = ({ text, image, left, top }) => {
+const MiniCardTechonology = ({ text, image }) => {
   const [ hover, setHover ] = useState(false);
   const onEnter = () => {
     setHover(true);
@@ -25,8 +22,6 @@ const MiniCardTechonology = ({ text, image, left, top }) => {
 
   return (
     <MiniCard
-      left={left}
-      top={top}
       className="flex items-center flex-col justify-center"
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}

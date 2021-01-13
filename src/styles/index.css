@@ -6,6 +6,8 @@
     --height-navigation:60px;
     --height-section:100vh;
     --primary-color: #7440e2;
+    --secondary-color: rgb(52, 211, 153);
+    --third-color:#8af0eb;
     --width-navigator:80px;
 }
 
@@ -13,21 +15,10 @@
     body {
         @apply bg-black;
         @apply bg-opacity-95;
+        @apply overflow-y-hidden;
     }
 }
 
 input,button,textarea {
     outline: none !important;
-}
-
-#___gatsby {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-body::-webkit-scrollbar {
-    width:15px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color:rgba(255,255,255,.2);
 }

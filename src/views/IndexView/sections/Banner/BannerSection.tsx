@@ -4,9 +4,9 @@ import figure_dotted from "assets/figure_dotted.png"
 import stylePosition, { PositionProps } from "common/StyledSystem/stylePosition"
 import useBannerScrollAnimation from "./hooks/useBannerScrollAnimation"
 import SectionFullHeight from "layouts/SectionFullHeight"
-import { VscArrowDown } from "react-icons/vsc"
 import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
-import FixedCircle from "common/FixedBaseFigures/FixedCircle"
+import LoadableComponent from "common/LoadableComponent"
+import useTextAnimatable from "./hooks/useTextAnimatable"
 
 const bannerH1 = keyframes`
   from {
@@ -16,7 +16,6 @@ const bannerH1 = keyframes`
 `
 
 const BannerWrapper = styled(SectionFullHeight)`
-  padding-top: var(--height-navigator);
   display: flex;
   transition:.3s;
   align-items: center;
@@ -36,6 +35,18 @@ animation:${bannerH1} .3s 1 linear;
 const TitleCareer = styled.h2`
   position: relative;
   text-shadow: 0 20px 30px rgba(0, 0, 0, .5);
+  & * {
+    transition:4s;
+  }
+  & .text-bubble {
+    display:inline-block;
+    will-change:transform;
+    &:hover {
+      transition:.3s;
+      color:var(--secondary-color);
+      transform:perspective(400px)scale(1.8)rotate3d(.2,1,0,-40deg);
+    }
+  }
 `
 
 const ImageWrapper = styled.img<PositionProps>`
@@ -56,37 +67,30 @@ const SquareBackgroundImageWrapper = styled.div<PositionProps>`
   ${stylePosition};
 `
 
-const movementKeyframes = scale => keyframes`
-  from { transform:scale(${scale}); }
-`
-const FixedCircleAnimatable = styled(FixedCircle)`
-  transition:.3s;
-  animation: ${props => movementKeyframes(props.grayscale)} ${props => props.grayscale * 50}s infinite linear alternate;
-`
-
-
 const BannerSection = () => {
   useBannerScrollAnimation();
+  useTextAnimatable();
   return (
     <BannerWrapper data-id="home">
-      <div className="left h-full bg-black flex items-center ">
-        <div className="pl-20 relative duration-150 banner__text">
-          <H1 className="text-label text-4xl font-bold duration-75">
+      <div className="left h-full bg-black flex items-center">
+        <div className="pl-20 relative duration-150 banner__text cursor-default">
+          <H1 className="text-label text-5xl font-bold duration-75">
             I'm Jhony Vega
           </H1>
-          <TitleCareer className="mb-12 mt-2 font-bold flex">
-            <span className="text-purple-700 text-6xl inline-block mr-3">Frontend</span> <span className="text-label text-7xl">Developer</span>
+          <TitleCareer className="mb-12 mt-2 font-bold flex title__career">
+            <span className="text-purple-700 text-6xl inline-flex mr-3">Frontend</span> 
+            <span className="text-label text-7xl inline-flex">Developer</span>
           </TitleCareer>
           <p className="text-gray-200 w-4/6 flex"> 
-          Hi 👋, I'm self-taught, persistent, passionate about programming and web development ❤️.
+          Hi 👋, I'm a frontend developer, passionate about programming and web development ❤️.
           </p>
           <div className="mt-9">
             <BaseRoundedButton>Contact me</BaseRoundedButton>
           </div>
         </div>
       </div>
-      <div className="right h-full bg-gray-900 flex items-center relative">
-        <BannerImageWrapper className="banner__image">
+      <div className="right h-full flex items-center relative bg-dark-10">
+        <BannerImageWrapper className="banner__image z-10">
           <div className="banner__figure-dotted transition duration-75">
           <ImageWrapper
             src={figure_dotted}
@@ -109,12 +113,7 @@ const BannerSection = () => {
           />
         </BannerImageWrapper>
       </div>
-      <div className="absolute bottom-0 mb-8 left-1/2 -translate-x-1/2 text-label transform animate-bounce">
-        <VscArrowDown size={40} />
-      </div>
-      <FixedCircleAnimatable left="5%" top="10%" grayscale={.2} d="40px" />
-      <FixedCircleAnimatable left="17%" top="50%" grayscale={.1} d="250px" />
-      <FixedCircleAnimatable right="35%" top="10%" grayscale={.12} d="300px" />
+      <LoadableComponent module={()=>import("./components/CirclesBubbleAnimation")} fallback={null} />
     </BannerWrapper>
   )
 }

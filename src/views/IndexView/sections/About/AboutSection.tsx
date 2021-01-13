@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { FaLinkedinIn, FaGoogle, FaTwitter, FaDev } from "react-icons/fa"
+import { FaLinkedinIn, FaTwitter, FaDev, FaGithub } from "react-icons/fa"
 import SectionFullHeight from "layouts/SectionFullHeight";
 import useAboutScroll from "./hooks/useAboutScroll";
 import FixedBox from "common/FixedBaseFigures/FixedBox";
@@ -14,7 +14,7 @@ const SocialButton = styled.a.attrs({ target: "_blank" })`
   width: ${sizeSocialButton}px;
   height: ${sizeSocialButton}px;
   background-color: #e7e7e7;
-  color:#707070;
+  color:#4e4e4e;
   font-size:1.2em;
   border-radius: 100%;
   display: flex;
@@ -58,10 +58,10 @@ const AboutSection = () => {
         Currently I am on the following social networks as.
         </div>
         <div className="flex items-center justify-between mx-auto mt-14">
-          <SocialButton href="https://twitter.com/JhonyV01"><FaTwitter/></SocialButton>
           <SocialButton href="https://www.linkedin.com/in/jhony-vega/"><FaLinkedinIn/></SocialButton>
-          <SocialButton href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jhonyvegacuya24@gmail.com"><FaGoogle/></SocialButton>
+          <SocialButton href="https://github.com/jhony-24"><FaGithub/></SocialButton>
           <SocialButton href="https://dev.to/jhony24"><FaDev/></SocialButton>
+          <SocialButton href="https://twitter.com/JhonyV01"><FaTwitter/></SocialButton>
         </div>
       </div>
     </AboutWrapper>

@@ -15,7 +15,7 @@ const styleBackgroundBase = css<BackgroundBaseProps>`
   ${props =>
     props.grayscale &&
     css`
-      background-color: rgba(100, 100, 100, ${props.grayscale});
+      background-color: rgba(150, 150, 150, ${props.grayscale});
     `}
   ${props =>
     props.light &&

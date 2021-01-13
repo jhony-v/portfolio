@@ -16,7 +16,7 @@ export default function ClosePrevisualize() {
   }
   return (
     <CloseWrapper
-      className="bg-white text-black absolute top-0 right-0 m-5 cursor-pointer rounded-full shadow-xl flex justify-center items-center"
+      className="bg-gray-600 bg-opacity-50 text-label absolute top-0 right-0 m-5 cursor-pointer rounded-full shadow-xl flex justify-center items-center"
       onClick={onClose}
     >
       <VscClose size={30} />

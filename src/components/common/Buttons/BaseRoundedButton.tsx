@@ -1,20 +1,26 @@
-import React from 'react'
-import { ReactNode } from 'react';
-import styled from "styled-components";
+import React from "react"
+import { ReactNode } from "react"
+import styled from "styled-components"
 
 const Wrapper = styled.button`
-  padding:10px 35px;
+  padding: 10px 35px;
 `
 
 type BaseRoundedButtonProps = {
-    children ?: ReactNode;
-    onClick ?: () => void
+  children?: ReactNode
+  onClick?: () => void
 }
 
-export default function BaseRoundedButton({children,onClick}:BaseRoundedButtonProps) {
-    return (
-        <Wrapper onClick={onClick} className="font-bold text-sm rounded-2xl text-secondary border-secondary border-2">
-            {children}
-        </Wrapper>
-    )
+export default function BaseRoundedButton({
+  children,
+  onClick,
+}: BaseRoundedButtonProps) {
+  return (
+    <Wrapper
+      onClick={onClick}
+      className="font-bold text-sm rounded-2xl text-secondary border-secondary border-2 hover:scale-105 duration-150 transform"
+    >
+      {children}
+    </Wrapper>
+  )
 }

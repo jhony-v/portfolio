@@ -16,11 +16,6 @@ const ModalVisualizeProvider = ({ children }: ModalVisualizeProviderProps) => {
     setModalActive: (modalKey: string) => setModal(modalKey),
   }
 
-
-  useEffect(() => {
-    document.body.style.overflow = modalActive !== "" ? "hidden" : "visible";
-  },[modalActive]);
-
   return (
     <ModalVisualizeContext.Provider value={value}>
       {children}

@@ -9,7 +9,10 @@ module.exports = {
         primary : "#7440e2",
         secondary : "rgb(52, 211, 153)",
         third : "#8af0eb",
-        label : "#ffffff"
+        label : "#ffffff",
+        dark : {
+          10 : "rgb(10,10,10,.1)"
+        }
       }
     },
   },

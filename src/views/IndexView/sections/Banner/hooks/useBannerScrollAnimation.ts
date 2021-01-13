@@ -23,7 +23,7 @@ export default function useBannerScrollAnimation() {
     let element = document.querySelector('.banner__image') as HTMLElement;
     const handlerMove = (e) => {
       element.style.transition = ".3s";
-      element.style.transform = `perspective(400px)rotateY(${e.clientX / -40}deg)rotateX(${e.clientY / 50}deg)`;
+      element.style.transform = `perspective(400px)rotateY(${e.clientX / -50}deg)rotateX(${e.clientY / 50}deg)`;
     }
     const handlerLeave = () => {
       element.style.transform = 'perspective(400px)rotateY(-10deg)';
