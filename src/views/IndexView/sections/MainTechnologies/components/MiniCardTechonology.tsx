@@ -29,7 +29,7 @@ const MiniCardTechonology = ({ text, image }) => {
       <img
         src={image}
         alt={image}
-        className="w-12 h-12 mb-2 rounded-full bg-white"
+        className="w-12 h-12 mb-2 rounded-full bg-white object-cover"
       />
       <span className="text-sm text-center text-label">{text}</span>
     </MiniCard>

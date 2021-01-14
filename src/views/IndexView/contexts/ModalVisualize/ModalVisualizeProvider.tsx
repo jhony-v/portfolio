@@ -14,6 +14,7 @@ const ModalVisualizeProvider = ({ children }: ModalVisualizeProviderProps) => {
     modalActive,
     closeModalActive: () => setModal(""),
     setModalActive: (modalKey: string) => setModal(modalKey),
+    isEqual : (value : string) => modalActive === value
   }
 
   return (

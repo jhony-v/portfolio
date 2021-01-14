@@ -2,28 +2,30 @@ import React from "react"
 import styled from "styled-components"
 import { FaLinkedinIn, FaTwitter, FaDev, FaGithub } from "react-icons/fa"
 import SectionFullHeight from "layouts/SectionFullHeight";
-import useAboutScroll from "./hooks/useAboutScroll";
 import FixedBox from "common/FixedBaseFigures/FixedBox";
-import FixedCircle from "common/FixedBaseFigures/FixedCircle";
 import Subtitle from 'common/Texts/Subtitle';
+import BasePrimaryButton from "common/Buttons/BasePrimaryButton";
 
-const AboutWrapper = styled(SectionFullHeight)``
+const AboutWrapper = styled(SectionFullHeight)`
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 95%);
+  background:linear-gradient(-40deg,black 30%,rgba(0,0,0,.7)), url("public_images/code_1.jfif") no-repeat left top / auto 100%;
+`
 
 const sizeSocialButton = 60;
 const SocialButton = styled.a.attrs({ target: "_blank" })`
   width: ${sizeSocialButton}px;
   height: ${sizeSocialButton}px;
-  background-color: #e7e7e7;
-  color:#4e4e4e;
-  font-size:1.2em;
+  color:var(--third-color);
+  font-size:1.4em;
   border-radius: 100%;
   display: flex;
+  border:2px solid var(--secondary-color);
   align-items: center;
   justify-content: center;
-  margin-left:10px;
-  margin-right:10px;
+  margin:20px 0;
   transition:transform .3s;
   will-change:transform;
+  z-index:10;
   &:hover {
     transform:scale(1.2);
   }
@@ -33,36 +35,33 @@ const TextShadow = styled.div`
   text-shadow: 0 20px 30px rgba(100, 100, 100, 0.2);
 `
 
-
 const AboutSection = () => {
-  useAboutScroll();
   return (
-    <AboutWrapper className="mx-auto flex items-center justify-center" data-id="about">
-      <div className="about__boxs">
-        <FixedBox opacity={0.1} left="0px" bottom="-100px" w="200px" h="350px"  />
-        <FixedBox opacity={0.05} left="130px" bottom="200px" w="100px" h="100px"  />
-        <FixedBox opacity={0.08} right="0" top="0px" w="400px" h="200px"  />
-        <FixedBox opacity={0.06} right="200px" bottom="-100px" w="250px" h="200px"  />
-        <FixedBox opacity={0.02} left="100px" top="200px" w="80%" h="65%" grayscale={.06}  />
-        <FixedCircle opacity={0.1} left="40%" top="120%" d="300px" grayscale={0.06} />
-        <FixedCircle opacity={0.3} left="20%" top="10%" d="100px" grayscale={0.1} />
-        <FixedCircle opacity={0.05} left="10%" top="150%" d="80px" />
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <Subtitle>About me</Subtitle>
-        <TextShadow className="font-bold text-4xl mb-16 w-3/4 text-center text-label mt-6">
-        Welcome to my <span className="text-purple-700 text-7xl">portfolio</span>, I believe you’re very nice
-        </TextShadow>
-        <div className="text-gray-400 text-center w-1/2">
-        I am a Fronted Developer with any years of experience in the area of ​​web development.
-        Currently I am on the following social networks as.
+    <AboutWrapper className="mx-auto flex items-center " data-id="about">
+      <div className="w-4/5 m-auto flex">
+        <div className="about__detail flex flex-col">
+          <Subtitle>About me</Subtitle>
+          <TextShadow className="font-bold text-5xl mb-16 w-3/4 text-label mt-6 z-10">
+            Frontend Developer with three years experiences in the industry technology
+          </TextShadow>
+          <div className="text-gray-400 w-1/2 z-10">
+            Hello, my name Jhony Vega , I am from Peru, a person who loves technology and web development.
+            My main experience is the frontend but also I worked with other technologies. I like to work in a team and to be constantly learning.
+           </div>
+           <div className="mt-8">
+            <BasePrimaryButton>VIEW PROJECTS</BasePrimaryButton>
+           </div>
         </div>
-        <div className="flex items-center justify-between mx-auto mt-14">
-          <SocialButton href="https://www.linkedin.com/in/jhony-vega/"><FaLinkedinIn/></SocialButton>
-          <SocialButton href="https://github.com/jhony-24"><FaGithub/></SocialButton>
-          <SocialButton href="https://dev.to/jhony24"><FaDev/></SocialButton>
-          <SocialButton href="https://twitter.com/JhonyV01"><FaTwitter/></SocialButton>
+        <div className="about__contact flex items-center relative">
+          <div className="flex flex-col items-center">
+            <SocialButton href="https://www.linkedin.com/in/jhony-vega/"><FaLinkedinIn/></SocialButton>
+            <SocialButton href="https://github.com/jhony-24"><FaGithub/></SocialButton>
+            <SocialButton href="https://dev.to/jhony24"><FaDev/></SocialButton>
+            <SocialButton href="https://twitter.com/JhonyV01"><FaTwitter/></SocialButton>
+          </div>
         </div>
+        <FixedBox right="0%" top="0%" w="400px" h="100%" grayscale={.06}  />
+        <FixedBox right="0%" top="0%" w="400px" h="50%" grayscale={.04}  />
       </div>
     </AboutWrapper>
   )

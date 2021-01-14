@@ -21,9 +21,9 @@ const IndexView = () => {
       <WrapperSections className="index-main__scrollable">
         <BannerSection />
         <AboutSection />
-        <LoadableComponent module={()=>import("./sections/MainTechnologies/MainTechnologiesSection")} fallback={null} />
+        <LoadableComponent module={()=>import("./sections/MainTechnologies")} fallback={null} />
       </WrapperSections>
-      <LoadableComponent module={()=>import("./sections/PrevisualizeProjectsSection/PrevisualizeProjectsSectionLoadable")} fallback={null} />
+      <LoadableComponent module={()=>import("./sections/PrevisualizeProjectsSection")} fallback={null} />
     </div>
   )
 }

@@ -4,6 +4,7 @@ export interface ModalVisualizeState {
     modalActive : string,
     setModalActive : (modalKey : string) => void;
     closeModalActive : (modalKey : string) => void; 
+    isEqual : (value : string) => boolean
 }
 
 export const ModalVisualizeContext = createContext<ModalVisualizeState | {}>({});

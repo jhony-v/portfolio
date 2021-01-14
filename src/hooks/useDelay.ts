@@ -3,10 +3,9 @@ import { useEffect, useState } from "react"
 
 interface DurationProps {
   duration ?: number;
-  auto ?: boolean;
 }
 
-export default function useDelay({ duration = 1000,auto = false } : DurationProps = {}) {
+export default function useDelay({ duration = 1000 } : DurationProps = {}) {
   const [completed, setCompleted] = useState<boolean>(false)
   const [isStart, setStart] = useState<boolean>(false)
   
@@ -20,11 +19,11 @@ export default function useDelay({ duration = 1000,auto = false } : DurationProp
   }
 
   useEffect(() => {
-    if (isStart || auto) {
+    if (isStart) {
       const handler = setTimeout(() => setCompleted(true), duration);
       return () => clearTimeout(handler);
     }
-  }, [setCompleted, duration, isStart,auto])
+  }, [setCompleted, duration, isStart])
 
   return {
     completed,

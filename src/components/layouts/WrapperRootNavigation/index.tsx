@@ -1,4 +1,3 @@
-import LinkNavigation from "common/LinkNavigation"
 import useNavigateToDataIdSection from "hooks/useNavigateToDataIdSection"
 import React, { useState } from "react"
 import styled from "styled-components"
@@ -69,12 +68,11 @@ const RootWrapper = styled.div`
 const LiItemNavigation = ({ to, icon : IconComponent, onClick, selected }) => {
   const isSelected = to === selected;
   const onLinkSelected = (e) => {
-    e.preventDefault()
     onClick(to);
   }
   return(
     <Li className="pt-4 pb-4 border-l-4 w-full flex justify-center border-transparent relative text-white" isSelected={isSelected}>
-      <LinkNavigation className="text-2xl" to={to} onClick={onLinkSelected}><IconComponent /></LinkNavigation>
+      <span className="text-2xl cursor-pointer" onClick={onLinkSelected}><IconComponent /></span>
       <span className="tooltip absolute text-white shadow-md p-2 rounded-lg z-20">{to.replace("#","")}</span>
     </Li>
   )
@@ -86,23 +84,25 @@ type WrapperRootNavigationProps = {
 export default function WrapperRootNavigation({ children }: WrapperRootNavigationProps) {
   const { setModalActive } = useModalVisualize();
   const { onNavigate } = useNavigateToDataIdSection();
-  const [ selected , setSelected ] = useState("#home");
+  const [ selected , setSelected ] = useState("home");
   const handlerOnLinkSelected = (to : string) => {
     setSelected(to);
-    let getAlsoText = to.replace('#',''); 
-    if(!/(projects|contact)/.test(getAlsoText)) onNavigate(getAlsoText);
-    else setModalActive(getAlsoText);
+    if(!/(projects|contact)/.test(to)) { 
+      onNavigate(to) 
+      setModalActive("");
+    }
+    else setModalActive(to);
   }
 
   return (
     <RootWrapper>
       <HeaderWrapper className="bg-black flex flex-col header__navigator">
         <ul className="flex flex-col justify-center h-full">
-          <LiItemNavigation to="#home" selected={selected} icon={AiOutlineHome} onClick={handlerOnLinkSelected} />
-          <LiItemNavigation to="#about" selected={selected} icon={AiOutlineUser} onClick={handlerOnLinkSelected} />
-          <LiItemNavigation to="#technologies" selected={selected} icon={BsCodeSlash} onClick={handlerOnLinkSelected} />
-          <LiItemNavigation to="#projects" selected={selected} icon={AiOutlineCodeSandbox} onClick={handlerOnLinkSelected} />
-          <LiItemNavigation to="#contact" selected={selected} icon={BiPaperPlane} onClick={handlerOnLinkSelected} />
+          <LiItemNavigation to="home" selected={selected} icon={AiOutlineHome} onClick={handlerOnLinkSelected} />
+          <LiItemNavigation to="about" selected={selected} icon={AiOutlineUser} onClick={handlerOnLinkSelected} />
+          <LiItemNavigation to="skills" selected={selected} icon={BsCodeSlash} onClick={handlerOnLinkSelected} />
+          <LiItemNavigation to="projects" selected={selected} icon={AiOutlineCodeSandbox} onClick={handlerOnLinkSelected} />
+          <LiItemNavigation to="contact" selected={selected} icon={BiPaperPlane} onClick={handlerOnLinkSelected} />
         </ul>
         <ExternalLinks/>
       </HeaderWrapper>

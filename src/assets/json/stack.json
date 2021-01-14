@@ -13,11 +13,6 @@
         "detail": "librería"
       },
       {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQx_cUhH2jYai4HoUHXGsAEi49rifYNXA66yxNIf16ULncqj1XT&usqp=CAU",
-        "name": "Angular",
-        "detail": "framework"
-      },
-      {
         "image": "https://www.kindpng.com/picc/m/476-4768417_vue-js-logo-vue-js-icon-svg-hd.png",
         "name": "Vue",
         "detail": "framework"
@@ -118,16 +113,6 @@
         "detail": "framework"
       },
       {
-        "image": "data:image/png;base64,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",
-        "name": "Codeigniter",
-        "detail": "framework"
-      },
-      {
-        "image": "https://i.ya-webdesign.com/images/spring-boot-logo-png-2.png",
-        "name": "Spring Boot",
-        "detail": "framework"
-      },
-      {
         "image": "https://w7.pngwing.com/pngs/166/342/png-transparent-flask-python-bottle-web-framework-web-application-flask-white-monochrome-shoe.png",
         "name": "Flask",
         "detail": "framework"
@@ -158,34 +143,9 @@
         "detail": "no relacional, caché"
       },
       {
-        "image": "https://w7.pngwing.com/pngs/338/123/png-transparent-microsoft-sql-server-sql-server-management-studio-database-transact-sql-microsoft-angle-white-text.png",
-        "name": "Sql Server",
-        "detail": "relacional"
-      },
-      {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSC8nB1Mfg1RJNFKYHHxb13o4SCfs2bxNRDCo01f3QsON0fqj-B&usqp=CAU",
-        "name": "CouchDb",
-        "detail": "no relacional, caché"
-      },
-      {
         "image": "https://greenido.files.wordpress.com/2012/05/screen-shot-2012-05-15-at-3-13-59-pm.png",
         "name": "IndexedDb",
         "detail": "no relacional, caché"
-      }
-    ]
-  },
-  {
-    "category" : "Application mobiles",
-    "stacks" : [
-      {
-        "image": "https://www.clipartmax.com/png/full/379-3794432_download-react-native-people-man-icon-download-react-native-people-man-icon.png",
-        "name": "React Native",
-        "detail": "framework"
-      },
-      {
-        "image": "https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/kotlin-programming-language.png",
-        "name": "Kotlin",
-        "detail": "lenguaje"
       }
     ]
   },
@@ -215,11 +175,6 @@
       {
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png",
         "name": "GitHub",
-        "detail": "repositorio"
-      },
-      {
-        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOYAAADbCAMAAABOUB36AAAA9lBMVEX////kQin8bib9oyjhQinxWyjjORzulob8///8ayf9pSj8bybkQij8bSfiQCn7nQDjMxDkPSP9oiD9nxT8nybhLgb6+/XiOBb67uvgOxj+/PrjRSb3w4D7oiD7mCX77Nj6gyb2YybsUin7qT/5dyX8lCj8jij13NXzvrjrqJjiIwDwppnzycPphXbqh3njSC/zzsfjTznsnYzz4drmXErlWED26ODvqaHlaVTma1rvtqzldF/mZUzofW3zonzwUh7udFT748j6y5j6rUX77t/40Jz5vXX51Kr73rr5s1n7tmb5rU/5wH76um731Kb7xI37hgD0agG42gZDAAAJiUlEQVR4nO2ce1vbNhTGMTapfIsTOwRwcChJWjrKCpS13bp1GxAKrLft+3+ZyXYS27o5iYVseM7v7z7HOtGrV0dHohsbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABU5ujV0SMIWRH003Hn+CckNeZrHPK13JBVCTua5gx2JUZE4V5bczqhxJCVQScdR9O2T6SH7MgMWRn0c0vTtNbP8kO+kRiyMv1T/MtrWleixPrdJORp2KDVebYdD0mqxM46cURn+0xeyMq86SZpSpQYkh+yKih02smYHEeWalFoOGnIgaSIEkgFhpEnsdkywAuhOap91pqNqfVMlmG8kR+yKij12Vhip305Efun3XnI86Z47dFcs9Ikhs46819O225IYYsWmo0l1tSQlUHn3cWYnFM5IRfLANcc580Q7dFONiZJEjvaziJqnaNG5Pm2lRuTHGPMh3RabxuR5nk7l2b3XEKFgM5zEfFCaECa6GK7MKYdCao96jj5mE3wWlTQrKbtvZUQcqcQstWAHgL6pVsYk1PdGPM+m4T8BdXeRCAEpmnHFxUjootjIs1O7apFr4sC07Sd1w8Qsm7VoncDYkzdP6qGJJYBns53UsZagffHGknnotpvf0EuA+y172uezg+kwPCWUlFirJAfak7zV1JgWLUVJfaOmkyt+2utaaLdjkGNSduu0pZGu/QywNP5XtqY1xkTLTDMzocqISmfjel8lDbmdcb0B63ZqhL7jRXSqWrfldjdZgxJMzoVVLtL+2wc8ni3xtX5scUYElZtBYl9ZGk2Dllfmuh3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",
-        "name": "GitLab",
         "detail": "repositorio"
       },
       {
