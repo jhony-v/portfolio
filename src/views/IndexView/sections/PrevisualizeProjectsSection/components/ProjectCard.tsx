@@ -7,26 +7,27 @@ import styled from "styled-components"
 
 const Wrapper = styled(animated.div)`
   width: 100%;
-  background-color: #242424;
+  background-color: #1b1b1b;
   height: auto;
+  transition:.3s;
+  &:hover {
+    background-color:#272727;
+    cursor:pointer;
+  }
 `
 
-export default function ProjectCard({image}) {
+export default function ProjectCard({image,style}) {
   return (
-    <Wrapper className="flex-col flex rounded-3xl overflow-hidden">
+    <Wrapper className="flex-col flex rounded-3xl overflow-hidden" style={style}>
       <img
         className="w-full object-cover"
-        style={{height:"200px"}}
+        style={{height:"150px"}}
         src={image}
       />
       <div className="p-4">
         <p className="text-label text-base mb-3 mt-3 font-bold">
           Facebook clone UI with ReactJS
         </p>
-        <div className="mt-5 w-full">
-          <p className="text-gray-300 text-sm mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam qui minus cupiditate nostrum sed itaque </p>
-          <Subtitle>VIEW DETAIL</Subtitle>
-        </div>
       </div>
     </Wrapper>
   )

@@ -8,5 +8,5 @@ export default styled.div`
   height: 100%;
   z-index: 1000;
   display:flex;
-  background: #000;
+  background: rgb(15,15,15);
 `

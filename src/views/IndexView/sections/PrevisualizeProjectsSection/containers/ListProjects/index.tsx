@@ -1,37 +1,50 @@
 import React from 'react'
-import styled from 'styled-components'
+import { config, useTransition } from 'react-spring';
+import ProjectCard from '../../components/ProjectCard'
 
-const ProjectCard = () => {
-    return(
-        <div className="bg-white shadow-lg flex mb-5 p-5 cursor-pointer rounded-2xl">
-            <img className="w-12 h-12 rounded-full" src="https://cdn.pixabay.com/photo/2020/12/09/21/36/charles-bridge-5818730__340.jpg" />
-            <div className="block pl-4">
-                <p className="font-bold text-sm select-none">Facebook clone - UI</p>
-                <p className="text-sm text-gray-400 select-none">Web application of Facebook with diferent screens</p>
-            </div>
-        </div>
-    )
-}
 
-const Wrapper = styled.div`
-    width:400px;
-    &::-webkit-scrollbar {
-        width:7px;
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color:rgba(0,0,0,.2);
-        border-radius:10px
-    }
-`
+const data = [
+    {
+        image : "https://cdn.vox-cdn.com/thumbor/vPwf_IT-1YLYwgHmOVDnLaUZRts=/0x0:2048x1410/1200x800/filters:focal(861x542:1187x868)/cdn.vox-cdn.com/uploads/chorus_image/image/67272132/facebook_website_redesign_1.0.jpg"
+    },
+    {
+        image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf3KPdLmoOw77WpfJ_EcbNSoQKHcKI7qYMEw&usqp=CAU"
+    },
+    {
+        image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcwwkPj_3ZyFmaoLRJKQmoJFZQjOg-qZtiOw&usqp=CAU"
+    },
+    {
+        image : "https://i.redd.it/t67an8sbwjg21.png"
+    },
+]
 
-const ListProjectsWrapper = styled.div``
+const dataParse = data.map((e,key) => ({key,...e}));
 
 export default function ListProjects() {
+
+    const transition = useTransition(dataParse,e => e.key,{
+        from:  {
+            opacity : 0,
+            transform : "translateY(-20px)"
+        },
+        enter: {
+            opacity : 1,
+            transform : "translateY(0px)"
+
+        },
+        leave : {
+            opacity : 0,
+            transform : "translateY(-20px)"
+        },
+        trail : 100,
+        config : config.wobbly
+    });
+    
     return (
-        <ListProjectsWrapper className="relative flex mt-auto mb-auto h-4/5 pl-10">
-            <Wrapper className="flex flex-col h-full overflow-y-auto pr-6">
-                {Array(10).fill(0).map((e,i)=><ProjectCard key={i} />)}
-            </Wrapper>
-        </ListProjectsWrapper>
+        <div className="list__projects grid grid-cols-3 gap-y-5 gap-x-5 auto-rows-max grid-flow-row-dense">
+            {transition.map(({item,key,props}) => (
+                <ProjectCard image={item.image} style={props} key={key} />
+            ))}    
+        </div>
     )
 }
