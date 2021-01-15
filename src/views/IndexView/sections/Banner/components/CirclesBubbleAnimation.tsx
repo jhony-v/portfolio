@@ -4,7 +4,9 @@ import styled, { keyframes } from "styled-components"
 import useWindowMouseMove from "hooks/useWindowMouseMove"
 
 const movementKeyframes = scale => keyframes`
-  from { transform:scale(${scale}); }
+  from { 
+    transform:scale(${scale}); 
+  }
 `
 const FixedCircleAnimatable = styled(FixedCircle)`
   transition: 0.3s;
@@ -13,22 +15,8 @@ const FixedCircleAnimatable = styled(FixedCircle)`
 `
 
 export default function CirclesBubbleAnimation() {
-  const bubbleContainer = useRef(null)
-  useWindowMouseMove(e => {
-    if (bubbleContainer.current) {
-      let x = e.clientX - 80
-      let y = e.clientY
-      let bubbles = bubbleContainer.current as HTMLElement
-      let elements = bubbles.querySelectorAll("div")
-      elements.forEach(item => {
-        let bubble = item as HTMLElement
-        let bubbleDimensions =  bubble.getBoundingClientRect();
-      })
-    }
-  })
-
   return (
-    <div ref={bubbleContainer}>
+    <div>
       <FixedCircleAnimatable left="17%" top="50%" grayscale={0.1} d="250px" />
       <FixedCircleAnimatable right="35%" top="10%" grayscale={0.15} d="300px" />
       <FixedCircleAnimatable right="5%" top="15%" grayscale={0.2} d="100px" />

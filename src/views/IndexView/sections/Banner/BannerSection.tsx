@@ -1,12 +1,12 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import figure_dotted from "assets/figure_dotted.png"
 import stylePosition, { PositionProps } from "common/StyledSystem/stylePosition"
 import useBannerScrollAnimation from "./hooks/useBannerScrollAnimation"
 import SectionFullHeight from "layouts/SectionFullHeight"
 import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
 import LoadableComponent from "common/LoadableComponent"
 import useTextAnimatable from "./hooks/useTextAnimatable"
+import TitleCareer from "./components/TitleCareer"
 
 const bannerH1 = keyframes`
   from {
@@ -30,23 +30,6 @@ const BannerWrapper = styled(SectionFullHeight)`
 
 const H1 = styled.h1`
 animation:${bannerH1} .3s 1 linear;
-`
-
-const TitleCareer = styled.h2`
-  position: relative;
-  text-shadow: 0 20px 30px rgba(0, 0, 0, .5);
-  & * {
-    transition:4s;
-  }
-  & .text-bubble {
-    display:inline-block;
-    will-change:transform;
-    &:hover {
-      transition:.3s;
-      color:var(--secondary-color);
-      transform:perspective(400px)scale(1.8)rotate3d(.2,1,0,-40deg);
-    }
-  }
 `
 
 const ImageWrapper = styled.img<PositionProps>`
@@ -77,10 +60,7 @@ const BannerSection = () => {
           <H1 className="text-label text-5xl font-bold duration-75">
             I'm Jhony Vega
           </H1>
-          <TitleCareer className="mb-12 mt-2 font-bold flex title__career">
-            <span className="text-purple-700 text-6xl inline-flex mr-3">Frontend</span> 
-            <span className="text-label text-7xl inline-flex">Developer</span>
-          </TitleCareer>
+          <TitleCareer/>
           <p className="text-gray-200 w-4/6 flex"> 
           Hi 👋, I'm a frontend developer, passionate about programming and web development ❤️.
           </p>
@@ -93,7 +73,7 @@ const BannerSection = () => {
         <BannerImageWrapper className="banner__image z-10">
           <div className="banner__figure-dotted transition duration-75">
           <ImageWrapper
-            src={figure_dotted}
+            src="public_images/figure_dotted.png"
             width="160"
             className="absolute transform rotate-90"
             left="-75px"

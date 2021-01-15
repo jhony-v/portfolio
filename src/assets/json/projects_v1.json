@@ -1,13 +1,83 @@
 [
     {
         "title" : "Facebook Clone",
-        "description" : "This is a web application of Clone UI Facebook created with ReactJS and SSR.",
+        "description" : "This is a web application of Clone UI Facebook created with ReactJS and SSR",
         "image" : "project_images/facebook_clone.PNG",
         "technologies" : [
+        ],
+        "links" : {
+            "demo" : "https://facebook-clone-dev.vercel.app",
+            "github" : "https://github.com/jhony-24/facebook-clone",
+            "storybook" : "https://facebook-clone-design-system.netlify.app"
+        }
+    },
+    {
+        "title" : "Notes app",
+        "description" : "Notes app to save information by cards and colors",
+        "image" : "project_images/notes_app.png",
+        "technologies" : [
             {
-                "name" : "React JS",
-                "logo" : "https://"
+                "name" : "Svelte JS",
+                "logo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png"
             }
-        ]
+        ],
+        "links" : {
+            "demo" : "https://jhony-24.github.io/svelte-notes-app/",
+            "github" : "https://github.com/jhony-24/svelte-notes-app"
+        }
+    },
+    {
+        "title" : "Instagram Clone - Redesign",
+        "description" : "📷 🖼️ Clone instagram web application with new design",
+        "image" : "project_images/instagram_clone.PNG",
+        "technologies" : [
+        ],
+        "links" : {
+            "demo" : "https://instagram-clone-redesign.vercel.app/",
+            "github" : "https://github.com/jhony-24/instagram-clone-redesign"
+        }
+    },
+    {
+        "title" : "Emoji picker Components",
+        "description" : "Emoji picker reusable components writed with React 📘, Vue 📗",
+        "image" : "project_images/emoji_picker.png",
+        "technologies" : [
+        ],
+        "links" : {
+            "demo" : "https://bit.dev/personal-dev",
+            "github" : "https://github.com/jhony-24/emoji-pickers"
+        }
+    },
+    {
+        "title" : "Spotify clone UI",
+        "description" : "Recreate spotify web application with react",
+        "image" : "project_images/spotify_clone.PNG",
+        "technologies" : [
+        ],
+        "links" : {
+            "demo" : "https://spotify-clone-dev.vercel.app/",
+            "github" : "https://github.com/jhony-24/spotify-clone"
+        }
+    },
+    {
+        "title" : "Meal platform type Twitter",
+        "description" : "",
+        "image" : "project_images/meal_twitter_clone.PNG",
+        "technologies" : [
+        ],
+        "links" : {
+            "demo" : "https://meals-twitter.netlify.app/",
+            "github" : "https://github.com/jhony-24/meal"
+        }
+    },
+    {
+        "title" : "Events calendar to mark days",
+        "description" : "",
+        "image" : "project_images/events_calendar.PNG",
+        "technologies" : [
+        ],
+        "links":{
+            "github":"https://github.com/jhony-24/events-calendar"
+        }
     }
 ]

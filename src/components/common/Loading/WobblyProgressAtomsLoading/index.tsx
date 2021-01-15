@@ -1,13 +1,25 @@
 import React from "react"
 import CurveAtomsLoading from "common/Loading/CurveAtomsLoading"
 import ProgressBarLoading from "common/Loading/ProgressBarLoading"
-import { animated, config, useSpring, useTransition } from "react-spring"
+import { animated, useTransition } from "react-spring"
 import styled from "styled-components"
 
 const Wrapper = styled(animated.div)`
   background: rgba(20,20,20);
   z-index: 10000;
 `
+
+const transitionAnimations = {
+  from: {
+    transform: "translate(0%,-100%)",
+  },
+  enter: {
+    transform: "translate(0%,0%)",
+  },
+  leave: {
+    transform: "translate(0%,100%)",
+  },
+}
 
 type WobblyProgressAtomsLoadingProps = {
   text?: string
@@ -20,21 +32,11 @@ export default function WobblyProgressAtomsLoading({
   text,
   duration,
 }: WobblyProgressAtomsLoadingProps) {
-  const props = useTransition(visible, null, {
-    from: {
-      transform: "translate(0%,-100%)",
-    },
-    enter: {
-      transform: "translate(0%,0%)",
-    },
-    leave: {
-      transform: "translate(0%,100%)",
-    },
-  })
+  const transitions = useTransition(visible, null,transitionAnimations);
 
   return (
     <>
-      {props.map(
+      {transitions.map(
         ({ item, props, key }) =>
           item && (
             <Wrapper

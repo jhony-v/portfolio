@@ -1,5 +1,9 @@
 import React, { Suspense, lazy } from "react"
 
+/**
+ * Load component only in the client 
+ */
+
 type LoadableComponentProps = {
     module : () =>Promise<{ default: React.ComponentType<any>; }>,
     fallback : React.ReactNode,
