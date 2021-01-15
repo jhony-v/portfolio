@@ -1,79 +1,110 @@
 import BasePrimaryButton from "common/Buttons/BasePrimaryButton"
+import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
+import SmoothText from "common/Texts/SmoothText"
 import React, { useState } from "react"
-import { animated, useTransition } from "react-spring"
 import styled from "styled-components"
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
+const BackgroundBackdropWrapper = styled.div`
+  background-color: rgba(20, 20, 20, 0.97);
+`
 const BackgroundWrapper = styled.div<{ image: string }>`
-  width: 100%;
-  height: 400px;
-  padding: 10px;
   display: flex;
-  background: linear-gradient(20deg, rgba(0, 0, 0, 0.9) 10%, transparent 80%),url("${props => props.image}") no-repeat top / cover;
+  background: url("${props => props.image}") no-repeat top / cover;
+  box-shadow: 0 10px 30px rgba(50, 50, 50, 0.2);
+  ${BackgroundBackdropWrapper} {
+    width: 100%;
+    height: 100%;
+  }
 `
 
-const technologies = [
-  "React JS",
-  "Typescript",
-  "Styletron",
-  "GraphQL",
-  "Next JS",
-]
+const PreviewImageBackdrop = styled(BackgroundWrapper)`
+  border: 2px solid white;
+  width: 100%;
+  position: relative;
+  height: 400px;
+`
 
+const ButtonChangeProject = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:20px;
+  font-size:1.2rem;
+  color:black;
+`
 
-const Technology = () => {
-  return(
-    <div className="rounded-md p-4 m-3" style={{backgroundColor:"rgba(100,100,100,.2)"}}>
-      <img 
-      style={{width:"40px",height:"40px"}} 
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" 
-      className="block m-auto rounded-full flex-none object-cover" />
-      <div className="mt-3 ml-auto mr-auto text-sm text-label">Typescript</div>
+const Wrapper = styled.div`
+  .preview__navigator {
+    width:55%;
+  }
+  .preview__detail {
+    width:45%;
+  }
+`
+
+const PreviewImageProject = () => {
+  return (
+    <div className="flex relative ml-auto w-full flex-col -right-12">
+      <PreviewImageBackdrop image="project_images/facebook_clone.PNG" />
+      <div className="flex relative top-10">
+        <BasePrimaryButton>DEMO</BasePrimaryButton>
+        <div className="options flex items-center ml-12">
+        <a href="" className="text-black font-bold">Go to demo</a>
+        <div className="bg-black w-14 mr-8 ml-8" style={{height:"2px"}} />
+        <a href="" className="text-black font-bold">View code in Github</a>
+        </div>
+        <div className="flex ml-auto mr-10">
+          <ButtonChangeProject><BsChevronLeft/></ButtonChangeProject>
+          <ButtonChangeProject><BsChevronRight/></ButtonChangeProject>
+        </div>
+        </div>
     </div>
   )
 }
 
-export default function PreviewProject() {
+const ItemTabNavigator = ({text,selected}) => {
+  return(
+    <span className={`text-label text-center block p-3 w-full border-b-2 ${selected ? 'border-secondary' : 'border-transparent'}`}>{text}</span>
+  )
+}
 
-  const [ visible, setVisible ] = useState(true);
-  const transition = useTransition(visible,null,{
-    from : {
-      width : "0px"
-    },
-    enter : {
-      width : "520px"
-    },
-    leave : {
-      width: "0px"
-    }
-  });
+export default function PreviewProject() {
   return (
-    <>
-      {transition.map(({item,props})=>(
-        item && <animated.div className="preview__projects flex-none overflow-y-auto overflow-x-hidden" style={props}  >
-        <BackgroundWrapper image="https://cdn.pixabay.com/photo/2021/01/05/01/50/elephants-5889403__340.jpg">
-          <div className="mt-auto p-5">
-            <div className="text-label font-bold text-2xl w-5/6 mb-4">
-              Project of facebook clone UI
+    <Wrapper className="absolute left-0 top-0 w-full h-full flex items-stretch bg-black">
+      <div className="preview__navigator bg-white relative flex items-center">
+        <PreviewImageProject />
+      </div>
+      <BackgroundWrapper
+        image="project_images/facebook_clone.PNG"
+        className="preview__detail"
+      >
+        <BackgroundBackdropWrapper className="flex items-center">
+          <div
+            className="pl-20 pr-20 pt-10 pb-10 w-11/12 flex flex-col"
+            style={{ border: "2px solid rgb(50,50,50)",height:"90%" }}
+          >
+            <p className="text-label text-4xl font-bold mb-5">
+              Facebook CLONE Application UI
+            </p>
+            <div className="preview__tabs__navigator flex mt-5 mb-14 w-full">
+              <ItemTabNavigator text="Description" selected />
+              <ItemTabNavigator text="Technologies" />
             </div>
-            <BasePrimaryButton onClick={()=>setVisible(false)}>WATCH DEMO</BasePrimaryButton>
+            <SmoothText>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+              iusto quo ut repellendus fuga aliquam quam assumenda expedita
+              ipsum, quidem, totam laboriosam? Ullam sint corrupti dolore harum,
+              adipisci eius laboriosam?. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. 
+            </SmoothText>
           </div>
-        </BackgroundWrapper>
-        <div className="mt-5 pl-4 pr-4">
-          <p className="text-gray-400 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quos,
-              officia sunt maxime nihil labore a, expedita delectus nostrum
-              architecto atque. Impedit assumenda possimus qui, earum eum totam
-              maxime facilis.
-          </p>
-          <div className="item mb-3 mt-4 flex">
-            <Technology/>
-            <Technology/>
-            <Technology/>
-            <Technology/>
-          </div>
-        </div>
-      </animated.div>
-      ))}
-    </>
+        </BackgroundBackdropWrapper>
+      </BackgroundWrapper>
+    </Wrapper>
   )
 }

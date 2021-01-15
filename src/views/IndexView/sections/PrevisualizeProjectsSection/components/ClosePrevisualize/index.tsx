@@ -2,7 +2,6 @@ import React from "react"
 import { useModalVisualize } from "views/IndexView/contexts/ModalVisualize/ModalVisualizeContext"
 import { VscClose } from "react-icons/vsc"
 import styled from "styled-components"
-import useHiddenScrollingScreen from "hooks/useHiddenScrollingScreen"
 
 const CloseWrapper = styled.div`
   width: 50px;

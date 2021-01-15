@@ -1,10 +1,6 @@
 import React from 'react'
-import { config, useTransition } from 'react-spring';
 import ProjectCard from '../../components/ProjectCard'
 import projects_v1 from "assets/json/projects_v1.json";
-
-const data = []
-const dataParse = data.map((e,key) => ({key,...e}));
 
 export default function ListProjects() {
     

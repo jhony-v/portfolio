@@ -1,5 +1,4 @@
 import React  from "react"
-import Subtitle from "common/Texts/Subtitle"
 import PreviewProject from "./containers/PreviewProject"
 import ListProjects from "./containers/ListProjects"
 import WrapperSection from "./components/WrapperSection"
@@ -19,10 +18,10 @@ const PrevisualizeProjectsSection = () => {
             </div>
             <ListProjects/>
           </div>
-          {/* <PreviewProject/> */}
         </div>
+          <PreviewProject/>
       </WrapperSection>
-      {/* <WobblyScreenAnimation text="Loading projects" isActiveInScreen="projects" /> */}
+      <WobblyScreenAnimation text="Loading projects" isActiveInScreen="projects" />
     </>
   )
 }
