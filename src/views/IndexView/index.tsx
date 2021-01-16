@@ -17,7 +17,7 @@ const WrapperSections = styled.div`
 
 const IndexView = () => {
   return (
-    <div className="index-view flex h-full w-full overflow-auto">
+    <div className="index-view flex h-full w-full overflow-auto bg-dark-10">
       <WrapperSections className="index-main__scrollable">
         <BannerSection />
         <AboutSection />

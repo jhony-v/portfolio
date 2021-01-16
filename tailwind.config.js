@@ -15,7 +15,8 @@ module.exports = {
         }
       },
       screens : {
-        'md-100' : '980px'
+        'md-100' : '980px',
+        'phone-100' : '540px'
       }
     },
   },

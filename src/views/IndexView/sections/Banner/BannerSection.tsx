@@ -18,12 +18,13 @@ const BannerWrapper = styled(SectionFullHeight)`
 const BannerSection = () => {
   useBannerScrollAnimation();
   useTextAnimatable();
+  
   return (
-    <BannerWrapper data-id="home" className="flex items-center md-100:flex-row flex-col">
-      <div className="h-full bg-black flex items-center md-100:w-4/5 w-full">
+    <BannerWrapper data-id="home" className="flex items-center md-100:flex-row flex-col-reverse">
+      <div className="phone-100:bg-black flex items-center md-100:w-4/5 md-100:h-full phone-100:h-4/5 w-full">
         <BannerDescriptionProfile/>
       </div>
-      <div className="h-full flex items-center relative bg-dark-10 md-100:w-2/5 w-full">
+      <div className="flex items-center relative bg-dark-10 md-100:w-1/5 md-100:h-full w-full pb-12">
         <BannerImageProfile/>
       </div>
       <LoadableComponent module={()=>import("./components/CirclesBubbleAnimation")} fallback={null} />
