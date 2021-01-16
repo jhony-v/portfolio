@@ -14,7 +14,7 @@ const TitleLayerInformation = ({
   return (
     <div className={className}>
       <Subtitle>{subtitle}</Subtitle>
-      <div className="text-label text-5xl mt-3 font-bold">{title}</div>
+      <div className="text-label text-3xl sm:text-5xl mt-3 font-bold">{title}</div>
     </div>
   )
 }

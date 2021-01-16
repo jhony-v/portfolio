@@ -21,13 +21,13 @@ const AboutSection = () => {
   }
   return (
     <AboutWrapper className="mx-auto flex items-center " data-id="about">
-      <div className="w-4/5 m-auto flex">
+      <div className="w-11/12 sm:w-4/5 m-auto flex flex-col sm:flex-row">
         <div className="about__detail flex flex-col">
           <TitleLayerInformation 
-            className="mb-16 w-3/4 z-10" 
+            className="mb-16 sm:w-3/4 z-10 sm:mt-0 mt-4 md:w-full" 
             subtitle="About me" 
             title="Frontend Developer with three years experiences in the industry technology" />
-          <SmoothText className="w-1/2 z-10">
+          <SmoothText className="w-full md:w-11/12 sm:w-1/2 z-10">
             Hello, my name Jhony Vega , I am from Peru, a person who loves technology and web development.
             My main experience is the frontend but also I worked with other technologies. I like to work in a team and to be constantly learning.
           </SmoothText>
@@ -35,7 +35,7 @@ const AboutSection = () => {
             <BasePrimaryButton onClick={handlerOnNavigateToProjects}>VIEW PROJECTS</BasePrimaryButton>
            </div>
         </div>
-        <div className="about__contact flex items-center relative flex-col">
+        <div className="about__contact flex justify-between md-100::justify-self-auto items-center relative sm:flex-col flex-row mt-10 mb-8 md:mb-0 md:mt-0">
             <ExternalLinkSocialButton href="https://www.linkedin.com/in/jhony-vega/"><FaLinkedinIn/></ExternalLinkSocialButton>
             <ExternalLinkSocialButton href="https://github.com/jhony-24"><FaGithub/></ExternalLinkSocialButton>
             <ExternalLinkSocialButton href="https://dev.to/jhony24"><FaDev/></ExternalLinkSocialButton>
