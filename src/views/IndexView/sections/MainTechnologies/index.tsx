@@ -74,7 +74,7 @@ const MainTechnologiesSection = () => {
 
   return (
     <MainTechnologiesWrapper
-      className="p-10 flex flex-col overflow-y-auto"
+      className="sm:p-10 p-3 flex flex-col overflow-y-auto"
       data-id="skills"
     >
       <div className="pb-10">
@@ -86,14 +86,14 @@ const MainTechnologiesSection = () => {
           My hard skills is in frontend development. Currenly I work more in
           react ecosystem.
         </div>
-        <div className="flex items-center mt-5">
+        <div className="flex items-center mt-5 overflow-x-auto">
           {dataFilter.map((e) => (
             <ButtonLinkCategory key={e.id} text={e.text} selected={e.id === category} id={e.id} onClick={setCategory} />
           ))}
         </div>
       </div>
       <div className="skills relative">
-        <div className="grid grid-cols-6 gap-2 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 mb-10">
           {data.map(({ image, name, detail }, stackKey) => (
             <MiniCardTechonology key={stackKey} image={image} text={name} />
           ))}
