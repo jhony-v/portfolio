@@ -8,5 +8,12 @@
   "css.validate": false,
   "tailwindCSS.includeLanguages": {
       "plaintext" : "typescript"
-  }
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)",
+    "tw=\"([^\"]*)", 
+    "tw={\"([^\"}]*)",
+    "tw\\.\\w+`([^`]*)",
+    "tw\\(.*?\\)`([^`]*)" 
+  ]
 }

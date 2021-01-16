@@ -15,6 +15,7 @@
     "cleanup": "rimraf node_modules/.cache/gh-pages"
   },
   "dependencies": {
+    "@emotion/react": "^11.1.4",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
@@ -33,7 +34,8 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
     "react-spring": "^8.0.27",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "twin.macro": "^2.0.8"
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.5",

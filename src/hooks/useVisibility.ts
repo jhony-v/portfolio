@@ -16,7 +16,11 @@ export default function useVisibility({ disconnect, ...restProps }:VisibilityPro
       }
     },restProps);
     if (ref.current) intersectionObserver.observe(ref.current)
-
+    return () => {
+      if(ref.current) {
+        intersectionObserver.disconnect();
+      }
+    }
   },[])
 
   return {
