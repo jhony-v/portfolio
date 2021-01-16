@@ -4,6 +4,7 @@ import { animated } from "react-spring"
 import styled from "styled-components"
 import ImageCard from "./ImageCard"
 import LinkButtonNavigate from "./LinkButtonNavigate"
+import { Project, usePrevisualizeProject } from "../../contexts/PrevisualizeProject/PrevisualizeProjectContext"
 
 const Wrapper = styled(animated.div)`
   width: 80%;
@@ -34,8 +35,16 @@ const Wrapper = styled(animated.div)`
 `
 
 
-
-export default function ProjectCard({ image, title }) {
+interface ProjectCardProps {
+  project : Project
+}
+export default function ProjectCard({ project } : ProjectCardProps) {
+  const { description, image, title } = project;
+  const { setCurrentProject, setShowing } = usePrevisualizeProject();
+  const onSelectProject  = () => {
+    setCurrentProject(project);
+    setShowing(true);
+  }
   return (
     <Wrapper className="flex justify-between mb-52 ml-auto mr-auto items-center">
       <div className="p-4 project__detail">
@@ -47,7 +56,7 @@ export default function ProjectCard({ image, title }) {
           voluptate eum!.
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus nulla veniam aut ad ut asperiores repudiandae dolor tempore optio recusandae molestias ex quod rerum ea porro eos, nobis explicabo tempora!
         </SmoothText>
-        <LinkButtonNavigate />
+        <LinkButtonNavigate onClick={onSelectProject} />
       </div>
      <ImageCard src={image} />
     </Wrapper>

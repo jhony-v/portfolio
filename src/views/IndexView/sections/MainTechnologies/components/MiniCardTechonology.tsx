@@ -31,7 +31,7 @@ const MiniCardTechonology = ({ text, image }) => {
 
   useEffect(() => {
     refImage.current.src = visible ? refImage.current.getAttribute("data-src") : "";
-  },[visible]);
+  },[visible,image]);
 
   return (
     <StyledCard

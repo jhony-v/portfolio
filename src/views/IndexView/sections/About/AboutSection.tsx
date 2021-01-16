@@ -7,6 +7,7 @@ import BasePrimaryButton from "common/Buttons/BasePrimaryButton";
 import TitleLayerInformation from "common/Texts/TitleLayerInformation";
 import ExternalLinkSocialButton from "common/Buttons/ExternalLinkSocialButton";
 import SmoothText from "common/Texts/SmoothText";
+import { useModalVisualize } from "views/IndexView/contexts/ModalVisualize/ModalVisualizeContext";
 
 const AboutWrapper = styled(SectionFullHeight)`
   clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 95%);
@@ -14,6 +15,10 @@ const AboutWrapper = styled(SectionFullHeight)`
 `
 
 const AboutSection = () => {
+  const { setModalActive } = useModalVisualize();
+  const handlerOnNavigateToProjects = () => {
+    setModalActive("projects");
+  }
   return (
     <AboutWrapper className="mx-auto flex items-center " data-id="about">
       <div className="w-4/5 m-auto flex">
@@ -27,7 +32,7 @@ const AboutSection = () => {
             My main experience is the frontend but also I worked with other technologies. I like to work in a team and to be constantly learning.
           </SmoothText>
            <div className="mt-8">
-            <BasePrimaryButton>VIEW PROJECTS</BasePrimaryButton>
+            <BasePrimaryButton onClick={handlerOnNavigateToProjects}>VIEW PROJECTS</BasePrimaryButton>
            </div>
         </div>
         <div className="about__contact flex items-center relative flex-col">

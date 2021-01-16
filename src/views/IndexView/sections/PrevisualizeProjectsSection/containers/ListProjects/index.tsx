@@ -1,13 +1,13 @@
 import React from 'react'
 import ProjectCard from '../../components/ProjectCard'
-import projects_v1 from "assets/json/projects_v1.json";
+import { usePrevisualizeProject } from '../../contexts/PrevisualizeProject/PrevisualizeProjectContext';
 
 export default function ListProjects() {
-    
+    const {  listProjects } = usePrevisualizeProject();
     return (
         <div className="list__projects w-full m-auto">
-            {projects_v1.map(({title,image},key) => (
-                <ProjectCard image={image} title={title} key={key} />
+            {listProjects.map((e,key) => (
+                <ProjectCard project={e} key={key} />
             ))}    
         </div>
     )

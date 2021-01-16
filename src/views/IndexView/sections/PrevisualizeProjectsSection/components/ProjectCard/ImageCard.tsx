@@ -1,5 +1,5 @@
 import useVisibility from "hooks/useVisibility"
-import React from "react"
+import React, { memo } from "react"
 import { animated, useSpring } from "react-spring"
 import styled from "styled-components"
 
@@ -27,7 +27,7 @@ const WrapperImage = styled(animated.div)`
   }
 `
 
-export default function ImageCard({ src }) {
+function ImageCard({ src }) {
   const { ref, visible } = useVisibility()
   const transition = useSpring({
     transform: `translateY(${visible ? 0 : 200}px)`,
@@ -45,3 +45,5 @@ export default function ImageCard({ src }) {
     </animated.div>
   )
 }
+
+export default memo(ImageCard);
