@@ -19,6 +19,9 @@ const MainWrapper = styled.main`
   display:flex;
   overflow:auto;
   height:100%;
+  @media screen and (max-width:768px) {
+    height:calc(100% - var(--width-navigator));
+  }
 `;
 
 

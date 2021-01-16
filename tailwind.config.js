@@ -13,6 +13,9 @@ module.exports = {
         dark : {
           10 : "rgb(10,10,10,.1)"
         }
+      },
+      screens : {
+        'md-100' : '980px'
       }
     },
   },

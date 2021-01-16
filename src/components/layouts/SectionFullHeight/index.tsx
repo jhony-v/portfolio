@@ -1,7 +1,6 @@
 import styled from "styled-components";
+import tw from "twin.macro";
 
 export default styled.div`
-  width: 100%;
-  height: 100%;
-  position:relative;
+  ${tw`w-full h-full overflow-x-hidden overflow-y-auto relative`}
 `
