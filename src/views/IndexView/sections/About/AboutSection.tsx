@@ -24,10 +24,10 @@ const AboutSection = () => {
       <div className="w-11/12 sm:w-4/5 m-auto flex flex-col sm:flex-row">
         <div className="about__detail flex flex-col">
           <TitleLayerInformation 
-            className="mb-16 sm:w-3/4 z-10 sm:mt-0 mt-4 md:w-full" 
+            className="mb-16 phone-100:w-full z-10 sm:mt-0 mt-4 md:w-full" 
             subtitle="About me" 
             title="Frontend Developer with three years experiences in the industry technology" />
-          <SmoothText className="w-full md:w-11/12 sm:w-1/2 z-10">
+          <SmoothText className="w-full md:w-11/12 phone-100:w-3/4 z-10">
             Hello, my name Jhony Vega , I am from Peru, a person who loves technology and web development.
             My main experience is the frontend but also I worked with other technologies. I like to work in a team and to be constantly learning.
           </SmoothText>

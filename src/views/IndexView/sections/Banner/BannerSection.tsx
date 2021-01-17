@@ -11,6 +11,9 @@ const BannerWrapper = styled(SectionFullHeight)`
   transition:.3s;
   @media screen and (min-width:768px) {
     clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 90%);
+    & .detail, & .image {
+      height:100%;
+    }
   }
 `
 
@@ -21,10 +24,10 @@ const BannerSection = () => {
   
   return (
     <BannerWrapper data-id="home" className="flex items-center md-100:flex-row flex-col-reverse">
-      <div className="phone-100:bg-black flex items-center md-100:w-4/5 md-100:h-full phone-100:h-4/5 w-full">
+      <div className="detail phone-100:bg-black flex items-center md-100:w-4/5 phone-100:h-4/5 w-full" style={{height:"100%"}}>
         <BannerDescriptionProfile/>
       </div>
-      <div className="flex items-center relative bg-dark-10 md-100:w-1/5 md-100:h-full w-full pb-12">
+      <div className="image flex items-center relative bg-dark-10 md-100:w-1/5 w-full pb-12">
         <BannerImageProfile/>
       </div>
       <LoadableComponent module={()=>import("./components/CirclesBubbleAnimation")} fallback={null} />

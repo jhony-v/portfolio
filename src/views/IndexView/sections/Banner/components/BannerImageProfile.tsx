@@ -21,6 +21,7 @@ const BannerImageWrapper = styled.div`
   @media screen and (max-width:768px) {
     position:static;
     margin:auto;
+    margin-top:60px;
   }
   @media screen and (max-width:540px) {
     .banner__figure-solid {
@@ -48,7 +49,7 @@ const SquareBackgroundImageWrapper = styled.div<PositionProps>`
 
 const BannerImageProfile = () => {
     return (
-        <BannerImageWrapper className="banner__image z-10 phone-100:mt-0 phone-100:mb-0">
+        <BannerImageWrapper className="banner__image phone-100:mt-0 phone-100:mb-0">
             <div className="banner__figure-dotted transition duration-75">
             <ImageWrapper
                 src="public_images/figure_dotted.png"
@@ -59,7 +60,7 @@ const BannerImageProfile = () => {
             />
             </div>
             <SquareBackgroundImageWrapper
-                className="z-10 absolute banner__figure-solid bg-primary"
+                className="absolute banner__figure-solid bg-primary"
                 left="-80px"
                 bottom="-60px"
                 />
@@ -67,7 +68,7 @@ const BannerImageProfile = () => {
                 src="public_images/profile.png"
                 width="220"
                 height="270"
-                className="z-10 relative object-cover banner__image-profile"
+                className="relative object-cover banner__image-profile"
             />
         </BannerImageWrapper>    
     )

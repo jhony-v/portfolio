@@ -20,7 +20,7 @@ const StyledTitleCareer = styled.h2`
 
 const TitleCareer = () => {
   return (
-    <StyledTitleCareer className="ml-auto mb-12 mt-2 font-bold z-20 phone-100:flex-row flex-col flex title__career">
+    <StyledTitleCareer className="ml-auto mb-12 mt-2 font-bold phone-100:flex-row flex-col flex title__career">
       <span className="text-purple-700 text-5xl md:text-6xl inline-flex mr-3">
         Frontend
       </span>

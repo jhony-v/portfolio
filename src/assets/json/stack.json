@@ -63,6 +63,11 @@
         "detail": "librería"
       },
       {
+        "image":"https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/q1cwqhahz7jbtfzalznd",
+        "name":"Cypress",
+        "detai":"Testing"
+      },
+      {
         "image": "https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/html5-512.png",
         "name": "HTML5",
         "detail": "lenguaje de marcado"
@@ -198,8 +203,8 @@
         "detail" : "empaquetador"
       },
       {
-        "image" : "https://img.icons8.com/color/480/heroku.png",
-        "name" : "Heroku",
+        "image" : "https://pbs.twimg.com/profile_images/1252525888710873088/CBm5_MB7_400x400.jpg",
+        "name" : "Vercel Platform",
         "detail" : "hosting"
       },
       {

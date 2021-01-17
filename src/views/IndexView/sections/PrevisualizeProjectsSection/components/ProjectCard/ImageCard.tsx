@@ -7,26 +7,29 @@ const WrapperImage = styled(animated.div)`
   width: 500px;
   flex: none;
   display: flex;
-  height: 300px;
   position: relative;
   transform-style: preserve-3d;
   & .image {
     border-radius: 15px;
     object-fit: cover;
-    width: 90%;
     height: 100%;
     z-index: 1;
     background-color: #2e2e2e;
   }
   & .backdrop {
     position: absolute;
-    width: 90%;
     height: 100%;
     border-radius: 10px;
     background-color: var(--primary-color);
   }
+
+  @media screen and (max-width:1125px) {
+    width:33vw;
+  }
+
   @media screen and (max-width:768px){
     width:100%;
+    margin-top:20px;
   }
 `
 
@@ -41,9 +44,9 @@ function ImageCard({ src }) {
   })
   return (
     <animated.div style={transition}>
-      <WrapperImage className="project__image" ref={ref}>
-        <div className="backdrop"></div>
-        {visible ? <img className="image" src={src} /> : <div className="image" />}
+      <WrapperImage className="project__image h-40 sm:h-80" ref={ref}>
+        <div className="backdrop "></div>
+        {visible ? <img className="image w-11/12 m-auto sm:w-11/12" src={src} /> : <div className="image w-full sm:w-11/12" />}
       </WrapperImage>
     </animated.div>
   )

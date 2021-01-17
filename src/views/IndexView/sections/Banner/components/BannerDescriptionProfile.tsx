@@ -16,8 +16,8 @@ const H1 = styled.h1`
 
 const BannerDescriptionProfile = () => {
   return (
-    <div className="sm:pl-10 md:pl-20 phone-100:w-full w-11/12 m-auto relative duration-150 banner__text cursor-default">
-      <H1 className="text-label sm:text-4xl md:text-5xl font-bold duration-75 z-20 ">
+    <div className="sm:pl-10 md:pl-20 sm:w-full w-11/12 m-auto relative duration-150 banner__text cursor-default">
+      <H1 className="text-label sm:text-4xl md:text-5xl font-bold duration-75">
         I'm Jhony Vega
       </H1>
       <TitleCareer />
