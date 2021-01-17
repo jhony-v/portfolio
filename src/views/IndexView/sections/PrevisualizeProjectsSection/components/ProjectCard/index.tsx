@@ -20,6 +20,9 @@ const Wrapper = styled(animated.div)`
         transform:translate(-5%,5%);
       }
     }
+    @media screen and (max-width:768px){
+      flex-direction:column-reverse;
+    }
   }
   &:nth-child(odd) {
     .project__detail {
@@ -29,6 +32,17 @@ const Wrapper = styled(animated.div)`
       transform:perspective(400px)rotateY(-20deg);
       & .backdrop {
         transform:translate(5%,5%);
+      }
+    }
+  }
+  @media screen and (max-width:768px){
+    flex-direction:column-reverse;
+    & .project__detail {
+      margin:0 !important;
+    }
+    .project__image{
+      .backdrop {
+        transform:none;
       }
     }
   }
@@ -46,7 +60,7 @@ export default function ProjectCard({ project } : ProjectCardProps) {
     setShowing(true);
   }
   return (
-    <Wrapper className="flex justify-between mb-52 ml-auto mr-auto items-center">
+    <Wrapper className="flex justify-between mb-52 ml-auto mr-auto phone-100:ml-auto phone-100:mr-auto items-center sm:bg-dark-10">
       <div className="p-4 project__detail">
         <p className="text-label text-2xl mb-3 mt-3 font-bold">{title}</p>
         <SmoothText>

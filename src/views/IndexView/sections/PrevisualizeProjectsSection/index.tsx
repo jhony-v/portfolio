@@ -13,7 +13,7 @@ const PrevisualizeProjectsSection = () => {
     <>
       <WrapperSection visible={isEqual("projects")}>
         <PrevisualizeProjectProvider>
-          <div className="h-full w-full flex-col overflow-y-auto relative preview flex p-10 content__projects">
+          <div className="h-full w-full flex-col overflow-y-auto relative preview flex sm:p-10 pt-3 content__projects">
               <div className="header w-4/5 m-auto">
                 <TitleLayerInformation subtitle="5 projects" title="My projects" className="mb-14" />
               </div>

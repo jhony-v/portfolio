@@ -19,6 +19,9 @@ const Wrapper = styled(animated.div)`
       background-color: rgba(100, 100, 100, 0.6);
     }
   }
+  @media screen and (max-width:768px) {
+    width:100%;
+  }
 `
 
 export default function WrapperSection({ children,visible }) {

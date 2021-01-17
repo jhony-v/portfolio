@@ -25,6 +25,9 @@ const WrapperImage = styled(animated.div)`
     border-radius: 10px;
     background-color: var(--primary-color);
   }
+  @media screen and (max-width:768px){
+    width:100%;
+  }
 `
 
 function ImageCard({ src }) {
