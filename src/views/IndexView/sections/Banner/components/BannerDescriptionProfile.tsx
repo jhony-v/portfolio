@@ -2,6 +2,8 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import TitleCareer from "./TitleCareer"
 import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
+import startInClient from "utils/startInClient"
+import openUrlNewTab from "utils/openUrlNewTab"
 
 const bannerH1 = keyframes`
   from {
@@ -15,6 +17,11 @@ const H1 = styled.h1`
 `
 
 const BannerDescriptionProfile = () => {
+
+  const onContactMe = () => startInClient(() => {
+    openUrlNewTab("https://www.linkedin.com/in/jhony-vega/");
+  });
+  
   return (
     <div className="sm:pl-10 md:pl-20 sm:w-full w-11/12 m-auto relative duration-150 banner__text cursor-default">
       <H1 className="text-label sm:text-4xl md:text-5xl font-bold duration-75">
@@ -26,7 +33,7 @@ const BannerDescriptionProfile = () => {
         development ❤️.
       </p>
       <div className="mt-9">
-        <BaseRoundedButton>Contact me</BaseRoundedButton>
+        <BaseRoundedButton onClick={onContactMe}>Contact me</BaseRoundedButton>
       </div>
     </div>
   )

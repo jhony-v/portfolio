@@ -22,7 +22,7 @@ const PrevisualizeProjectsSection = () => {
           <PreviewProject/>
         </PrevisualizeProjectProvider>
       </WrapperSection>
-      {/* <WobblyScreenAnimation text="Loading projects" isActiveInScreen="projects" /> */}
+      <WobblyScreenAnimation text="Loading projects" isActiveInScreen="projects" />
     </>
   )
 }
