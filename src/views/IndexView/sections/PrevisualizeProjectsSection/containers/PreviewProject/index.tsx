@@ -4,54 +4,12 @@ import SmoothText from "common/Texts/SmoothText"
 import React, { useState } from "react"
 import styled from "styled-components"
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs"
-import {
-  ExternalLinks,
-  usePrevisualizeProject,
-} from "../../contexts/PrevisualizeProject/PrevisualizeProjectContext"
+import {  usePrevisualizeProject,} from "../../contexts/PrevisualizeProject/PrevisualizeProjectContext"
 import useNavigateBetweenProjects from "../../hooks/useNavigateBetweenProjects"
 import { animated, useSpring, useTransition } from "react-spring"
+import startInClient from "utils/startInClient"
 
-const BackgroundBackdropWrapper = styled.div`
-  background-color: rgba(20, 20, 20, 0.97);
-`
-const BackgroundWrapper = styled(animated.div)<{ image: string }>`
-  display: flex;
-  background: url("${props => props.image}") no-repeat top / cover;
-  ${BackgroundBackdropWrapper} {
-    width: 100%;
-    height: 100%;
-  }
-`
-
-const PreviewImageBackdrop = styled(BackgroundWrapper)`
-  border: 2px solid white;
-  width: 100%;
-  position: relative;
-  height: 400px;
-`
-
-const ButtonChangeProject = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: #e4e4e4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-  font-size: 1.2rem;
-  color: black;
-`
-
-const Wrapper = styled(animated.div)`
-  .preview__navigator {
-    width: 55%;
-  }
-  .preview__detail {
-    width: 45%;
-  }
-`
-
+const Wrapper = styled(animated.div)``
 
 const ChevronMove = ({children, onClick,position}) => {
   return(
@@ -72,17 +30,6 @@ const ChevronsChangeProject = () => {
 }
 
 
-const ItemTabNavigator = ({ text, selected }) => {
-  return (
-    <span
-      className={`text-label text-center block p-3 w-full border-b-2 ${
-        selected ? "border-secondary" : "border-transparent"
-      }`}
-    >
-      {text}
-    </span>
-  )
-}
 
 
 const CardTechnologyUsed = ({image,title}) => (
@@ -91,6 +38,10 @@ const CardTechnologyUsed = ({image,title}) => (
       <span className="font-bold ml-2">{title}</span>
   </div>
 )
+
+const open = (url : stirng ) => {
+  window.open(url,"_blank");
+}
 
 export default function PreviewProject() {
   const {
@@ -113,6 +64,14 @@ export default function PreviewProject() {
     },
   });
 
+  const onDemo = () => startInClient(() => {
+      open(links.demo);
+  })
+  
+  const onCode = () => startInClient(() => {
+    open(links.github);
+  });
+
   return (
     <>
       {transitionShowingWrapper.map(
@@ -131,9 +90,9 @@ export default function PreviewProject() {
                     {description}
                   </p>
                   <div className="options mt-10 flex items-center">
-                    <BasePrimaryButton>WATCH DEMO</BasePrimaryButton>
+                    <BasePrimaryButton onClick={onDemo}>WATCH DEMO</BasePrimaryButton>
                     <div className="ml-3">
-                      <BaseRoundedButton>VIEW CODE</BaseRoundedButton>
+                      <BaseRoundedButton onClick={onCode}>VIEW CODE</BaseRoundedButton>
                     </div>
                   </div>
                 </div>

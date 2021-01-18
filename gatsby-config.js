@@ -41,6 +41,7 @@ module.exports = {
         config : path.resolve(__dirname,"src/config"),
         assets : path.resolve(__dirname,"src/assets"),
         hooks : path.resolve(__dirname,"src/hooks"),
+        utils : path.resolve(__dirname,"src/utils"),
       }
     }
   ],
