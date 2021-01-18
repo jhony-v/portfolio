@@ -13,8 +13,8 @@ const Wrapper = styled(animated.div)`
   }
   .progress-bar {
     width:400px;
-    @media screen and (max-width:400px) {
-      width:70%;
+    @media screen and (max-width:540px) {
+      width:80%;
     }
   }
   ${tw`fixed h-full flex-col flex w-full left-0 justify-center items-center`}

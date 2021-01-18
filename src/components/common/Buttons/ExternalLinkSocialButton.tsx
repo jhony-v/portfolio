@@ -1,7 +1,8 @@
+import { animated } from "react-spring";
 import styled from "styled-components";
 
 const sizeSocialButton = 60;
-const ExternalLinkSocialButton = styled.a.attrs({ target: "_blank" })`
+const ExternalLinkSocialButton = styled(animated.a).attrs({ target: "_blank" })`
   width: ${sizeSocialButton}px;
   height: ${sizeSocialButton}px;
   color:var(--third-color);
@@ -14,6 +15,7 @@ const ExternalLinkSocialButton = styled.a.attrs({ target: "_blank" })`
   margin:20px 0;
   transition:transform .3s;
   will-change:transform;
+  position:relative;
   z-index:10;
   &:hover {
     transform:scale(1.2);

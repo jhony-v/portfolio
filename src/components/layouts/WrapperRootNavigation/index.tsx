@@ -35,7 +35,7 @@ const RootWrapper = styled.div`
   grid-template-columns:var(--width-navigator) 1fr;
   @media screen and (max-width:768px) {
     display:block;
-    --width-navigator : 50px;
+    --width-navigator : 60px;
     ${HeaderWrapper} {
       height:var(--width-navigator);
       ${tw`fixed bottom-0 left-0 w-full z-20`};
@@ -64,7 +64,7 @@ export default function WrapperRootNavigation({ children }: WrapperRootNavigatio
   return (
     <RootWrapper>
       <HeaderWrapper className="bg-black flex flex-col header__navigator">
-        <ul className="flex justify-center h-full md:flex-col ">
+        <ul className="flex justify-center h-full md:flex-col items-center md:items-start">
           <LiItemNavigation to="home" selected={selected} icon={AiOutlineHome} onClick={handlerOnLinkSelected} />
           <LiItemNavigation to="about" selected={selected} icon={AiOutlineUser} onClick={handlerOnLinkSelected} />
           <LiItemNavigation to="skills" selected={selected} icon={BsCodeSlash} onClick={handlerOnLinkSelected} />

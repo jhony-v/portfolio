@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react"
 
+interface Dimension {
+  width: number; 
+  height: number 
+}
+
 export default function useResize() {
-  const [size, setSize] = useState<{ width: number; height: number }>({
+  const [size, setSize] = useState<Dimension>({
     width: 0,
     height: 0,
   })
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      let getDimension = () : Dimension => ({
+        width : window.innerWidth || document.body.offsetWidth,
+        height : window.innerWidth || document.body.offsetWidth
+      });
+      setSize(getDimension)
       const handler = () => {
-        setSize({
-          width: window.innerWidth || document.body.offsetWidth,
-          height: window.innerHeight || document.body.offsetHeight,
-        })
+        setSize(getDimension())
       }
       window.addEventListener("resize", handler)
       return () => {

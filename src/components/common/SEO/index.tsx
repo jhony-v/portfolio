@@ -15,6 +15,7 @@ export default function SEO({ children, title, description }: SEOProps) {
         <meta name="description" content={description} />
         <meta name="og:title" content={title} />
         <meta name="og:description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </Helmet>
       {children}
     </>

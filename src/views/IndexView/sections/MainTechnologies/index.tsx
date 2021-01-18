@@ -4,42 +4,18 @@ import SectionFullHeight from "layouts/SectionFullHeight"
 import MiniCardTechonology from "./components/MiniCardTechonology"
 import stackJson from "assets/json/stack.json"
 import TitleLayerInformation from "common/Texts/TitleLayerInformation"
-import Subtitle from "common/Texts/Subtitle"
+import ButtonLinkCategory from "./components/ButtonLinkCategory"
 
 const MainTechnologiesWrapper = styled(SectionFullHeight)`
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(100, 100, 100, 0.6);
+  @media screen and (min-width:540px) {
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(100, 100, 100, 0.6);
+    }
   }
 `
-
-type ButtonLinkCategoryProps = {
-  text: string
-  selected?: boolean,
-  onClick: (id : string) => void,
-  id : string,
-}
-const ButtonLinkCategory = ({
-  text,
-  selected,
-  onClick,
-  id,
-}: ButtonLinkCategoryProps) => {
-
-  const handlerOnClick = () => onClick(id)
-  return (
-    <div
-      onClick={handlerOnClick}
-      className={`mr-8 border-b-2 cursor-pointer text-gray-300 font-bold pb-4 pt-4 ${
-        selected ? "border-primary text-primary" : "border-transparent"
-      }`}
-    >
-      {text}
-    </div>
-  )
-}
 
 const dataFilter = [
   {
