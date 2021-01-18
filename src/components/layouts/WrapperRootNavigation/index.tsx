@@ -8,6 +8,7 @@ import { BsCodeSlash } from 'react-icons/bs'
 import ExternalLinks from "./components/ExternalLinks";
 import LiItemNavigation from "./components/LiItemNavigation";
 import tw from "twin.macro";
+import HanburgerMenu from "./components/HamburgerMenu";
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -64,6 +65,7 @@ export default function WrapperRootNavigation({ children }: WrapperRootNavigatio
   return (
     <RootWrapper>
       <HeaderWrapper className="bg-black flex flex-col header__navigator">
+        <HanburgerMenu/> 
         <ul className="flex justify-center h-full md:flex-col items-center md:items-start">
           <LiItemNavigation to="home" selected={selected} icon={AiOutlineHome} onClick={handlerOnLinkSelected} />
           <LiItemNavigation to="about" selected={selected} icon={AiOutlineUser} onClick={handlerOnLinkSelected} />
