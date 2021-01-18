@@ -52,40 +52,25 @@ const Wrapper = styled(animated.div)`
   }
 `
 
-const PreviewImageProject = ({
-  links: { demo, github },
-  image,
-}: {
-  links: ExternalLinks
-  image: string
-}) => {
-  const { onNext, onPrevious } = useNavigateBetweenProjects();
-  return (
-    <div className="flex relative ml-auto w-full flex-col -right-12">
-      <PreviewImageBackdrop image={image} />
-      <div className="flex relative top-10">
-        <BasePrimaryButton>DEMO</BasePrimaryButton>
-        <div className="options flex items-center ml-12">
-          <a href={demo} target="_blank" className="text-black font-bold">
-            Go to demo
-          </a>
-          <div className="bg-black w-14 mr-8 ml-8" style={{ height: "2px" }} />
-          <a href={github} target="_blank" className="text-black font-bold">
-            View code in Github
-          </a>
-        </div>
-        <div className="flex ml-auto mr-10">
-          <ButtonChangeProject onClick={onPrevious}>
-            <BsChevronLeft />
-          </ButtonChangeProject>
-          <ButtonChangeProject onClick={onNext}>
-            <BsChevronRight />
-          </ButtonChangeProject>
-        </div>
-      </div>
+
+const ChevronMove = ({children, onClick,position}) => {
+  return(
+    <div className={`${position}-3 absolute top-1/2 text-3xl transform -translate-1/2`} onClick={onClick}>
+      {children}
     </div>
   )
 }
+
+const ChevronsChangeProject = () => {
+  const { onNext, onPrevious } = useNavigateBetweenProjects();
+  return(
+    <>
+      <ChevronMove onClick={onPrevious}  position="left"><BsChevronLeft/></ChevronMove>
+      <ChevronMove onClick={onNext} position="right"><BsChevronRight/></ChevronMove>
+    </>
+  )
+}
+
 
 const ItemTabNavigator = ({ text, selected }) => {
   return (
@@ -99,10 +84,18 @@ const ItemTabNavigator = ({ text, selected }) => {
   )
 }
 
+
+const CardTechnologyUsed = ({image,title}) => (
+  <div className="bg-white rounded-3xl inline-flex items-center py-3 px-5 mr-4 mb-4">
+      <img className="w-5 h-5 object-cover" src={image} />
+      <span className="font-bold ml-2">{title}</span>
+  </div>
+)
+
 export default function PreviewProject() {
   const {
     showing,
-    currentProject: { description, image, title, links },
+    currentProject: { description, image, title, links, technologies },
   } = usePrevisualizeProject()
 
   const transitionShowingWrapper = useTransition(showing, null, {
@@ -119,53 +112,41 @@ export default function PreviewProject() {
       transform : 'translateY(100%)'
     },
   });
-  const transitionTitle = useSpring({
-    transform : showing ? 'translateX(0%)' : 'translateX(100%)',
-    config : {
-      duration : 2000
-    }
-  });
-
-  const transitionDetail = useSpring({
-    transform : showing ? 'translateY(0%)' : 'translateY(200%)',
-    config : {
-      duration : 1000
-    }
-  });
-  const transitionNavigator = useSpring({
-    transform : showing ? 'translateY(0%)' : 'translateY(-200%)',
-    config : {
-      duration : 1000
-    }
-  });
-
 
   return (
     <>
       {transitionShowingWrapper.map(
         ({ item, key, props }) =>
           item && (
-            <Wrapper key={key} style={props} className="absolute left-0 top-0 w-full h-full flex items-stretch bg-black">
-              <animated.div style={transitionNavigator} className="preview__navigator bg-gray-100 relative flex items-center z-10">
-                <PreviewImageProject links={links} image={image} />
-              </animated.div>
-              <BackgroundWrapper style={transitionDetail} image={image} className="preview__detail">
-                <BackgroundBackdropWrapper className="flex items-center">
-                  <div
-                    className="pl-20 pr-20 pt-10 pb-10 w-11/12 flex flex-col"
-                    style={{ border: "2px solid rgb(50,50,50)", height: "90%" }}
-                  >
-                    <animated.p style={transitionTitle} className="text-label text-4xl font-bold mb-5">
-                      {title}
-                    </animated.p>
-                    <div className="preview__tabs__navigator flex mt-5 mb-14 w-full">
-                      <ItemTabNavigator text="Description" selected />
-                      <ItemTabNavigator text="Technologies" selected={false} />
+            <Wrapper key={key} style={props} className="absolute left-0 top-0 w-full h-full bg-gray-200">
+              <div className=" w-11/12 md:w-5/6 mx-auto mt-14 md:flex project__detail mb-24">
+                <div className="flex md:w-1/2">
+                    <div className="rounded-3xl border-white border-2 shadow-2xl overflow-hidden md:w-4/5" style={{height:"300px"}}>
+                      <img className="w-dull h-full object-cover" src={image} />
                     </div>
-                    <SmoothText>{description}</SmoothText>
+                </div>
+                <div className="md:w-1/2">
+                  <div className="text-4xl md:text-5xl mb-10 mt-10 md:mt-0">{title}</div>
+                  <p className="text-gray-400">
+                    {description}
+                  </p>
+                  <div className="options mt-10 flex items-center">
+                    <BasePrimaryButton>WATCH DEMO</BasePrimaryButton>
+                    <div className="ml-3">
+                      <BaseRoundedButton>VIEW CODE</BaseRoundedButton>
+                    </div>
                   </div>
-                </BackgroundBackdropWrapper>
-              </BackgroundWrapper>
+                </div>
+              </div>
+              <div className="project__technologies w-5/6 mx-auto">
+                <div className="text-lg mb-5 font-bold">Technologies</div>
+                <div className="list__project-technologies flex flex-wrap">
+                  {technologies.map((item,index) => (
+                  <CardTechnologyUsed image={item.image} title={item.name} key={index} />
+                  ))}
+                </div>
+              </div>
+              <ChevronsChangeProject/>
             </Wrapper>
           )
       )}
