@@ -1,12 +1,16 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { PrevisualizeProjectContext, PrevisualizeProjectContextState, Project } from "./PrevisualizeProjectContext"
-import projects_v1 from "assets/json/projects_v1.json";
-
 
 const PrevisualizeProjectProvider: React.FC = ({ children }) => {
-  const [ listProjects , setListProjects  ] = useState<Project[]>(projects_v1 as Project[]);
+  const [ listProjects , setListProjects  ] = useState<Project[]>([]);
   const [ showing , setShowing  ] = useState<boolean>(false);
   const [ currentProject , setCurrentProject  ] = useState<Partial<Project>>({});
+
+  useEffect(() => {
+      import("assets/json/projects_v1.json").then((e) => {
+        setListProjects(e.default as Project[]);
+      })
+  },[]);
 
   const value : PrevisualizeProjectContextState = {
     listProjects,

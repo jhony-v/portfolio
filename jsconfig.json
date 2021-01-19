@@ -9,7 +9,8 @@
             "config/*" : ["config/*"],  
             "assets/*" : ["assets/*"],  
         },
-        "jsx": "react"
+        "jsx": "react",
+        "resolveJsonModule": true
     },
     "include": ["src/**/*"]
 }

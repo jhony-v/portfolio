@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import SectionFullHeight from "layouts/SectionFullHeight"
 import MiniCardTechonology from "./components/MiniCardTechonology"
-import stackJson from "assets/json/stack.json"
 import TitleLayerInformation from "common/Texts/TitleLayerInformation"
 import ButtonLinkCategory from "./components/ButtonLinkCategory"
+import useFetchStack from "./hooks/useFetchStack"
+import CurveAtomsLoading from "common/Loading/CurveAtomsLoading"
 
 const MainTechnologiesWrapper = styled(SectionFullHeight)`
   @media screen and (min-width:540px) {
@@ -37,16 +38,12 @@ const dataFilter = [
 ]
 
 const MainTechnologiesSection = () => {
-  const [data, setData] = useState([]);
+  const { ref , data, filterByCategory, loading } = useFetchStack();
   const [ category , setCategoryId ] = useState("Frontend");
   const setCategory = (id) => {
-    setData(stackJson.find(e => e.category === id).stacks);
+    filterByCategory(id);
     setCategoryId(id);
   } 
-
-  useEffect(() => {
-      setData(stackJson[0].stacks);
-  },[]);
 
   return (
     <MainTechnologiesWrapper
@@ -68,12 +65,18 @@ const MainTechnologiesSection = () => {
           ))}
         </div>
       </div>
-      <div className="skills relative">
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 mb-10">
-          {data.map(({ image, name, detail }, stackKey) => (
-            <MiniCardTechonology key={stackKey} image={image} text={name} />
-          ))}
-        </div>
+      <div className="skills relative" ref={ref}>
+        { loading ? (
+            <div className="text-center my-20">
+              <CurveAtomsLoading text="Loading technologies" />
+            </div>
+        ) :  (
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 mb-10">
+            {data.map(({ image, name }, stackKey) => (
+              <MiniCardTechonology key={stackKey} image={image} text={name} />
+            ))}
+          </div>
+        )}
       </div>
     </MainTechnologiesWrapper>
   )

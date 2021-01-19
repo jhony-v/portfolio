@@ -4,8 +4,8 @@ import ListProjects from "./containers/ListProjects"
 import WrapperSection from "./components/WrapperSection"
 import { useModalVisualize } from "views/IndexView/contexts/ModalVisualize/ModalVisualizeContext"
 import WobblyScreenAnimation from "views/IndexView/components/animations/WobblyScreenAnimation"
-import TitleLayerInformation from "common/Texts/TitleLayerInformation"
 import PrevisualizeProjectProvider from "./contexts/PrevisualizeProject/PrevisualizeProjectProvider"
+import TitleProjects from "./containers/TitleProjects"
 
 const PrevisualizeProjectsSection = () => {
   const { isEqual } = useModalVisualize();
@@ -14,9 +14,7 @@ const PrevisualizeProjectsSection = () => {
       <WrapperSection visible={isEqual("projects")}>
         <PrevisualizeProjectProvider>
           <div className="h-full w-full flex-col overflow-y-auto relative preview flex sm:p-10 pt-3 content__projects">
-              <div className="header w-4/5 m-auto">
-                <TitleLayerInformation subtitle="5 projects" title="My projects" className="mb-14" />
-              </div>
+              <TitleProjects/>
               <ListProjects/>
           </div>
           <PreviewProject/>

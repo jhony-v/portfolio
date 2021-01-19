@@ -25,9 +25,9 @@ const AboutSection = () => {
           <TitleLayerInformation 
             className="mb-16 phone-100:w-full z-10 sm:mt-0 mt-4 md:w-full" 
             subtitle="About me" 
-            title="Frontend Developer with three years experiences in the industry technology" />
+            title="Frontend Developer with three years experiences in the technology industry" />
           <SmoothText className="w-full phone-100:w-3/4 z-10 md:w-11/12">
-            Hello, my name Jhony Vega , I am from Peru, a person who loves technology and web development.
+            Hello, my name is Jhony Vega , I'm from Peru, a person who loves technology and web development.
             My main experience is the frontend but also I worked with other technologies. I like to work in a team and to be constantly learning.
           </SmoothText>
            <div className="mt-8 z-10">
