@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react'
 
 export interface Technology {
     name ?: string;
-    image ?: string;
+    logo ?: string;
 }
 
 export interface ExternalLinks {

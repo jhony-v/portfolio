@@ -84,7 +84,7 @@ export default function PreviewProject() {
                 <div className="text-lg mb-5 font-bold text-label">Technologies</div>
                 <div className="list__project-technologies flex flex-wrap">
                   {technologies.map((item,index) => (
-                  <CardTechnologyUsed image={item.image} title={item.name} key={index} />
+                  <CardTechnologyUsed image={item.logo} title={item.name} key={index} />
                   ))}
                 </div>
               </div>
