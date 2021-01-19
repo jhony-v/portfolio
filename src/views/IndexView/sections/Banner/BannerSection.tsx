@@ -24,13 +24,14 @@ const BannerSection = () => {
   
   return (
     <BannerWrapper data-id="home" className="flex items-center md-100:flex-row flex-col-reverse">
+      <LoadableComponent module={() => import("./CanvasBackdropAnimatable")} fallback={null} />
       <div className="detail phone-100:bg-black flex items-center md-100:w-4/5 phone-100:h-4/5 w-full" style={{height:"100%"}}>
         <BannerDescriptionProfile/>
       </div>
       <div className="image flex items-center relative bg-dark-10 md-100:w-1/5 w-full pb-12">
         <BannerImageProfile/>
       </div>
-      <LoadableComponent module={()=>import("./components/CirclesBubbleAnimation")} fallback={null} />
+      {/* <LoadableComponent module={()=>import("./components/CirclesBubbleAnimation")} fallback={null} /> */}
     </BannerWrapper>
   )
 }

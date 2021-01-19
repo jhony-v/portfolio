@@ -14,9 +14,9 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "cleanup": "rimraf node_modules/.cache/gh-pages"
   },
-  "husky" : {
-    "hooks" : {
-      "pre-push" : "npm run deploy"
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run deploy"
     }
   },
   "dependencies": {
@@ -32,6 +32,7 @@
     "gatsby-plugin-styled-components": "^3.8.0",
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-sharp": "^2.6.0",
+    "p5": "^1.2.0",
     "postcss": "^8.2.3",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
