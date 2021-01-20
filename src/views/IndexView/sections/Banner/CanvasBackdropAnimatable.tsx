@@ -14,7 +14,7 @@ function Particle(p5: p5Types, particleProps: ParticleProps) {
   this.y = p5.random(0, particleProps.maxY)
   this.vx = p5.random(-1, 1)
   this.vy = p5.random(-1, 1)
-  this.isPressed = false
+  this.acceleration = 1;
 }
 
 Particle.prototype.draw = function () {
@@ -24,12 +24,17 @@ Particle.prototype.draw = function () {
 }
 
 Particle.prototype.move = function () {
-  if (this.x <= 0) this.vx += 1
-  if (this.x >= this.particleProps.maxX) this.vx -= 1
-  if (this.y <= 0) this.vy += 1
-  if (this.y >= this.particleProps.maxY) this.vy -= 1
-  this.x += this.vx
-  this.y += this.vy
+  
+  if(this.p5.dist(this.p5.mouseX,this.p5.mouseY,this.x,this.y) <= this.size) this.acceleration = this.p5.random(10,15);
+  if(this.acceleration > 1)  this.acceleration-= 1;
+  
+  if (this.x <= 0) this.vx += this.acceleration
+  if (this.x >= this.particleProps.maxX) this.vx -= this.acceleration
+  if (this.y <= 0) this.vy += this.acceleration
+  if (this.y >= this.particleProps.maxY) this.vy -= this.acceleration
+  
+  this.x += this.vx * this.acceleration
+  this.y += this.vy * this.acceleration
 }
 
 const CanvasBackdropAnimatable = () => {
