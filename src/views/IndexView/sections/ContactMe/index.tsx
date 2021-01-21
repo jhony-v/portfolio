@@ -25,10 +25,10 @@ const ContactMe = () => {
         ({ item, key, props }) =>
           item && (
             <FloatingSectionContent style={props} key={key}>
-                <div className="flex md:flex-row flex-col w-full pt-5 md:pt:20 pb-20 px-4 sm:px-20 md:px-0 overflow-y-auto">
+              <div className="flex md:flex-row flex-col w-full pt-5 md:pt:20 pb-20 px-4 sm:px-20 md:px-0 sm:items-center overflow-y-auto">
                 <ContactForm/>
                 <ContactBanner/>
-                </div>
+              </div>
             </FloatingSectionContent>
           )
       )}
