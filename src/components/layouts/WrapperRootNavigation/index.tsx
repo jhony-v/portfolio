@@ -71,7 +71,7 @@ export default function WrapperRootNavigation({ children }: WrapperRootNavigatio
           <LiItemNavigation to="about" selected={selected} icon={AiOutlineUser} onClick={handlerOnLinkSelected} />
           <LiItemNavigation to="skills" selected={selected} icon={BsCodeSlash} onClick={handlerOnLinkSelected} />
           <LiItemNavigation to="projects" selected={selected} icon={AiOutlineCodeSandbox} onClick={handlerOnLinkSelected} />
-          {/* <LiItemNavigation to="contact" selected={selected} icon={BiPaperPlane} onClick={handlerOnLinkSelected} /> */}
+          <LiItemNavigation to="contact" selected={selected} icon={BiPaperPlane} onClick={handlerOnLinkSelected} />
         </ul>
         <ExternalLinks/>
       </HeaderWrapper>

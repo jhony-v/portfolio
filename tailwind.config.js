@@ -11,7 +11,8 @@ module.exports = {
         third : "#8af0eb",
         label : "#ffffff",
         dark : {
-          10 : "rgb(10,10,10,.1)"
+          5 : "#333333",
+          10 : "rgb(10,10,10,.1)",
         }
       },
       screens : {

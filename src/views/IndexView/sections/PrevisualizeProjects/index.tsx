@@ -7,7 +7,7 @@ import WobblyScreenAnimation from "views/IndexView/components/animations/WobblyS
 import PrevisualizeProjectProvider from "./contexts/PrevisualizeProject/PrevisualizeProjectProvider"
 import TitleProjects from "./containers/TitleProjects"
 
-const PrevisualizeProjectsSection = () => {
+const PrevisualizeProjects = () => {
   const { isEqual } = useModalVisualize();
   return (
     <>
@@ -25,4 +25,4 @@ const PrevisualizeProjectsSection = () => {
   )
 }
 
-export default PrevisualizeProjectsSection
+export default PrevisualizeProjects

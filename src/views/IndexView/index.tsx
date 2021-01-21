@@ -23,7 +23,8 @@ const IndexView = () => {
         <AboutSection />
         <LoadableComponent module={()=>import("./sections/MainTechnologies")} fallback={null} />
       </WrapperSections>
-      <LoadableComponent module={()=>import("./sections/PrevisualizeProjectsSection")} fallback={null} />
+      <LoadableComponent module={()=>import("./sections/PrevisualizeProjects")} fallback={null} />
+      <LoadableComponent module={()=>import("./sections/ContactMe")} fallback={null} />
     </div>
   )
 }
