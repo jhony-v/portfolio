@@ -2,5 +2,5 @@ import dotenv from "dotenv"
 dotenv.config()
 import server from "./server"
 
-const PORT = 7000 || process.env.PORT;
+const PORT = process.env.PORT || 7000;
 server.listen(PORT)
