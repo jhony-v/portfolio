@@ -1,16 +1,21 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import BasePrimaryButton from "common/Buttons/BasePrimaryButton"
 import EditTextControl from "common/FormControls/Inputs/EditTextControl"
 import TitleLayerInformation from "common/Texts/TitleLayerInformation"
+import FloatingAlertMessage from "../components/FloatingAlertMessage";
 
+type Status = "error" | "success" | "empty" | "";
 type EditTextElement = HTMLInputElement & HTMLTextAreaElement;
+
 const ContactForm = () => {
   const name = useRef<EditTextElement>();
   const email = useRef<EditTextElement>();
   const subject = useRef<EditTextElement>();
   const message = useRef<EditTextElement>();
-  const [ status, setStatus ] = useState<"error" | "success" | "empty" | "">("");
+  const [ status, setStatus ] = useState<Status>("");
   const checkIssetFields = () => [email,subject,message].every(e => e.current.value.trim() !== "");
+
+  const isStatus = (payloadStatus : Status) => status === payloadStatus;
 
   const onSendMessage = async () => {
     if(checkIssetFields()) {
@@ -32,7 +37,8 @@ const ContactForm = () => {
           body : JSON.stringify(params),
         });
         const { data } = await fetchRequest.json();
-        setStatus("success");
+        if(data.sent) setStatus("success");
+        else setStatus("error");
       }
       catch {
         setStatus("error");
@@ -42,6 +48,14 @@ const ContactForm = () => {
       setStatus("empty");
     }
   }
+
+  useEffect(() => {
+    if(status !== "") {
+     setTimeout(() => {
+      setStatus("");
+     },4000); 
+    }
+  },[status]);
 
   return (
     <div className="contact__form md:px-20 md:w-3/4">
@@ -55,6 +69,9 @@ const ContactForm = () => {
       <div className="flex justify-end">
           <BasePrimaryButton onClick={onSendMessage}>SEND MESSAGE</BasePrimaryButton>
       </div>
+      <FloatingAlertMessage visible={isStatus("success")} variant="success" message="Your message hast sent to Jhony, Thanks" title="Very good" />
+      <FloatingAlertMessage visible={isStatus("error")} variant="error" message="Ups!, Your message hast not sent to Jhony" title="An error ocurred" />
+      <FloatingAlertMessage visible={isStatus("empty")} variant="warning" message="To send a message you need to type in the fields" title="Complete all fields" />
     </div>
   )
 }
