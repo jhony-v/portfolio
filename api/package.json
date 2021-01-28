@@ -19,6 +19,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.9.2",
+    "heroku": "^7.47.8",
     "nodemailer": "^6.4.17",
     "pug": "^3.0.0"
   },

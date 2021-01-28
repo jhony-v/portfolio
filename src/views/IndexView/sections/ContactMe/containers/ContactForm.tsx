@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import BasePrimaryButton from "common/Buttons/BasePrimaryButton"
 import EditTextControl from "common/FormControls/Inputs/EditTextControl"
 import TitleLayerInformation from "common/Texts/TitleLayerInformation"
@@ -9,15 +9,31 @@ const ContactForm = () => {
   const email = useRef<EditTextElement>();
   const subject = useRef<EditTextElement>();
   const message = useRef<EditTextElement>();
+  const [ status, setStatus ] = useState<"error" | "success" | "empty" | "">("");
+  const checkIssetFields = () => [email,subject,message].every(e => e.current.value.trim() !== "");
 
-  const checkIssetFields = () => [name,email,subject,message].every(e => e.current.value.trim() !== "");
-
-  const onSendMessage = () => {
+  const onSendMessage = async () => {
     if(checkIssetFields()) {
-      alert("")
+      const params = {
+        name : name.current.value,
+        email : email.current.value,
+        subject : subject.current.value,
+        message : message.current.value,
+      }
+      try {
+        const fetchRequest = await fetch("",{
+          method : "POST",
+          body : JSON.stringify(params)
+        });
+        const { data } = await fetchRequest.json();
+        setStatus("success");
+      }
+      catch {
+        setStatus("error");
+      }
     }
     else {
-
+      setStatus("empty");
     }
   }
 
