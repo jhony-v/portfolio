@@ -20,10 +20,16 @@ const ContactForm = () => {
         subject : subject.current.value,
         message : message.current.value,
       }
+      
       try {
-        const fetchRequest = await fetch("",{
+        const fetchRequest = await fetch("https://jhony-portfolio-api.herokuapp.com/send-email",{
           method : "POST",
-          body : JSON.stringify(params)
+          headers : {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json',
+            'Authorization' : 'Bearer 3ohjpojt4ty82ty3047t43t83byfoqgeihit9ra90eeu0fjoht34983948g349gn8hgegnvsonlsnoij101804t249tjfmmff001miofheoiqhoeww2ru02u320bum20u',
+          },
+          body : JSON.stringify(params),
         });
         const { data } = await fetchRequest.json();
         setStatus("success");
