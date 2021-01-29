@@ -1,7 +1,7 @@
 [
     {
         "title" : "Facebook Clone",
-        "description" : "This is a web application of Clone UI Facebook created with ReactJS and SSR",
+        "description" : "This is a web application of Clone UI Facebook created with ReactJS and SSR.",
         "image" : "project_images/facebook_clone.PNG",
         "technologies" : [
             {

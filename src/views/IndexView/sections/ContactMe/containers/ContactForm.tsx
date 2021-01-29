@@ -3,6 +3,10 @@ import BasePrimaryButton from "common/Buttons/BasePrimaryButton"
 import EditTextControl from "common/FormControls/Inputs/EditTextControl"
 import TitleLayerInformation from "common/Texts/TitleLayerInformation"
 import FloatingAlertMessage from "../components/FloatingAlertMessage";
+import CircleLoading from "../components/CircleLoading";
+
+
+const url = "https://jhony-portfolio-api.herokuapp.com/send-email";
 
 type Status = "error" | "success" | "empty" | "";
 type EditTextElement = HTMLInputElement & HTMLTextAreaElement;
@@ -13,7 +17,10 @@ const ContactForm = () => {
   const subject = useRef<EditTextElement>();
   const message = useRef<EditTextElement>();
   const [ status, setStatus ] = useState<Status>("");
+  const [ loading, setLoading ] = useState<boolean>(false);
+
   const checkIssetFields = () => [email,subject,message].every(e => e.current.value.trim() !== "");
+  const clearFields = () => [email,subject,name,message].forEach(e => e.current.value = "");
 
   const isStatus = (payloadStatus : Status) => status === payloadStatus;
 
@@ -27,7 +34,8 @@ const ContactForm = () => {
       }
       
       try {
-        const fetchRequest = await fetch("https://jhony-portfolio-api.herokuapp.com/send-email",{
+        setLoading(true);
+        const fetchRequest = await fetch(url,{
           method : "POST",
           headers : {
             'Accept' : 'application/json',
@@ -36,12 +44,18 @@ const ContactForm = () => {
           },
           body : JSON.stringify(params),
         });
-        const { data } = await fetchRequest.json();
-        if(data.sent) setStatus("success");
+        const { sent } = await fetchRequest.json();
+        if(sent) {
+          setStatus("success");
+          clearFields();
+        } 
         else setStatus("error");
       }
       catch {
         setStatus("error");
+      }
+      finally {
+        setLoading(false);
       }
     }
     else {
@@ -51,9 +65,12 @@ const ContactForm = () => {
 
   useEffect(() => {
     if(status !== "") {
-     setTimeout(() => {
+     const timeOut = setTimeout(() => {
       setStatus("");
      },4000); 
+     return () => {
+       clearTimeout(timeOut);
+     }
     }
   },[status]);
 
@@ -67,10 +84,13 @@ const ContactForm = () => {
         <EditTextControl ref={message} placeholder="Message" className="col-span-2 h-40" as="textarea" />
       </div>
       <div className="flex justify-end">
-          <BasePrimaryButton onClick={onSendMessage}>SEND MESSAGE</BasePrimaryButton>
+          <BasePrimaryButton onClick={onSendMessage}>
+            {loading ? "SENDING..." : "SEND MESSAGE"}
+            {loading && <CircleLoading className="ml-5" />}
+          </BasePrimaryButton>
       </div>
-      <FloatingAlertMessage visible={isStatus("success")} variant="success" message="Your message hast sent to Jhony, Thanks" title="Very good" />
-      <FloatingAlertMessage visible={isStatus("error")} variant="error" message="Ups!, Your message hast not sent to Jhony" title="An error ocurred" />
+      <FloatingAlertMessage visible={isStatus("success")} variant="success" message="Your message has sent to Jhony, Thanks" title="Very good" />
+      <FloatingAlertMessage visible={isStatus("error")} variant="error" message="Ups!, Your message has not sent to Jhony" title="An error ocurred" />
       <FloatingAlertMessage visible={isStatus("empty")} variant="warning" message="To send a message you need to type in the fields" title="Complete all fields" />
     </div>
   )
