@@ -2,28 +2,15 @@ import React from "react"
 import BasePrimaryButton from "common/Buttons/BasePrimaryButton"
 import BaseRoundedButton from "common/Buttons/BaseRoundedButton"
 import styled from "styled-components"
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs"
 import {  usePrevisualizeProject,} from "../../contexts/PrevisualizeProject/PrevisualizeProjectContext"
-import useNavigateBetweenProjects from "../../hooks/useNavigateBetweenProjects"
 import { animated, useTransition } from "react-spring"
 import startInClient from "utils/startInClient"
-import CardTechnologyUsed from "./components/CardTechnologyUsed"
-import ChevronMove from "./components/ChevronMove"
 import openUrlNewTab from "utils/openUrlNewTab"
+import LoadableComponent from "common/LoadableComponent"
 
 const Wrapper = styled(animated.div)`
   overflow-y:auto;
 `
-
-const ChevronsChangeProject = () => {
-  const { onNext, onPrevious } = useNavigateBetweenProjects();
-  return(
-    <div className="flex justify-between mt-5 md:mt-0">
-      <ChevronMove onClick={onPrevious}  position="left"><BsChevronLeft/></ChevronMove>
-      <ChevronMove onClick={onNext} position="right"><BsChevronRight/></ChevronMove>
-    </div>
-  )
-}
 
 export default function PreviewProject() {
   const {
@@ -67,7 +54,7 @@ export default function PreviewProject() {
                     </div>
                 </div>
                 <div className="md:w-1/2">
-                  <ChevronsChangeProject/>
+                  <LoadableComponent fallback={null} module={()=>import("./ChevronsChangeProject")} />
                   <div className="text-4xl md:text-5xl mb-10 mt-10 md:mt-0 text-label">{title}</div>
                   <p className="text-gray-400">
                     {description}
@@ -80,14 +67,7 @@ export default function PreviewProject() {
                   </div>
                 </div>
               </div>
-              <div className="project__technologies w-5/6 mx-auto mb-12">
-                <div className="text-lg mb-5 font-bold text-label">Technologies</div>
-                <div className="list__project-technologies flex flex-wrap">
-                  {technologies.map((item,index) => (
-                  <CardTechnologyUsed image={item.logo} title={item.name} key={index} />
-                  ))}
-                </div>
-              </div>
+              <LoadableComponent fallback={null} module={()=>import("./ListTechnologiesProject")} data={technologies} />
             </Wrapper>
           )
       )}
