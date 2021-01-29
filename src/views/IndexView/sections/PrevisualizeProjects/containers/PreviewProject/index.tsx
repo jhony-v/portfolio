@@ -7,6 +7,7 @@ import { animated, useTransition } from "react-spring"
 import startInClient from "utils/startInClient"
 import openUrlNewTab from "utils/openUrlNewTab"
 import LoadableComponent from "common/LoadableComponent"
+import LoadingTechnologies from "./components/LoadingTechnologies"
 
 const Wrapper = styled(animated.div)`
   overflow-y:auto;
@@ -67,7 +68,8 @@ export default function PreviewProject() {
                   </div>
                 </div>
               </div>
-              <LoadableComponent fallback={null} module={()=>import("./ListTechnologiesProject")} data={technologies} />
+              <LoadingTechnologies/>
+              {/* <LoadableComponent fallback={<LoadingTechnologies/>} module={()=>import("./ListTechnologiesProject")} data={technologies} /> */}
             </Wrapper>
           )
       )}

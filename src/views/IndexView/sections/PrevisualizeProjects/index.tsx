@@ -1,11 +1,10 @@
 import React  from "react"
 import PreviewProject from "./containers/PreviewProject"
-import ListProjects from "./containers/ListProjects"
 import WrapperSection from "./components/WrapperSection"
 import { useModalVisualize } from "views/IndexView/contexts/ModalVisualize/ModalVisualizeContext"
 import WobblyScreenAnimation from "views/IndexView/components/animations/WobblyScreenAnimation"
 import PrevisualizeProjectProvider from "./contexts/PrevisualizeProject/PrevisualizeProjectProvider"
-import TitleProjects from "./containers/TitleProjects"
+import LoadableComponent from "common/LoadableComponent"
 
 const PrevisualizeProjects = () => {
   const { isEqual } = useModalVisualize();
@@ -14,8 +13,8 @@ const PrevisualizeProjects = () => {
       <WrapperSection visible={isEqual("projects")}>
         <PrevisualizeProjectProvider>
           <div className="h-full w-full flex-col overflow-y-auto relative preview flex sm:p-10 pt-3 content__projects">
-              <TitleProjects/>
-              <ListProjects/>
+              <LoadableComponent fallback={null} module={()=>import("./containers/TitleProjects")} />
+              <LoadableComponent fallback={null} module={()=>import("./containers/ListProjects")} />
           </div>
           <PreviewProject/>
         </PrevisualizeProjectProvider>
