@@ -68,8 +68,7 @@ export default function PreviewProject() {
                   </div>
                 </div>
               </div>
-              <LoadingTechnologies/>
-              {/* <LoadableComponent fallback={<LoadingTechnologies/>} module={()=>import("./ListTechnologiesProject")} data={technologies} /> */}
+              <LoadableComponent fallback={<LoadingTechnologies/>} module={()=>import("./ListTechnologiesProject")} data={technologies} />
             </Wrapper>
           )
       )}

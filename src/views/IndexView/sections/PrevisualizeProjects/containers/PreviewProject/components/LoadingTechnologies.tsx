@@ -3,11 +3,21 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 const Loading = styled.div`
-    width:150px;
-    height:60px;
-    ${tw`bg-gray-600 rounded-3xl ml-2 mr-2 mb-8`}
+    ${tw`w-14 sm:w-32`}
+    height:50px;
+    border-radius:30px;
+    margin:5px;
+    display:inline-block;
+    background-color:rgba(200,200,200,.2);
+    animation:loading-project-technologies 1s infinite linear alternate;
+    @keyframes loading-project-technologies {
+        from {
+            opacity:.5;
+        }
+    }
+
 `
-const Wrapper = styled.div`${tw`w-11/12 md:w-5/6 mx-auto mt-14 md:flex`}`
+const Wrapper = styled.div`${tw`w-11/12 md:w-5/6 mx-auto mt-10 md:flex`}`
 
 
 export default function LoadingTechnologies() {
