@@ -5,7 +5,7 @@ import { usePrevisualizeProject } from "../../contexts/PrevisualizeProject/Previ
 export default function TitleProjects() {
   const { listProjects } = usePrevisualizeProject()  
   return (
-    <div className="header w-4/5 m-auto">
+    <div className="header w-11/12 md:w-4/5 m-auto">
       <TitleLayerInformation
         subtitle={`${listProjects.length} projects`}
         title="My projects"

@@ -47,7 +47,7 @@ export default function PreviewProject() {
       {transitionShowingWrapper.map(
         ({ item, key, props }) =>
           item && (
-            <Wrapper key={key} style={props} className="absolute left-0 top-0 w-full h-full bg-black">
+            <Wrapper key={key} style={props} className="absolute left-0 top-0 w-full h-full bg-black content__projects">
               <div className=" w-11/12 md:w-5/6 mx-auto mt-14 md:flex project__detail mb-24">
                 <div className="flex md:w-1/2">
                     <div className="rounded-3xl flex w-full border-white border-2 shadow-2xl overflow-hidden md:w-4/5" style={{height:"300px"}}>
@@ -56,7 +56,7 @@ export default function PreviewProject() {
                 </div>
                 <div className="md:w-1/2">
                   <LoadableComponent fallback={null} module={()=>import("./ChevronsChangeProject")} />
-                  <div className="text-4xl md:text-5xl mb-10 mt-10 md:mt-0 text-label">{title}</div>
+                  <div className="text-3xl md:text-5xl mb-10 mt-10 md:mt-0 text-label">{title}</div>
                   <p className="text-gray-400">
                     {description}
                   </p>
