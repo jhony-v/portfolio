@@ -1,7 +1,7 @@
 [
     {
         "title" : "Facebook Clone",
-        "description" : "This is a web application of Clone UI Facebook created with ReactJS and SSR.",
+        "description" : "This is a web application of clone UI Facebook desktop, created with ReactJS and SSR. The objective with this project is to see how can scale a web application using different technologies from React ecosystem.",
         "image" : "project_images/facebook_clone.PNG",
         "technologies" : [
             {
@@ -57,7 +57,7 @@
     },
     {
         "title" : "Instagram Clone - Redesign",
-        "description" : "📷 🖼️ Clone instagram web application with new design",
+        "description" : "📷 🖼️ Clone instagram web application using React and the principal objective has been to redesign the interface applying libraries, utilities to optimize the web.",
         "image" : "project_images/instagram_clone.PNG",
         "technologies" : [
             {
@@ -134,7 +134,7 @@
         }
     },
     {
-        "title" : "Notes app",
+        "title" : "Personal notes app",
         "description" : "Notes app to save information by cards and colors",
         "image" : "project_images/notes_app.png",
         "technologies" : [
@@ -189,7 +189,7 @@
     },
     {
         "title" : "Meal platform type Twitter",
-        "description" : "",
+        "description" : "Web application with similar twitter design",
         "image" : "project_images/meal_twitter_clone.PNG",
         "technologies" : [
             {
@@ -225,7 +225,7 @@
     },
     {
         "title" : "Events calendar to mark days",
-        "description" : "",
+        "description" : "Vue application to mark days and create events on respective dates",
         "image" : "project_images/events_calendar.PNG",
         "technologies" : [
             {

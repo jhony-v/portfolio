@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jhony-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal portolio",
   "version": "0.1.0",
-  "author": "",
+  "author": "Jhony Vega",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -53,14 +53,12 @@
     "tailwindcss": "^2.0.2"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio",
+    "react"
   ],
-  "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jhony-24/portfolio"
   }
 }
