@@ -14,7 +14,7 @@ const linksAboutContact = [
     icon: <FaGithub />,
   },
   {
-    href: "https://dev.to/jhony24",
+    href: "https://dev.to/jhony",
     icon: <FaDev />,
   },
   {

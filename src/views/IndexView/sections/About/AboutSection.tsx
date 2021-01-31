@@ -2,10 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import SectionFullHeight from "layouts/SectionFullHeight";
 import FixedBox from "common/FixedBaseFigures/FixedBox";
-import BasePrimaryButton from "common/Buttons/BasePrimaryButton";
 import TitleLayerInformation from "common/Texts/TitleLayerInformation";
 import SmoothText from "common/Texts/SmoothText";
-import { useModalVisualize } from "views/IndexView/contexts/ModalVisualize/ModalVisualizeContext";
 import ListAboutContactSocialButtons from "./components/ListAboutContactSocialButtons";
 
 const AboutWrapper = styled(SectionFullHeight)`
@@ -14,10 +12,6 @@ const AboutWrapper = styled(SectionFullHeight)`
 `
 
 const AboutSection = () => {
-  const { setModalActive } = useModalVisualize();
-  const handlerOnNavigateToProjects = () => {
-    setModalActive("projects");
-  }
   return (
     <AboutWrapper className="mx-auto flex items-center " data-id="about">
       <div className="w-11/12 sm:w-4/5 m-auto flex flex-col sm:flex-row">
@@ -27,12 +21,14 @@ const AboutSection = () => {
             subtitle="About me" 
             title="Frontend Developer with three years experiences in the technology industry" />
           <SmoothText className="w-full phone-100:w-3/4 z-10 md:w-11/12">
-            Hello, my name is Jhony Vega , I'm from Peru, a person who loves technology and web development.
-            My main experience is the frontend but also I worked with other technologies. I like to work in a team and to be constantly learning.
+            <p className="mb-5">
+              Hello, my name is Jhony Vega 😃, I'm from Peru, a person who loves technology and web development.
+              My main experience is the frontend but also I worked with other technologies 💻.
+            </p>
+            <p>
+              I like to work in a team and to be constantly learning new things.
+            </p>
           </SmoothText>
-           <div className="mt-8 z-10">
-            <BasePrimaryButton onClick={handlerOnNavigateToProjects}>VIEW PROJECTS</BasePrimaryButton>
-           </div>
         </div>
         <ListAboutContactSocialButtons/>
         <FixedBox right="0%" top="0%" w="400px" h="100%" grayscale={.06}  />

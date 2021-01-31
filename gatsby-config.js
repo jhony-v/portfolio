@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  pathPrefix : "/portfolio",
+  pathPrefix : "/",
   siteMetadata: {
     title: `Jhony Vega | Frontend Developer`,
-    description: `Frontend Developer, working main in React , Vue and Testing libraries to improve the websites and create new features`,
+    description: `Hello, my name is Jhony Vega, I'm from Peru, a person who loves technology and web development. My main experience is the frontend but also I worked with other technologies.`,
     author: `Jhony Vega`,
   },
   plugins: [
