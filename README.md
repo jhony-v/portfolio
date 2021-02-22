@@ -1,4 +1,6 @@
-# [jhonyvega.com](https://jhonyvega.com) - Personal portfolio
+# *[jhonyvega.com](https://jhonyvega.com) - Personal portfolio*
+
+*Hi 👋, I'm a Frontend Developer, passionate about programming and web development ❤️.*
 
 * [Linkedin](https://www.linkedin.com/in/jhony-vega/)
 * [Twitter](https://twitter.com/JhonyV01)
