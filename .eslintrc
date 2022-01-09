@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "next",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "printWidth": 80,
+        "tabWidth": 2,
+        "endOfLine": "lf"
+      }
+    ]
+  }
+}

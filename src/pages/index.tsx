@@ -1,17 +1,12 @@
-import React from "react"
-import SEO from "common/SEO"
-import WrapperRootNavigation from "layouts/WrapperRootNavigation"
-import IndexView from "views/IndexView"
-import ModalVisualizeProvider from "views/IndexView/contexts/ModalVisualize/ModalVisualizeProvider"
+import HomePage from '@/views/HomePage'
+import type { NextPage } from 'next'
 
-const IndexPage = () => (
-  <SEO title="Jhony Vega | Frontend Developer" description="">
-    <ModalVisualizeProvider>
-      <WrapperRootNavigation>
-        <IndexView />
-      </WrapperRootNavigation>
-    </ModalVisualizeProvider>
-  </SEO>
-)
+const Home: NextPage = () => {
+  return (
+    <div className="underline text-red-500">
+      <HomePage />
+    </div>
+  )
+}
 
-export default IndexPage
+export default Home
