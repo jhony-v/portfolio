@@ -2,7 +2,7 @@ import Navigator from '@/layouts/Navigator'
 import HomePage from '@/views/HomePage'
 import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const AboutMe: NextPage = () => {
   return (
     <Navigator>
       <HomePage />
@@ -10,4 +10,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default AboutMe

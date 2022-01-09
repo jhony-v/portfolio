@@ -1,9 +1,13 @@
 import 'nprogress/nprogress.css'
 import '../../styles/globals.scss'
-import Router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import type { AppProps } from 'next/app'
 import NProgress from 'nprogress'
 import { useEffect } from 'react'
+
+NProgress.configure({
+  showSpinner: false,
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
