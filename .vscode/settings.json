@@ -1,19 +1,18 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "colorize.languages": [
     "css",
+    "sass",
+    "scss",
+    "less",
     "postcss",
-    "typescript",
-    "javascript"
-  ],
-  "css.validate": false,
-  "tailwindCSS.includeLanguages": {
-      "plaintext" : "typescript"
-  },
-  "tailwindCSS.experimental.classRegex": [
-    "tw`([^`]*)",
-    "tw=\"([^\"]*)", 
-    "tw={\"([^\"}]*)",
-    "tw\\.\\w+`([^`]*)",
-    "tw\\(.*?\\)`([^`]*)" 
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "javascript",
+    "typescript"
   ]
 }
