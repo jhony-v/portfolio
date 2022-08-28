@@ -1,11 +1,11 @@
 import Navigator from '@/layouts/Navigator'
-import HomePage from '@/views/HomePage'
+import AboutMeView from '@/views/AboutMeView'
 import type { NextPage } from 'next'
 
 const AboutMe: NextPage = () => {
   return (
     <Navigator>
-      <HomePage />
+      <AboutMeView />
     </Navigator>
   )
 }
