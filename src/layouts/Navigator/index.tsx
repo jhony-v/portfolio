@@ -44,7 +44,10 @@ const Navigator: FC = ({ children }) => {
             </li>
           </ul>
         </div>
-        <main className="p-5 md:px-11 lg:p-24 overflow-y-auto sm:h-screen flex-1">
+        <main
+          data-id="main-navigator"
+          className="p-2 md:px-11 lg:p-24 overflow-y-auto sm:h-screen flex-1"
+        >
           {children}
         </main>
       </div>
