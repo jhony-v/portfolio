@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 const StyledCard = styled.div`
-  height: 160px;
+  height: 105px;
   border-radius: 5px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 `

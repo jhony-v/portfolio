@@ -4,7 +4,7 @@ const AboutMeView = () => {
   return (
     <Detail
       title="About me"
-      subtitle="Frontend Developer with three years experiences in the technology industry"
+      subtitle="Frontend Developer with more than three years in the technology industry"
     >
       <p className="mb-5">
         Hello, my name is Jhony Vega 😃, I'm from Peru, a person who loves

@@ -8,7 +8,10 @@ type SkillsViewProps = {
 
 const SkillsView = ({ stack }: SkillsViewProps) => {
   return (
-    <Detail title="Skills" subtitle="Some of my tech skills">
+    <Detail
+      title="Skills"
+      subtitle="Welcome to this section, here you will find some of my tech skills"
+    >
       <div className="grid gap-1 grid-cols-2 md:grid-cols-5">
         {stack.map((stackItem, index) => (
           <TechnologyCard
