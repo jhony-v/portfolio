@@ -51,7 +51,7 @@
     ],
     "links": {
       "demo": "https://facebook-clone-dev.vercel.app",
-      "github": "https://github.com/jhony-24/facebook-clone",
+      "github": "https://github.com/jhony-v/facebook-clone",
       "storybook": "https://facebook-clone-design-system.netlify.app"
     }
   },
@@ -99,7 +99,7 @@
     ],
     "links": {
       "demo": "https://instagram-clone-redesign.vercel.app/",
-      "github": "https://github.com/jhony-24/instagram-clone-redesign"
+      "github": "https://github.com/jhony-v/instagram-clone-redesign"
     }
   },
   {
@@ -130,7 +130,7 @@
     ],
     "links": {
       "demo": "https://bit.dev/personal-dev",
-      "github": "https://github.com/jhony-24/emoji-pickers"
+      "github": "https://github.com/jhony-v/emoji-pickers"
     }
   },
   {
@@ -148,8 +148,8 @@
       }
     ],
     "links": {
-      "demo": "https://jhony-24.github.io/svelte-notes-app/",
-      "github": "https://github.com/jhony-24/svelte-notes-app"
+      "demo": "https://jhony-v.github.io/svelte-notes-app/",
+      "github": "https://github.com/jhony-v/svelte-notes-app"
     }
   },
   {
@@ -184,7 +184,7 @@
     ],
     "links": {
       "demo": "https://spotify-clone-dev.vercel.app/",
-      "github": "https://github.com/jhony-24/spotify-clone"
+      "github": "https://github.com/jhony-v/spotify-clone"
     }
   },
   {
@@ -219,7 +219,7 @@
     ],
     "links": {
       "demo": "https://meals-twitter.netlify.app/",
-      "github": "https://github.com/jhony-24/meal"
+      "github": "https://github.com/jhony-v/meal"
     }
   },
   {
@@ -237,7 +237,7 @@
       }
     ],
     "links": {
-      "github": "https://github.com/jhony-24/events-calendar"
+      "github": "https://github.com/jhony-v/events-calendar"
     }
   }
 ]
