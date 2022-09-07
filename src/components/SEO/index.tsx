@@ -23,7 +23,7 @@ const SEO: FC<PropsWithChildren<{}>> = ({ children }) => {
           url: "'https://jhonyvega.com",
           images: [
             {
-              url: '/favicon.ico',
+              url: '/code.png',
             },
           ],
           description: Seo.description,

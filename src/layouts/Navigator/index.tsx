@@ -6,6 +6,12 @@ import CodeSharp from '@material-ui/icons/CodeSharp'
 import AddBoxOutlined from '@material-ui/icons/AddBoxOutlined'
 import TagAboutMe from '@/components/TagAboutMe'
 import SEO from '@/components/SEO'
+import dynamic from 'next/dynamic'
+
+const AsyncBackgroundAnimation = dynamic(
+  () => import('@/components/BackgroundAnimation'),
+  { ssr: false }
+)
 
 const Navigator: FC = ({ children }) => {
   return (
@@ -48,6 +54,7 @@ const Navigator: FC = ({ children }) => {
           data-id="main-navigator"
           className="p-2 md:px-11 lg:p-24 overflow-y-auto sm:h-screen flex-1"
         >
+          <AsyncBackgroundAnimation />
           {children}
         </main>
       </div>

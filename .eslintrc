@@ -1,12 +1,6 @@
 {
-  "extends": [
-    "next",
-    "plugin:jsx-a11y/recommended",
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["next", "plugin:jsx-a11y/recommended", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
       "error",
