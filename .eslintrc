@@ -8,12 +8,13 @@
         "singleQuote": true,
         "printWidth": 80,
         "tabWidth": 2,
-        "endOfLine": "lf"
+        "endOfLine": "auto"
       }
     ],
     "react-hooks/exhaustive-deps": "off",
     "react/no-unescaped-entities": "off",
     "@next/next/no-img-element": "off",
-    "jsx-a11y/alt-text": "off"
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/anchor-is-valid": "off"
   }
 }

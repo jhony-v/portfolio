@@ -1,12 +1,9 @@
 import NavigatorItem from '@/components/NavigatorItem'
 import { FC } from 'react'
-import Home from '@material-ui/icons/Home'
-import Person from '@material-ui/icons/Person'
-import CodeSharp from '@material-ui/icons/CodeSharp'
-import AddBoxOutlined from '@material-ui/icons/AddBoxOutlined'
 import TagAboutMe from '@/components/TagAboutMe'
 import SEO from '@/components/SEO'
 import dynamic from 'next/dynamic'
+import { BsGithub } from 'react-icons/bs'
 
 const AsyncBackgroundAnimation = dynamic(
   () => import('@/components/BackgroundAnimation'),
@@ -16,48 +13,33 @@ const AsyncBackgroundAnimation = dynamic(
 const Navigator: FC = ({ children }) => {
   return (
     <SEO>
-      <div className="flex sm:min-h-screen">
-        <div className="border-t p-2 sm:p-0 border-gray-900 sm:border-r z-20 flex sm:flex-col fixed sm:static bottom-0  sm:w-sidebar w-full bg-dark-100 bg-opacity-50">
-          <TagAboutMe />
-          <ul className="my-auto flex sm:block justify-around w-full">
-            <li>
-              <NavigatorItem
-                to="/"
-                text="home"
-                icon={<Home fontSize="medium" />}
-              />
-            </li>
-            <li>
-              <NavigatorItem
-                to="/about-me"
-                text="about me"
-                icon={<Person fontSize="medium" />}
-              />
-            </li>
-            <li>
-              <NavigatorItem
-                to="/skills"
-                text="skills"
-                icon={<CodeSharp fontSize="medium" />}
-              />
-            </li>
-            <li>
-              <NavigatorItem
-                to="/projects"
-                text="projects"
-                icon={<AddBoxOutlined fontSize="medium" />}
-              />
-            </li>
-          </ul>
-        </div>
-        <main
-          data-id="main-navigator"
-          className="p-2 md:px-11 lg:p-24 overflow-y-auto sm:h-screen flex-1"
-        >
-          <AsyncBackgroundAnimation />
-          {children}
-        </main>
-      </div>
+      <header className="flex items-center justify-between px-5 md:px-11 py-4 sticky top-0">
+        <TagAboutMe />
+        <ul className="inline-flex items-center gap-9 mx-auto left-0 right-0">
+          <li>
+            <NavigatorItem to="/" text="home" />
+          </li>
+          <li>
+            <NavigatorItem to="/about-me" text="about me" />
+          </li>
+          <li>
+            <NavigatorItem to="/skills" text="skills" />
+          </li>
+          <li>
+            <NavigatorItem to="/projects" text="projects" />
+          </li>
+        </ul>
+        <a href="https://github.com/jhony-v" className="text-white text-2xl">
+          <BsGithub />
+        </a>
+      </header>
+      <main
+        data-id="main-navigator"
+        className="p-2 md:px-11 lg:p-16 sm:h-screen flex-1"
+      >
+        <AsyncBackgroundAnimation />
+        {children}
+      </main>
     </SEO>
   )
 }

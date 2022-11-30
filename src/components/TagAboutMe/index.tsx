@@ -1,7 +1,8 @@
 const TagAboutMe = () => {
   return (
-    <div className="bg-secondary mt-6 sm:flex justify-center p-4 hidden text-light text-2xl">
-      J
+    <div className="relative flex items-center">
+      <img src="/code.png" alt="jhony vega" width="40" />
+      <span className="text-white font-bold ">Frontend</span>
     </div>
   )
 }

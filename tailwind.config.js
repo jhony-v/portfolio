@@ -9,9 +9,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#7440e2',
-        secondary: '#34d399',
+        primary: {
+          DEFAULT: 'var(--primary-color)',
+          light: 'var(--primary-color-light)',
+          lighter: 'var(--primary-color-lighter)',
+        },
+        secondary: 'var(--secondary-color)',
+        tertiary: 'var(--tertiary-color)',
+        alternative: 'var(--alternative-color)',
         light: '#FFFFFF',
+        neutral: 'var(--neutral-color)',
         dark: {
           100: '#000000',
         },

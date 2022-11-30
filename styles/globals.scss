@@ -5,4 +5,63 @@
 :root {
   --sidebar-width: 70px;
   --sidebar-height: 100vh;
+  --primary-color: #0d091f;
+  --primary-color-light: #1d2042;
+  --primary-color-lighter: #474670;
+  --secondary-color: #5e4ecd;
+  --tertiary-color: #4c97da;
+  --alternative-color: #ad39b5;
+  --neutral-color: #cdcbda;
+}
+
+body {
+  background: var(--primary-color);
+}
+
+body::after {
+  content: '';
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background: var(--primary-color-lighter);
+  position: fixed;
+  left: 10px;
+  opacity: 0.6;
+  filter: blur(50px);
+  top: 0;
+  z-index: -1;
+  animation: 2s fade-bubble infinite alternate;
+}
+
+@keyframes fade-bubble {
+  from {
+    transform: scale(0.8);
+  }
+}
+
+body::before {
+  content: '';
+  width: 220px;
+  height: 220px;
+  border-radius: 100%;
+  background: var(--secondary-color);
+  position: fixed;
+  left: 50%;
+  filter: blur(180px);
+  top: 30%;
+  z-index: -1;
+  animation: 2s distort-bubble infinite alternate;
+  transform-style: preserve-3d;
+}
+
+@keyframes distort-bubble {
+  from {
+    height: 70px;
+  }
+  30% {
+    width: 220px;
+  }
+  40% {
+    transform: translate(50deg, 30deg, 80deg);
+  }
 }
