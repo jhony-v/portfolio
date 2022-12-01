@@ -29,7 +29,11 @@ const Navigator: FC = ({ children }) => {
             <NavigatorItem to="/projects" text="projects" />
           </li>
         </ul>
-        <a href="https://github.com/jhony-v" className="text-white text-2xl">
+        <a
+          href="https://github.com/jhony-v"
+          aria-label="GitHub profile"
+          className="text-white text-2xl"
+        >
           <BsGithub />
         </a>
       </header>

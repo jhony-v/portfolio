@@ -7,7 +7,7 @@
   --sidebar-height: 100vh;
   --primary-color: #0d091f;
   --primary-color-light: #1d2042;
-  --primary-color-lighter: #474670;
+  --primary-color-lighter: #9392d8;
   --secondary-color: #5e4ecd;
   --tertiary-color: #4c97da;
   --alternative-color: #ad39b5;
@@ -30,12 +30,13 @@ body::after {
   filter: blur(50px);
   top: 0;
   z-index: -1;
+  will-change: transform;
   animation: 2s fade-bubble infinite alternate;
 }
 
 @keyframes fade-bubble {
   from {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
 }
 
@@ -52,14 +53,15 @@ body::before {
   z-index: -1;
   animation: 2s distort-bubble infinite alternate;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 @keyframes distort-bubble {
   from {
-    height: 70px;
+    transform: scaleY(2);
   }
   30% {
-    width: 220px;
+    transform: scaleX(0.7);
   }
   40% {
     transform: translate(50deg, 30deg, 80deg);
