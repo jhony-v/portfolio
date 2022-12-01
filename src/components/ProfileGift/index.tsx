@@ -23,6 +23,7 @@ const ProfileGift = () => {
       <CircleBox className="border-tertiary absolute top-0 mx-auto left-0 right-0 border-4 rounded-full" />
       <Image
         src="/profile.jpg"
+        alt="Frontend Developer profile"
         className="rounded-full h-60 w-60 absolute mx-auto left-0 right-0 top-0 z-10"
       />
     </Box>

@@ -18,6 +18,10 @@ const SEO: FC<PropsWithChildren<{}>> = ({ children }) => {
             rel: 'icon',
             href: '/favicon.ico',
           },
+          {
+            rel: 'apple-touch-icon',
+            href: '/favicon.ico',
+          },
         ]}
         openGraph={{
           url: "'https://jhonyvega.com",
@@ -26,6 +30,7 @@ const SEO: FC<PropsWithChildren<{}>> = ({ children }) => {
               url: '/code.png',
             },
           ],
+          type: 'website',
           description: Seo.description,
           title: Seo.title,
         }}
