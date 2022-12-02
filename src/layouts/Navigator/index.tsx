@@ -13,7 +13,7 @@ const AsyncBackgroundAnimation = dynamic(
 const Navigator: FC = ({ children }) => {
   return (
     <SEO>
-      <header className="flex items-center justify-between px-5 md:px-11 py-4 sticky top-0">
+      <header className="flex items-center justify-between px-5 md:px-11 py-4 sticky top-0 bg-black bg-opacity-30 z-10">
         <TagAboutMe />
         <ul className="inline-flex items-center gap-9 mx-auto left-0 right-0">
           <li>

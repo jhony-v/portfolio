@@ -12,10 +12,19 @@
   --tertiary-color: #4c97da;
   --alternative-color: #ad39b5;
   --neutral-color: #cdcbda;
+  --text-light-color: #ffffff;
 }
 
 body {
   background: var(--primary-color);
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color-light);
 }
 
 body::after {
