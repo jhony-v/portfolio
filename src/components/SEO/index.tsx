@@ -2,9 +2,9 @@ import { FC, PropsWithChildren } from 'react'
 import { NextSeo } from 'next-seo'
 
 const Seo = {
-  title: 'Jhony Vega - Frontend Developer',
+  title: 'Jhony Vega - Frontend Engineer',
   description:
-    'Frontend developer with solid knowledge and experience creating scalable, maintainable frontend solutions focused on web performance and delivering better user experiences.',
+    'Frontend Engineer with solid knowledge and experience creating scalable, maintainable frontend solutions focused on web performance and delivering better user experiences.',
 }
 
 const SEO: FC<PropsWithChildren<{}>> = ({ children }) => {

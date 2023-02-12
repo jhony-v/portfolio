@@ -12,7 +12,7 @@ const HomePageView = () => {
       <section className="lg:flex gap-8">
         <div>
           <h1 className="text-white text-5xl md:text-6xl font-bold leading-relaxed">
-            Hello everyone, I'm a Frontend Developer enthusiastic
+            Hello everyone, I'm a Frontend Engineer enthusiast
           </h1>
           <p className="text-neutral my-12">
             I'm Jhony 💻, passionate about programming and web development. I
